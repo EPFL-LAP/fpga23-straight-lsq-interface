@@ -5,8 +5,8 @@ This repository holds the source code, benchmarks and results of the work presen
 ## Prerequisites
 
 In order to reproduce the main results, the following dependencies are needed:
-1) Dynamatic's virutal machine (VM) through the following link https://dynamatic.epfl.ch/ which contains the LLVM infrastructure, the Dynamatic tool and Modelsim
-2) Guorobi which is an MILP solver needed in Dynamatic's buffer placement
+1) Dynamatic's virutal machine (VM) which contains an installation of the Dynamatic tool with its dependencies through the following link https://drive.google.com/file/d/1OI24totIPdp-P_inkdH1-slyNPw-huRL/view. The following link contains the VM setup instructions https://dynamatic.epfl.ch/downloads/DynamaticVM_setup_instructions.pdf
+2) Guorobi which is an MILP solver needed in Dynamatic's buffer placement through the following link https://www.gurobi.com/downloads/?campaignid=2027425882&adgroupid=77414946611&creative=601650357813&keyword=gurobi&matchtype=e&gclid=eaiaiqobchminsvdsbr3-givrgklch2j8wkaeaayasabegloxvd_bwe
 3) Vivado 2019.2
 
 ## Code Organization and Result Reproduction
@@ -26,5 +26,6 @@ To reproduce results:
 6) Run the script [NAME] in [WHICH DIRECTORY] to synthesize our generated circuits using Vivado. The script synthesizes the generated circuits one after the other. You can check the clock period of each benchmark in [FILENAME] and the resources in [FILENAME].
 
 To check the results of our two baselines:
-
+1) The results of the first Dynamatic baseline [13] are in [WHICH DIRECTORY]
+2) The results of the second Dynamatic baseline [6] are in [WHICH DIRECTORY]
 

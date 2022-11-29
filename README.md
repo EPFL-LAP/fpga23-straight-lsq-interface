@@ -11,7 +11,7 @@ In order to reproduce the main results, the following dependencies are needed:
 
 ## Code Organization 
 
-## Result Reproduction
+## Results Reproduction
 
 To reproduce the results:
 1) Download Dynamatic's virutal machine (VM)

@@ -17,7 +17,7 @@ export GRB_LICENSE_FILE=/opt/gurobi951/gurobi.lic
 
 file=filelist.lst
 i=0
-myArray=(fir histogram)
+myArray=(getTanh 2mm 3mm covariance jacobi_1d atax triangular histogram)
 
 clean="clean"
 

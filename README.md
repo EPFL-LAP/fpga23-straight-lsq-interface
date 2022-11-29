@@ -9,13 +9,9 @@ In order to reproduce the main results, the following dependencies are needed:
 2) Guorobi which is an MILP solver needed in Dynamatic's buffer placement through the following link https://www.gurobi.com/downloads/?campaignid=2027425882&adgroupid=77414946611&creative=601650357813&keyword=gurobi&matchtype=e&gclid=eaiaiqobchminsvdsbr3-givrgklch2j8wkaeaayasabegloxvd_bwe
 3) Vivado 2019.2
 
-## Code Organization and Result Reproduction
+## Code Organization 
 
-This repository is organized as follows:
-1) elastic-circuits/
-2) Buffers/
-3) components/
-4) dot2vhdl/
+## Result Reproduction
 
 To reproduce results:
 1) Download Dynamatic's virutal machine (VM)

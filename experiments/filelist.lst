@@ -1,0 +1,8 @@
+benchmarks/getTanh
+benchmarks/2mm
+benchmarks/3mm
+benchmarks/covariance
+benchmarks/jacobi_1d
+benchmarks/atax
+benchmarks/triangular
+benchmarks/histogram

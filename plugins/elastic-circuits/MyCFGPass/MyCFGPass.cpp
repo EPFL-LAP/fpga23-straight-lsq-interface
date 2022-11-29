@@ -128,7 +128,7 @@ public:
 				Or - If True: Make the CntrlOrder network implement the FPGA'23 algorithm
 			*/
 			// depending on the experiment I want, I manually change the flag to true or false.
-			bool is_smart_cntrlOrder_flag = false;
+			bool is_smart_cntrlOrder_flag = true;
 
 			bool lazy_fork_flag = false;
 

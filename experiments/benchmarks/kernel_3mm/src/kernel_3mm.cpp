@@ -8,7 +8,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "3mm.h"
+#include "kernel_3mm.h"
 
 int kernel_3mm(in_int_t A[N][N], in_int_t B[N][N], in_int_t C[N][N], in_int_t D[N][N], inout_int_t E[N][N], inout_int_t F[N][N], out_int_t G[N][N])
 {

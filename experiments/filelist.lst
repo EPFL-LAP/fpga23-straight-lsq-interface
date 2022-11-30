@@ -1,6 +1,6 @@
 benchmarks/getTanh
-benchmarks/2mm
-benchmarks/3mm
+benchmarks/kernel_2mm
+benchmarks/kernel_3mm
 benchmarks/covariance
 benchmarks/jacobi_1d
 benchmarks/atax

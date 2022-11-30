@@ -4,7 +4,7 @@
 workingdir="$(pwd)/synth_place_route_reports/"
 file=filelist.lst
 i=0
-myArray=(getTanh 2mm 3mm covariance jacobi_1d atax triangular histogram)
+myArray=(getTanh kernel_2mm kernel_3mm covariance jacobi_1d atax triangular histogram)
 
 timing_rpt=timing_post_pr.rpt
 util_rpt=utilization_post_pr.rpt

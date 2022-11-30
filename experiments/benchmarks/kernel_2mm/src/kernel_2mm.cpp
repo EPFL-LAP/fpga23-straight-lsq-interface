@@ -6,7 +6,7 @@
  * Web address: http://polybench.sourceforge.net
  */
 
-#include "2mm.h"
+#include "kernel_2mm.h"
 #include <stdio.h>
 #include <stdlib.h>
 

@@ -22,14 +22,14 @@ read_verilog  ../sim/VHDL_SRC/LSQ_data.v
 #source ../../components/array_RAM_ap_fmul_4_max_dsp_32_ip.tcl
 
 
-read_vhdl -vhdl2008 ../sim/VHDL_SRC/new_covariance_optimized.vhd
+read_vhdl -vhdl2008 ../sim/VHDL_SRC/covariance_optimized.vhd
 
 
 #synth_design -mode out_of_context -flatten_hierarchy rebuilt -top array_RAM -part 7k160tfbg484-1
 #comment line below out if no clock constraints
 read_xdc period_4.xdc
 
-synth_design -top new_covariance -part xc7k160tfbg484-1 -no_iobuf -mode out_of_context
+synth_design -top covariance -part xc7k160tfbg484-1 -no_iobuf -mode out_of_context
 
 report_utilization > utilization_post_syn.rpt
 report_timing > timing_post_syn.rpt

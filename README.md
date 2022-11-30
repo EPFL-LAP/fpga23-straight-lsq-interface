@@ -6,8 +6,10 @@ This repository holds the source code, benchmarks and results of the work presen
 
 In order to reproduce the main results, the following dependencies are needed:
 1) Dynamatic's virutal machine (VM) which contains an installation of the Dynamatic tool with its dependencies through the following link https://drive.google.com/file/d/1OI24totIPdp-P_inkdH1-slyNPw-huRL/view. The following link contains the VM setup instructions https://dynamatic.epfl.ch/downloads/DynamaticVM_setup_instructions.pdf
-2) Guorobi which is an MILP solver needed in Dynamatic's buffer placement through the following link https://www.gurobi.com/downloads/?campaignid=2027425882&adgroupid=77414946611&creative=601650357813&keyword=gurobi&matchtype=e&gclid=eaiaiqobchminsvdsbr3-givrgklch2j8wkaeaayasabegloxvd_bwe
+2) Guorobi optimizer version 9.5.1 build v9.5.1rc2 (linux64). It is an MILP solver needed in Dynamatic's buffer placement through the following link https://www.gurobi.com/downloads/?campaignid=2027425882&adgroupid=77414946611&creative=601650357813&keyword=gurobi&matchtype=e&gclid=eaiaiqobchminsvdsbr3-givrgklch2j8wkaeaayasabegloxvd_bwe
 3) Vivado 2019.2
+
+It would be better to install both Vivado and the Gurobi optimizer inside Dynamatic's VM to have the whole environment in one place.
 
 ## Code Organization 
 
@@ -15,7 +17,7 @@ In order to reproduce the main results, the following dependencies are needed:
 
 To reproduce the results:
 1) Download Dynamatic's virutal machine (VM)
-2) Inside the VM, install Gurobi.
+2) Inside the VM, install the Gurobi optimizer.
 3) Go through lines 7 to 11 in the compile_simulate_test.sh script and make sure that the intialization variables needed to run Gurobi are consistent with your installation path and license of Gurobi. 
 4) Inside the VM, install Vivado 2019.2.
 5) Clone this repository in home/Dynamatic/etc/dynamatic/

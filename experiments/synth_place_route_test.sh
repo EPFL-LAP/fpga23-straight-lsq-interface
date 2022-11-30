@@ -11,18 +11,7 @@ util_rpt=utilization_post_pr.rpt
 sim_report_dir=simulation_reports/
 clk_period=4
 
-# while IFS= read -r line
-# do
-#     # first create the synth directory by copying the needed scripts
-#     cp -r synth_place_route_scripts/${myArray[$i]}/synth ${line}/
-#     cd ${line}/synth/
-#     /softs/xilinx/Vivado/2019.2/bin/vivado -mode batch -source synthesize_4.tcl
-#     cd ../../../
-#     ((i=i+1))
-# done < "$file"
-
 # generate the summary reports
-# temporarily having this loop structure
 while IFS= read -r line
 do
     # first create the synth directory by copying the needed scripts

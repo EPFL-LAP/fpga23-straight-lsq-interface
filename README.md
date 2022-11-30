@@ -20,10 +20,11 @@ To reproduce the results:
 2) Inside the VM, install the Gurobi optimizer.
 3) Go through lines 7 to 11 in the compile_simulate_test.sh script and make sure that the intialization variables needed to run Gurobi are consistent with your installation path and license of Gurobi. 
 4) Inside the VM, install Vivado 2019.2.
-5) Clone this repository in home/Dynamatic/etc/dynamatic/
-6) From inside the directory of the cloned repository, run the install_plugins.sh script using the following command "bash ./install_plugins.sh" to install the plugins of this paper into Dynamatic's infrastructure
-7) From inside the directory of the cloned repository, run the script compile_simulate_test.sh using the following command "bash ./compile_simulate_test.sh" which runs our HLS tool to produce VHDL netlists out of the C++ inputs. The script runs the source code of the 8 benchmarks present in the benchmarks/ directory one after the other, then it simulates the generated designs. Reports of results are generated in simulation_reports/ directory. We generate three types of reports for each benchmark. [TODO: Explain the contents of each report]
-8) From inside the directory of the cloned repository, run the script synth_place_route_test.sh which runs synthesis as well as place and route using Vivado 2019.2 on our generated circuits. The script synthesizes the generated circuits of the 8 benchmarks one after the other. You can check the summary of the timing and area results in synth_place_route_reports/ directory.
+5) Make sure that line 20 in the synth_place_route_test.sh script is consistent with the path where Vivado is installed. For instance, if your Vivado installation is in "opt", the command should be modified to "/opt/xilinx/Vivado/2019.2/bin/vivado"
+6) Clone this repository in home/Dynamatic/etc/dynamatic/
+7) From inside the directory of the cloned repository, run the install_plugins.sh script using the following command "bash ./install_plugins.sh" to install the plugins of this paper into Dynamatic's infrastructure
+8) From inside the directory of the cloned repository, run the script compile_simulate_test.sh using the following command "bash ./compile_simulate_test.sh" which runs our HLS tool to produce VHDL netlists out of the C++ inputs. The script runs the source code of the 8 benchmarks present in the benchmarks/ directory one after the other, then it simulates the generated designs. Reports of results are generated in simulation_reports/ directory. We generate three types of reports for each benchmark. [TODO: Explain the contents of each report]
+9) From inside the directory of the cloned repository, run the script synth_place_route_test.sh which runs synthesis as well as place and route using Vivado 2019.2 on our generated circuits. The script synthesizes the generated circuits of the 8 benchmarks one after the other. You can check the summary of the timing and area results in synth_place_route_reports/ directory.
 
 The results of the two baselines that we referenced in the paper can be found in the baselines/ directory.
 

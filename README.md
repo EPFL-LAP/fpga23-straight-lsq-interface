@@ -14,7 +14,6 @@ Ideally, the rest of the dependencies should be installed inside Dynamatic's VM 
 
 This repository is composed of two main directories:
 1) plugins/ holds the implementation of the methodology proposed in the paper as a set of plugins that should be installed into the Dynamatic tool through the provided install_plugins.sh script.
-
 2) experiments/ holds the (i) C++ source files of the benchmarks used for generating the results reported in the paper, (ii) hls_verifier that verifies the correctness of the generated circuits, (iii) scripts that automate the process of running the HLS tool, simulating, synthesizing the generated designs and reporting the results.
 
 
@@ -23,8 +22,8 @@ This repository is composed of two main directories:
 ### Clone this repository
 
 Inside Dynamatic's VM, execute the following commands from a terminal.
-`cd Dynamatic/etc/dynamatic/
-git clone git@github.com:EPFL-LAP/fpga23-straight-lsq-interface.git`
+`cd Dynamatic/etc/dynamatic/`
+`git clone git@github.com:EPFL-LAP/fpga23-straight-lsq-interface.git`
 
 ### Ensure that tools installations comply with our scripts
 
@@ -36,16 +35,16 @@ Our scripts use the installation paths of the Gurobi optimizer and Vivado. Make 
 ### Install our plugins into Dynamatic
 
 To install our plugins into Dynamatic's infrastructure, run the following commands from a terminal. 
-`cd Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/
-chmod +x install_plugins.sh
-bash ./install_plugins.sh`
+`cd Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/`
+`chmod +x install_plugins.sh`
+`bash ./install_plugins.sh`
 
 ### Run the HLS flow and simulate the designs
 
 To generate circuits out of the C++ source files of our benchmarks, run the following commands from a terminal. 
-`cd Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments
-chmod +x compile_simulate_test.sh
-bash ./compile_simulate_test.sh`
+`cd Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments`
+`chmod +x compile_simulate_test.sh`
+`bash ./compile_simulate_test.sh`
 
 The previous commands do the following for all of the benchmarks one after the other:
 1) Run our HLS flow to generate VHDL netlists
@@ -66,15 +65,15 @@ If you would like to simulate the generated desgins using Modelsim, go to the Dy
 
 To synthesize, place and route the generated designs using Vivado, run the following commands from a terminal. 
 
-`cd Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments
-chmod +x synth_place_route_test.sh
-bash ./synth_place_route_test.sh`
+`cd Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments`
+`chmod +x synth_place_route_test.sh`
+`bash ./synth_place_route_test.sh`
 
 The outcome of the above step is the generation of a report with a summary of the timing and area results for each benchmark in the Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/synth_place_route_reports/ directory. 
 
 ### Check baselines results
 
-The results of the two baselines that we referenced in the paper can be found in the baselines/ directory.
+The results of the two baselines that we referenced in the paper can be found in the experiments/baselines/ directory.
 
 ## Contact
 

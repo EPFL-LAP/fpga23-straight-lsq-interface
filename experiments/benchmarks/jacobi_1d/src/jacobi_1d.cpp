@@ -19,7 +19,7 @@
 
 
 
-int jacobi_1d(inout_int_t A[N], inout_int_t B[N], inout_int_t C[N])
+int jacobi_1d(inout_int_t A_1[N], inout_int_t A_2[N], inout_int_t B[N])
 {
 
 	int t, i, j;
@@ -28,15 +28,12 @@ int jacobi_1d(inout_int_t A[N], inout_int_t B[N], inout_int_t C[N])
 	{
 
 		for (i = 1; i < N - 1; i++) {
-		    B[i] = 3 * (A[i-1] + A[i] + A[i + 1]);
+		    B[i] = 3 * (A_1[i-1] + A_1[i] + A_1[i + 1]);
 		}
 
 		for (j = 1; j < N - 1; j++) {
-		    C[j] = B[j];
+		    A_2[j] = B[j];
 		}
-
-		for (j = 1; j < N - 1; j++)
-		    A[j] = C[j];
 
 	}		
 

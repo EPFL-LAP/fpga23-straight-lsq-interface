@@ -5,9 +5,7 @@ read_vhdl -vhdl2008 ../sim/VHDL_SRC/elastic_components.vhd
 read_vhdl -vhdl2008 ../sim/VHDL_SRC/MemCont.vhd
 read_vhdl -vhdl2008 ../sim/VHDL_SRC/multipliers.vhd
 read_vhdl -vhdl2008 ../sim/VHDL_SRC/mul_wrapper.vhd
-read_verilog  ../sim/VHDL_SRC/LSQ_A.v
 read_verilog  ../sim/VHDL_SRC/LSQ_B.v
-read_verilog  ../sim/VHDL_SRC/LSQ_C.v
 
 #read_vhdl -vhdl2008 ../../components/array_RAM_fadd_32bkb.vhd
 #read_vhdl -vhdl2008 ../../../components/array_RAM_fsub_32bkb.vhd

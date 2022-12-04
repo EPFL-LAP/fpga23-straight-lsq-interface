@@ -33,9 +33,11 @@ do
 
     #echo " " >> $workingdir/$synth_summary_rpt
     cycle_count_str=`grep "cycles" "${sim_report_dir}/${myArray[$i]}_cycles_count.rpt"`
-    cycle_count=`echo $cycle_count_str | tr -dc '0-9'`
-    echo "The cycles count from simulation is ${cycle_count}" >> $workingdir/$synth_summary_rpt
-    exec_time=`echo "$cycle_count * $actual_cp" | bc`
+    #cycle_count=`echo $cycle_count_str | tr -dc '0-9'`
+    cycle_count=`echo ${cycle_count_str% *}` 
+    cycle_count_final=`echo ${cycle_count##* }`
+    echo "The cycles count from simulation is ${cycle_count_final}" >> $workingdir/$synth_summary_rpt
+    exec_time=`echo "$cycle_count_final * $actual_cp" | bc`
     echo "The total execution time is ${exec_time}ns" >> $workingdir/$synth_summary_rpt
     echo " " >> $workingdir/$synth_summary_rpt
 

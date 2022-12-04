@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2.1 (64-bit)
+# SW Build 2729669 on Thu Dec  5 04:48:12 MST 2019
+# IP Build 2729494 on Thu Dec  5 07:38:25 MST 2019
+# Start of session at: Sun Dec  4 19:26:43 2022
+# Process ID: 82489
+# Current directory: /home/elakhras/dynamatic_work/FPGA'23/artifact_eval_check/fpga23-straight-lsq-interface/experiments/benchmarks/kernel_2mm/synth
+# Command line: vivado -mode batch -source synthesize_4.tcl
+# Log file: /home/elakhras/dynamatic_work/FPGA'23/artifact_eval_check/fpga23-straight-lsq-interface/experiments/benchmarks/kernel_2mm/synth/vivado.log
+# Journal file: /home/elakhras/dynamatic_work/FPGA'23/artifact_eval_check/fpga23-straight-lsq-interface/experiments/benchmarks/kernel_2mm/synth/vivado.jou
+#-----------------------------------------------------------
+source synthesize_4.tcl

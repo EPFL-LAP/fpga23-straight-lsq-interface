@@ -1,0 +1,7 @@
+************************************
+Synthesis getTanh_optimized
+Checking dot... PASS
+Checking vhdl... PASS
+Simulating getTanh
+Checking results...PASS
+Checking if simulations run...PASS

@@ -1,0 +1,7 @@
+************************************
+Synthesis histogram_optimized
+Checking dot... PASS
+Checking vhdl... PASS
+Simulating histogram
+Checking results...PASS
+Checking if simulations run...PASS

@@ -1,0 +1,13 @@
+**************************************************
+Timing Summary for the benchmarks/kernel_3mm example
+The clk period constraint applied during synthesis is 4ns
+The slack is -3.870ns
+The actual clk period (CP) is 7.870ns
+The cycles count from simulation is 2498
+The total execution time is 19659.26ns
+ 
+**************************************************
+Area Summary for the benchmarks/kernel_3mm example
+The LUTs count is  39742 
+The FFs count is  10667 
+The DSPs count is  9 

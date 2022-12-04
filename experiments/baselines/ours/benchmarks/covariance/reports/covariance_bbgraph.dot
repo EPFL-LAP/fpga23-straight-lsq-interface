@@ -1,0 +1,38 @@
+Digraph G {
+	splines=spline;
+//DHLS version: 0.1.1" [shape = "none" pos = "20,20!"]
+		"block1";
+		"block2";
+		"block3";
+		"block4";
+		"block5";
+		"block6";
+		"block7";
+		"block8";
+		"block9";
+		"block10";
+		"block11";
+		"block12";
+		"block13";
+		"block14";
+		"block1" -> "block2" [color = "blue", freq = 1];
+		"block2" -> "block3" [color = "blue", freq = 32];
+		"block3" -> "block3" [color = "red", freq = 992];
+		"block3" -> "block4" [color = "blue", freq = 32];
+		"block4" -> "block5" [color = "blue", freq = 32];
+		"block5" -> "block5" [color = "red", freq = 992];
+		"block5" -> "block6" [color = "blue", freq = 32];
+		"block6" -> "block2" [color = "red", freq = 31];
+		"block6" -> "block7" [color = "blue", freq = 1];
+		"block7" -> "block8" [color = "blue", freq = 1];
+		"block8" -> "block9" [color = "blue", freq = 32];
+		"block8" -> "block13" [color = "blue", freq = 0];
+		"block9" -> "block10" [color = "blue", freq = 32];
+		"block10" -> "block11" [color = "blue", freq = 528];
+		"block11" -> "block11" [color = "red", freq = 16368];
+		"block11" -> "block12" [color = "blue", freq = 528];
+		"block12" -> "block10" [color = "red", freq = 496];
+		"block12" -> "block13" [color = "blue", freq = 32];
+		"block13" -> "block8" [color = "red", freq = 31];
+		"block13" -> "block14" [color = "blue", freq = 1];
+}

@@ -1,0 +1,40 @@
+
+
+Considering f_prod =  1 
+
+
+
+And f_cons =  not C5 &  + 
+
+The outcome of negating the product number 0is: 	 C5 +  & 
+
+
+
+Considering f_prod =  1 
+
+
+
+And f_cons =  not C3 &  + 
+
+The outcome of negating the product number 0is: 	 C3 +  & 
+
+
+
+Considering f_prod =  1 
+
+
+
+And f_cons =  C5 &  + 
+
+The outcome of negating the product number 0is: 	 not C5 +  & 
+
+
+
+Considering f_prod =  1 
+
+
+
+And f_cons =  C3 &  + 
+
+The outcome of negating the product number 0is: 	 not C3 +  & 
+

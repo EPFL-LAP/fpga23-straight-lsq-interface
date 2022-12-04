@@ -1,0 +1,166 @@
+
+---------------------------------------------------
+Producer in BBbbID= 1 to a Consumer in BB bbID= 1
+
+---------------------------------------------------
+Producer in BBbbID= 1 to a Consumer in BB bbID= 1
+
+---------------------------------------------------
+Producer in BBbbID= 1 to a Consumer in BB bbID= 3
+
+---------------------------------------------------
+Producer in BBbbID= 1 to a Consumer in BB bbID= 7
+
+---------------------------------------------------
+Producer in BBbbID= 1 to a Consumer in BB bbID= 1
+
+---------------------------------------------------
+Producer in BBbbID= 1 to a Consumer in BB bbID= 3
+
+---------------------------------------------------
+Producer in BBbbID= 1 to a Consumer in BB bbID= 7
+
+---------------------------------------------------
+Producer in BBbbID= 1 to a Consumer in BB bbID= 1
+
+---------------------------------------------------
+Producer in BBbbID= 1 to a Consumer in BB bbID= 1
+
+---------------------------------------------------
+Producer in BBbbID= 3 to a Consumer in BB bbID= 3
+
+---------------------------------------------------
+Producer in BBbbID= 3 to a Consumer in BB bbID= 5
+
+---------------------------------------------------
+Producer in BBbbID= 3 to a Consumer in BB bbID= 6
+
+---------------------------------------------------
+Producer in BBbbID= 3 to a Consumer in BB bbID= 6
+
+---------------------------------------------------
+Producer in BBbbID= 3 to a Consumer in BB bbID= 5
+
+---------------------------------------------------
+Producer in BBbbID= 3 to a Consumer in BB bbID= 5
+
+---------------------------------------------------
+Producer in BBbbID= 3 to a Consumer in BB bbID= 3
+
+---------------------------------------------------
+Producer in BBbbID= 3 to a Consumer in BB bbID= 3
+
+---------------------------------------------------
+Producer in BBbbID= 5 to a Consumer in BB bbID= 5
+
+---------------------------------------------------
+Producer in BBbbID= 5 to a Consumer in BB bbID= 5
+
+---------------------------------------------------
+Producer in BBbbID= 5 to a Consumer in BB bbID= 5
+
+---------------------------------------------------
+Producer in BBbbID= 5 to a Consumer in BB bbID= 5
+
+---------------------------------------------------
+Producer in BBbbID= 5 to a Consumer in BB bbID= 5
+
+---------------------------------------------------
+Producer in BBbbID= 5 to a Consumer in BB bbID= 5
+
+---------------------------------------------------
+Producer in BBbbID= 5 to a Consumer in BB bbID= 5
+
+---------------------------------------------------
+Producer in BBbbID= 5 to a Consumer in BB bbID= 5
+
+---------------------------------------------------
+Producer in BBbbID= 5 to a Consumer in BB bbID= 5
+
+---------------------------------------------------
+Producer in BBbbID= 5 to a Consumer in BB bbID= 5
+
+---------------------------------------------------
+
+---------------------------------------------------
+Producer in BBbbID= 5 to a Consumer in BB bbID= 5
+
+---------------------------------------------------
+
+---------------------------------------------------
+Producer in BBbbID= 5 to a Consumer in BB bbID= 5
+
+---------------------------------------------------
+Producer in BBbbID= 5 to a Consumer in BB bbID= 5
+
+---------------------------------------------------
+Producer in BBbbID= 5 to a Consumer in BB bbID= 5
+
+---------------------------------------------------
+Producer in BBbbID= 5 to a Consumer in BB bbID= 5
+
+---------------------------------------------------
+Producer in BBbbID= 5 to a Consumer in BB bbID= 5
+
+---------------------------------------------------
+Producer in BBbbID= 5 to a Consumer in BB bbID= 5
+
+---------------------------------------------------
+
+---------------------------------------------------
+Producer in BBbbID= 5 to a Consumer in BB bbID= 5
+
+---------------------------------------------------
+
+---------------------------------------------------
+Producer in BBbbID= 5 to a Consumer in BB bbID= 5
+
+---------------------------------------------------
+Producer in BBbbID= 5 to a Consumer in BB bbID= 5
+
+---------------------------------------------------
+Producer in BBbbID= 6 to a Consumer in BB bbID= 6
+
+---------------------------------------------------
+Producer in BBbbID= 6 to a Consumer in BB bbID= 3
+
+---------------------------------------------------
+Producer in BBbbID= 6 to a Consumer in BB bbID= 7
+
+---------------------------------------------------
+Producer in BBbbID= 6 to a Consumer in BB bbID= 6
+
+---------------------------------------------------
+Producer in BBbbID= 6 to a Consumer in BB bbID= 6
+
+---------------------------------------------------
+Producer in BBbbID= 7 to a Consumer in BB bbID= 7
+
+---------------------------------------------------
+Producer in BBbbID= 7 to a Consumer in BB bbID= 7
+
+---------------------------------------------------
+
+---------------------------------------------------
+Producer in BBbbID= 5 to a Consumer in BB bbID= 5
+
+---------------------------------------------------
+Producer in BBbbID= 5 to a Consumer in BB bbID= 5
+
+---------------------------------------------------
+Producer in BBbbID= 3 to a Consumer in BB bbID= 5
+
+---------------------------------------------------
+Producer in BBbbID= 3 to a Consumer in BB bbID= 3
+
+---------------------------------------------------
+Producer in BBbbID= 5 to a Consumer in BB bbID= 5
+
+---------------------------------------------------
+Producer in BBbbID= 5 to a Consumer in BB bbID= 5
+
+---------------------------------------------------
+Producer in BBbbID= 5 to a Consumer in BB bbID= 5
+
+---------------------------------------------------
+Producer in BBbbID= 5 to a Consumer in BB bbID= 5

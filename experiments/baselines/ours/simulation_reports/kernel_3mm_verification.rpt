@@ -1,0 +1,7 @@
+************************************
+Synthesis kernel_3mm_optimized
+Checking dot... PASS
+Checking vhdl... PASS
+Simulating kernel_3mm
+Checking results...PASS
+Checking if simulations run...PASS

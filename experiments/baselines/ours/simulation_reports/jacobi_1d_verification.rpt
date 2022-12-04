@@ -1,0 +1,7 @@
+************************************
+Synthesis jacobi_1d_optimized
+Checking dot... PASS
+Checking vhdl... PASS
+Simulating jacobi_1d
+Checking results...PASS
+Checking if simulations run...PASS

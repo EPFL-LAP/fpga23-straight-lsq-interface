@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -fno-rtti -g  -shared  -o libLLVMMemElemInfo.so CMakeFiles/LLVMMemElemInfo.dir/IndexAnalysis.cpp.o CMakeFiles/LLVMMemElemInfo.dir/MemElemInfo.cpp.o CMakeFiles/LLVMMemElemInfo.dir/TokenDependenceInfo.cpp.o CMakeFiles/LLVMMemElemInfo.dir/MemUtils.cpp.o  -L/home/dynamatic/Dynamatic/etc/llvm-6.0/lib 

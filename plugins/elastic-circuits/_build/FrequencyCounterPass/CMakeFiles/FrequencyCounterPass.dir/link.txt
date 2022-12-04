@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -fopenmp -fno-rtti -fPIC -g  -shared  -o libFrequencyCounterPass.so CMakeFiles/FrequencyCounterPass.dir/FrequencyCounterPass.cpp.o  -L/home/dynamatic/Dynamatic/etc/llvm-6.0/lib 

@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -fopenmp -fno-rtti -fPIC -g  -shared  -o libFrequencyDataGatherPass.so CMakeFiles/FrequencyDataGatherPass.dir/FrequencyDataGatherPass.cpp.o  -L/home/dynamatic/Dynamatic/etc/llvm-6.0/lib 

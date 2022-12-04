@@ -1,0 +1,36 @@
+Digraph G {
+	splines=spline;
+		"block1";
+		"block2";
+		"block3";
+		"block4";
+		"block5";
+		"block6";
+		"block7";
+		"block8";
+		"block9";
+		"block10";
+		"block11";
+		"block12";
+		"block13";
+		"block1" -> "block2" [color = "blue", freq = 1, DSU = 0, MG = ""];
+		"block2" -> "block3" [color = "blue", freq = 32, DSU = 2, MG = "6"];
+		"block3" -> "block3" [color = "red", freq = 992, DSU = 2, MG = "4"];
+		"block3" -> "block4" [color = "blue", freq = 32, DSU = 2, MG = "6"];
+		"block4" -> "block5" [color = "blue", freq = 32, DSU = 2, MG = "6"];
+		"block5" -> "block5" [color = "red", freq = 992, DSU = 2, MG = "3"];
+		"block5" -> "block6" [color = "blue", freq = 32, DSU = 2, MG = "6"];
+		"block6" -> "block2" [color = "red", freq = 31, DSU = 2, MG = "6"];
+		"block6" -> "block7" [color = "blue", freq = 1, DSU = 0, MG = ""];
+		"block7" -> "block8" [color = "blue", freq = 1, DSU = 0, MG = ""];
+		"block8" -> "block9" [color = "blue", freq = 32, DSU = 1, MG = "5"];
+		"block8" -> "block13" [color = "blue", freq = 0, DSU = 0, MG = ""];
+		"block9" -> "block10" [color = "blue", freq = 32, DSU = 1, MG = "5"];
+		"block10" -> "block11" [color = "blue", freq = 528, DSU = 1, MG = "2, 5"];
+		"block11" -> "block11" [color = "red", freq = 16368, DSU = 1, MG = "1"];
+		"block11" -> "block12" [color = "blue", freq = 528, DSU = 1, MG = "2, 5"];
+		"block12" -> "block10" [color = "red", freq = 496, DSU = 1, MG = "2"];
+		"block12" -> "block13" [color = "blue", freq = 32, DSU = 1, MG = "5"];
+		"block13" -> "block8" [color = "red", freq = 31, DSU = 1, MG = "5"];
+		"block13" -> "block14" [color = "blue", freq = 1, DSU = 0, MG = ""];
+}

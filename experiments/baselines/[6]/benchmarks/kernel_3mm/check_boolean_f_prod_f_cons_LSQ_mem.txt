@@ -1,0 +1,244 @@
+
+
+======================================================
+
+
+Consumer of type type = "Fork!!
+
+
+	New (Producer,Consumer) pair: (BB3, BB5)
+
+*******************************************
+
+Found 1 paths
+Printing path number 0 details
+5 -> 4 -> 3 -> 2 -> 1 -> 
+
+*******************************************
+
+Found 1 paths
+Printing path number 0 details
+3 -> 2 -> 1 -> 
+
+
+======================================================
+
+
+Consumer of type type = "Fork!!
+
+
+	New (Producer,Consumer) pair: (BB9, BB11)
+
+*******************************************
+
+Found 1 paths
+Printing path number 0 details
+11 -> 10 -> 9 -> 8 -> 7 -> 6 -> 5 -> 4 -> 3 -> 2 -> 1 -> 
+
+*******************************************
+
+Found 1 paths
+Printing path number 0 details
+9 -> 8 -> 7 -> 6 -> 5 -> 4 -> 3 -> 2 -> 1 -> 
+
+
+======================================================
+
+
+Consumer of type type = "Merge!!
+
+
+	New (Producer,Consumer) pair: (BB15, BB16)
+
+*******************************************
+
+Found 1 paths
+Printing path number 0 details
+16 -> 15 -> 14 -> 13 -> 12 -> 11 -> 10 -> 9 -> 8 -> 7 -> 6 -> 5 -> 4 -> 3 -> 2 -> 1 -> 
+
+*******************************************
+
+Found 1 paths
+Printing path number 0 details
+15 -> 14 -> 13 -> 12 -> 11 -> 10 -> 9 -> 8 -> 7 -> 6 -> 5 -> 4 -> 3 -> 2 -> 1 -> 
+
+
+======================================================
+
+
+Consumer of type type = "Merge!!
+
+
+	New (Producer,Consumer) pair: (BB16, BB16)
+
+*******************************************
+
+Found 1 paths
+Printing path number 0 details
+16 -> 
+
+
+======================================================
+
+
+Consumer of type type = "Merge!!
+
+
+	New (Producer,Consumer) pair: (BB14, BB15)
+
+*******************************************
+
+Found 1 paths
+Printing path number 0 details
+15 -> 14 -> 13 -> 12 -> 11 -> 10 -> 9 -> 8 -> 7 -> 6 -> 5 -> 4 -> 3 -> 2 -> 1 -> 
+
+*******************************************
+
+Found 1 paths
+Printing path number 0 details
+14 -> 13 -> 12 -> 11 -> 10 -> 9 -> 8 -> 7 -> 6 -> 5 -> 4 -> 3 -> 2 -> 1 -> 
+
+
+======================================================
+
+
+Consumer of type type = "Merge!!
+
+
+	New (Producer,Consumer) pair: (BB15, BB15)
+
+*******************************************
+
+Found 1 paths
+Printing path number 0 details
+15 -> 
+
+
+======================================================
+
+
+Consumer of type type = "Merge!!
+
+
+	New (Producer,Consumer) pair: (BB5, BB14)
+
+*******************************************
+
+Found 1 paths
+Printing path number 0 details
+14 -> 13 -> 12 -> 11 -> 10 -> 9 -> 8 -> 7 -> 6 -> 5 -> 4 -> 3 -> 2 -> 1 -> 
+
+
+======================================================
+
+
+Consumer of type type = "Merge!!
+
+
+	New (Producer,Consumer) pair: (BB14, BB14)
+
+*******************************************
+
+Found 1 paths
+Printing path number 0 details
+14 -> 
+
+
+======================================================
+
+
+Consumer of type type = "Merge!!
+
+
+	New (Producer,Consumer) pair: (BB15, BB16)
+
+*******************************************
+
+Found 0 paths
+
+*******************************************
+
+Found 1 paths
+Printing path number 0 details
+15 -> 14 -> 13 -> 12 -> 11 -> 10 -> 9 -> 8 -> 7 -> 6 -> 5 -> 4 -> 3 -> 2 -> 1 -> 
+
+
+======================================================
+
+
+Consumer of type type = "Merge!!
+
+
+	New (Producer,Consumer) pair: (BB16, BB16)
+
+*******************************************
+
+Found 1 paths
+Printing path number 0 details
+16 -> 
+
+
+======================================================
+
+
+Consumer of type type = "Merge!!
+
+
+	New (Producer,Consumer) pair: (BB14, BB15)
+
+*******************************************
+
+Found 1 paths
+Printing path number 0 details
+15 -> 14 -> 13 -> 12 -> 11 -> 10 -> 9 -> 8 -> 7 -> 6 -> 5 -> 4 -> 3 -> 2 -> 1 -> 
+
+*******************************************
+
+Found 1 paths
+Printing path number 0 details
+14 -> 13 -> 12 -> 11 -> 10 -> 9 -> 8 -> 7 -> 6 -> 5 -> 4 -> 3 -> 2 -> 1 -> 
+
+
+======================================================
+
+
+Consumer of type type = "Merge!!
+
+
+	New (Producer,Consumer) pair: (BB15, BB15)
+
+*******************************************
+
+Found 1 paths
+Printing path number 0 details
+15 -> 
+
+
+======================================================
+
+
+Consumer of type type = "Merge!!
+
+
+	New (Producer,Consumer) pair: (BB11, BB14)
+
+*******************************************
+
+Found 1 paths
+Printing path number 0 details
+14 -> 13 -> 12 -> 11 -> 10 -> 9 -> 8 -> 7 -> 6 -> 5 -> 4 -> 3 -> 2 -> 1 -> 
+
+
+======================================================
+
+
+Consumer of type type = "Merge!!
+
+
+	New (Producer,Consumer) pair: (BB14, BB14)
+
+*******************************************
+
+Found 1 paths
+Printing path number 0 details
+14 -> 

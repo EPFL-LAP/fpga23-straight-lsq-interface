@@ -1,0 +1,98 @@
+
+This file lists the control dependencies of each BB
+
+
+****************************************
+	BB1:
+Has no control dependencies!!
+
+
+****************************************
+	BB2:
+Has no control dependencies!!
+
+
+****************************************
+	BB3:
+Has no control dependencies!!
+
+
+****************************************
+	BB4:
+Has no control dependencies!!
+
+
+****************************************
+	BB5:
+Has no control dependencies!!
+
+
+****************************************
+	BB6:
+Has no control dependencies!!
+
+
+****************************************
+	BB7:
+Has no control dependencies!!
+
+
+****************************************
+	BB8:
+Has no control dependencies!!
+
+
+****************************************
+	BB9:
+Has no control dependencies!!
+
+
+****************************************
+	BB10:
+Has no control dependencies!!
+
+
+****************************************
+	BB11:
+Has no control dependencies!!
+
+
+****************************************
+	BB12:
+Has no control dependencies!!
+
+
+****************************************
+	BB13:
+Has no control dependencies!!
+
+
+****************************************
+	BB14:
+Has no control dependencies!!
+
+
+****************************************
+	BB15:
+Has no control dependencies!!
+
+
+****************************************
+	BB16:
+Has no control dependencies!!
+
+
+****************************************
+	BB17:
+Has no control dependencies!!
+
+
+****************************************
+	BB18:
+Has no control dependencies!!
+
+
+****************************************
+	BB19:
+Has no control dependencies!!
+

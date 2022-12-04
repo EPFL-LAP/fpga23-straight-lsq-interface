@@ -1,0 +1,23 @@
+
+
+======================================================
+
+
+Consumer of type type = "Fork!!
+
+
+	New (Producer,Consumer) pair: (BB2, BB4)
+
+*******************************************
+
+Found 2 paths
+Printing path number 0 details
+4 -> 2 -> 1 -> 
+Printing path number 1 details
+4 -> 3 -> 2 -> 1 -> 
+
+*******************************************
+
+Found 1 paths
+Printing path number 0 details
+2 -> 1 -> 

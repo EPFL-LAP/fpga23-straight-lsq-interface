@@ -1,0 +1,90 @@
+
+
+Considering f_prod =  1 
+
+
+
+And f_cons =  C6 &  + 
+
+The outcome of negating the product number 0is: 	 not C6 +  & 
+
+
+
+Considering f_prod =  1 
+
+
+
+And f_cons =  C5 &  + 
+
+The outcome of negating the product number 0is: 	 not C5 +  & 
+
+
+
+Considering f_prod =  1 
+
+
+
+And f_cons =  C4 &  + 
+
+The outcome of negating the product number 0is: 	 not C4 +  & 
+
+
+
+Considering f_prod =  1 
+
+
+
+And f_cons =  C12 &  + 
+
+The outcome of negating the product number 0is: 	 not C12 +  & 
+
+
+
+Considering f_prod =  1 
+
+
+
+And f_cons =  C11 &  + 
+
+The outcome of negating the product number 0is: 	 not C11 +  & 
+
+
+
+Considering f_prod =  1 
+
+
+
+And f_cons =  C10 &  + 
+
+The outcome of negating the product number 0is: 	 not C10 +  & 
+
+
+
+Considering f_prod =  1 
+
+
+
+And f_cons =  C18 &  + 
+
+The outcome of negating the product number 0is: 	 not C18 +  & 
+
+
+
+Considering f_prod =  1 
+
+
+
+And f_cons =  C17 &  + 
+
+The outcome of negating the product number 0is: 	 not C17 +  & 
+
+
+
+Considering f_prod =  1 
+
+
+
+And f_cons =  C16 &  + 
+
+The outcome of negating the product number 0is: 	 not C16 +  & 
+

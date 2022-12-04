@@ -1,0 +1,93 @@
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2.1 (lin64) Build 2729669 Thu Dec  5 04:48:12 MST 2019
+| Date         : Mon Nov 28 19:00:11 2022
+| Host         : lapsrv6.epfl.ch running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command      : report_timing
+| Design       : triangular
+| Device       : 7k160t-fbg484
+| Speed File   : -1  PRODUCTION 1.12 2017-02-17
+--------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (VIOLATED) :        -5.175ns  (required time - arrival time)
+  Source:                 Buffer_5/fifo/Head_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            c_LSQ_A/loadQ/addrQ_4_reg[31]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (clk rise@4.000ns - clk rise@0.000ns)
+  Data Path Delay:        8.727ns  (logic 2.432ns (27.869%)  route 6.295ns (72.131%))
+  Logic Levels:           11  (CARRY4=6 LUT3=2 LUT6=2 RAMD32=1)
+  Clock Path Skew:        -0.306ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.286ns = ( 5.286 - 4.000 ) 
+    Source Clock Delay      (SCD):    1.602ns
+    Clock Pessimism Removal (CPR):    0.010ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=5108, unset)         1.602     1.602    Buffer_5/fifo/clk
+    SLICE_X25Y94         FDRE                                         r  Buffer_5/fifo/Head_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X25Y94         FDRE (Prop_fdre_C_Q)         0.269     1.871 r  Buffer_5/fifo/Head_reg[1]/Q
+                         net (fo=21, routed)          1.124     2.995    Buffer_5/fifo/Memory_reg_0_3_30_31/ADDRA1
+    SLICE_X40Y90         RAMD32 (Prop_ramd32_RADR1_O)
+                                                      0.066     3.061 r  Buffer_5/fifo/Memory_reg_0_3_30_31/RAMA/O
+                         net (fo=66, routed)          0.954     4.015    Buffer_5/fifo/dataOutArray[0][12]
+    SLICE_X35Y90         LUT6 (Prop_lut6_I4_O)        0.168     4.183 r  Buffer_5/fifo/addrQ_15[31]_i_140/O
+                         net (fo=4, routed)           0.554     4.737    Buffer_5/fifo/clk_36[1]
+    SLICE_X36Y90         LUT6 (Prop_lut6_I0_O)        0.053     4.790 r  Buffer_5/fifo/addrQ_15[31]_i_260/O
+                         net (fo=1, routed)           0.000     4.790    getelementptr_20/addrQ_15[27]_i_58_0[1]
+    SLICE_X36Y90         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.379     5.169 r  getelementptr_20/addrQ_15_reg[31]_i_120/O[3]
+                         net (fo=3, routed)           0.533     5.702    getelementptr_20/addrQ_15_reg[31]_i_120_n_4
+    SLICE_X35Y88         LUT3 (Prop_lut3_I1_O)        0.142     5.844 r  getelementptr_20/addrQ_15[31]_i_78/O
+                         net (fo=1, routed)           0.690     6.534    getelementptr_20/addrQ_15[31]_i_78_n_0
+    SLICE_X39Y89         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.230     6.764 r  getelementptr_20/addrQ_15_reg[31]_i_30/CO[3]
+                         net (fo=1, routed)           0.000     6.764    getelementptr_20/addrQ_15_reg[31]_i_30_n_0
+    SLICE_X39Y90         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.136     6.900 r  getelementptr_20/addrQ_15_reg[31]_i_25/O[2]
+                         net (fo=3, routed)           0.723     7.623    getelementptr_20/addrQ_15_reg[31]_i_25_n_5
+    SLICE_X45Y95         LUT3 (Prop_lut3_I2_O)        0.152     7.775 r  getelementptr_20/addrQ_15[31]_i_14/O
+                         net (fo=1, routed)           0.359     8.135    getelementptr_20/addrQ_15[31]_i_14_n_0
+    SLICE_X44Y94         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.234     8.369 r  getelementptr_20/addrQ_15_reg[31]_i_4/CO[3]
+                         net (fo=1, routed)           0.000     8.369    getelementptr_20/addrQ_15_reg[31]_i_4_n_0
+    SLICE_X44Y95         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.135     8.504 r  getelementptr_20/addrQ_15_reg[31]_i_3/O[0]
+                         net (fo=2, routed)           0.356     8.860    getelementptr_20/dataOutArray[0]1[29]
+    SLICE_X46Y96         CARRY4 (Prop_carry4_DI[1]_O[3])
+                                                      0.468     9.328 r  getelementptr_20/addrQ_15_reg[31]_i_2/O[3]
+                         net (fo=32, routed)          1.001    10.329    c_LSQ_A/loadQ/dataOutArray[0][31]
+    SLICE_X49Y107        FDRE                                         r  c_LSQ_A/loadQ/addrQ_4_reg[31]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        4.000     4.000 r  
+                                                      0.000     4.000 r  clk (IN)
+                         net (fo=5108, unset)         1.286     5.286    c_LSQ_A/loadQ/clk
+    SLICE_X49Y107        FDRE                                         r  c_LSQ_A/loadQ/addrQ_4_reg[31]/C
+                         clock pessimism              0.010     5.296    
+                         clock uncertainty           -0.035     5.261    
+    SLICE_X49Y107        FDRE (Setup_fdre_C_D)       -0.107     5.154    c_LSQ_A/loadQ/addrQ_4_reg[31]
+  -------------------------------------------------------------------
+                         required time                          5.154    
+                         arrival time                         -10.329    
+  -------------------------------------------------------------------
+                         slack                                 -5.175    
+
+
+
+

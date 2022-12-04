@@ -1,0 +1,7 @@
+************************************
+Synthesis new_covariance_optimized
+Checking dot... PASS
+Checking vhdl... PASS
+Simulating new_covariance
+Checking results...PASS
+Checking if simulations run...PASS

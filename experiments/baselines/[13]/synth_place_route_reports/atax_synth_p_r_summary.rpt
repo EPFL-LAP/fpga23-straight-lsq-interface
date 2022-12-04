@@ -1,0 +1,13 @@
+**************************************************
+Timing Summary for the benchmarks/atax example
+The clk period constraint applied during synthesis is 4ns
+The slack is -2.815ns
+The actual clk period (CP) is 6.80ns
+The cycles count from simulation is 1149
+The total execution time is 7813ns
+ 
+**************************************************
+Area Summary for the benchmarks/atax example
+The LUTs count is  20559 
+The FFs count is  5424 
+The DSPs count is  6 

@@ -1,0 +1,753 @@
+
+Gurobi 9.5.1 (linux64, gurobi_cl) logging started Mon Mar 21 19:40:38 2022
+
+Set parameter Username
+Set parameter LogFile to value "gurobi.log"
+Academic license - for non-commercial use only - expires 2023-03-13
+Using license file /opt/gurobi951/gurobi.lic
+
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Copyright (c) 2022, Gurobi Optimization, LLC
+
+Read LP format model from file MILP_lpmodel.hXdYg6.lp
+Reading time = 0.00 seconds
+: 35 rows, 18 columns, 76 nonzeros
+Thread count: 1 physical cores, 1 logical processors, using up to 1 threads
+Optimize a model with 35 rows, 18 columns and 76 nonzeros
+Model fingerprint: 0x1c2f8a8a
+Variable types: 6 continuous, 12 integer (11 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+03]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+03]
+  RHS range        [1e+00, 1e+03]
+Found heuristic solution: objective -0.0000000
+Presolve removed 28 rows and 14 columns
+Presolve time: 0.00s
+Presolved: 7 rows, 4 columns, 16 nonzeros
+Variable types: 0 continuous, 4 integer (1 binary)
+Found heuristic solution: objective 4.0000000
+
+Root relaxation: objective 1.980000e+03, 2 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    1980.0000000 1980.00000  0.00%     -    0s
+
+Explored 1 nodes (2 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 1 available processors)
+
+Solution count 3: 1980 4 -0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.980000000000e+03, best bound 1.980000000000e+03, gap 0.0000%
+
+Wrote result file 'MILP_solution.Mwx4as.sol'
+
+
+Gurobi 9.5.1 (linux64, gurobi_cl) logging started Mon Mar 21 19:40:38 2022
+
+Set parameter Username
+Set parameter LogFile to value "gurobi.log"
+Academic license - for non-commercial use only - expires 2023-03-13
+Using license file /opt/gurobi951/gurobi.lic
+
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Copyright (c) 2022, Gurobi Optimization, LLC
+
+Read LP format model from file MILP_lpmodel.8QgYeO.lp
+Reading time = 0.00 seconds
+: 31 rows, 16 columns, 64 nonzeros
+Thread count: 1 physical cores, 1 logical processors, using up to 1 threads
+Optimize a model with 31 rows, 16 columns and 64 nonzeros
+Model fingerprint: 0x20761692
+Variable types: 5 continuous, 11 integer (10 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+01]
+  RHS range        [1e+00, 1e+01]
+Found heuristic solution: objective -0.0000000
+Presolve removed 31 rows and 16 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 1 available processors)
+
+Solution count 2: 27 -0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.700000000000e+01, best bound 2.700000000000e+01, gap 0.0000%
+
+Wrote result file 'MILP_solution.wOISia.sol'
+
+
+Gurobi 9.5.1 (linux64, gurobi_cl) logging started Mon Mar 21 19:40:38 2022
+
+Set parameter Username
+Set parameter LogFile to value "gurobi.log"
+Academic license - for non-commercial use only - expires 2023-03-13
+Using license file /opt/gurobi951/gurobi.lic
+
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Copyright (c) 2022, Gurobi Optimization, LLC
+
+Read LP format model from file MILP_lpmodel.wPIqrw.lp
+Reading time = 0.00 seconds
+: 26 rows, 14 columns, 50 nonzeros
+Thread count: 1 physical cores, 1 logical processors, using up to 1 threads
+Optimize a model with 26 rows, 14 columns and 50 nonzeros
+Model fingerprint: 0xc0c4b483
+Variable types: 4 continuous, 10 integer (9 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 26 rows and 14 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 1 available processors)
+
+Solution count 1: -0 
+No other solutions better than -0
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -0.000000000000e+00, best bound -0.000000000000e+00, gap 0.0000%
+
+Wrote result file 'MILP_solution.QmkZzS.sol'
+
+
+Gurobi 9.5.1 (linux64, gurobi_cl) logging started Mon Mar 21 19:40:38 2022
+
+Set parameter Username
+Set parameter TimeLimit to value 180
+Set parameter LogFile to value "gurobi.log"
+Academic license - for non-commercial use only - expires 2023-03-13
+Using license file /opt/gurobi951/gurobi.lic
+
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Copyright (c) 2022, Gurobi Optimization, LLC
+
+Read LP format model from file MILP_lpmodel.CgMiMe.lp
+Reading time = 0.01 seconds
+: 912 rows, 582 columns, 2204 nonzeros
+Thread count: 1 physical cores, 1 logical processors, using up to 1 threads
+Optimize a model with 912 rows, 582 columns and 2204 nonzeros
+Model fingerprint: 0x62c2b47d
+Variable types: 408 continuous, 174 integer (116 binary)
+Coefficient statistics:
+  Matrix range     [1e-02, 5e+01]
+  Objective range  [1e-05, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-01, 4e+00]
+Found heuristic solution: objective -0.0043567
+Presolve removed 478 rows and 286 columns
+Presolve time: 0.01s
+Presolved: 434 rows, 296 columns, 1251 nonzeros
+Variable types: 148 continuous, 148 integer (90 binary)
+Found heuristic solution: objective -0.0007706
+
+Root relaxation: objective 8.581009e-01, 236 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.85810    0   48   -0.00077    0.85810      -     -    0s
+     0     0    0.83206    0   58   -0.00077    0.83206      -     -    0s
+     0     0    0.78889    0   59   -0.00077    0.78889      -     -    0s
+     0     0    0.67223    0   53   -0.00077    0.67223      -     -    0s
+     0     0    0.67219    0   53   -0.00077    0.67219      -     -    0s
+     0     0    0.62760    0   66   -0.00077    0.62760      -     -    0s
+H    0     0                      -0.0004446    0.62760      -     -    0s
+     0     0    0.62264    0   58   -0.00044    0.62264      -     -    0s
+     0     0    0.42553    0   47   -0.00044    0.42553      -     -    0s
+     0     0    0.42152    0   46   -0.00044    0.42152      -     -    0s
+     0     0    0.42100    0   50   -0.00044    0.42100      -     -    0s
+     0     0    0.42100    0   50   -0.00044    0.42100      -     -    0s
+     0     0    0.38400    0   52   -0.00044    0.38400      -     -    0s
+     0     0    0.38104    0   53   -0.00044    0.38104      -     -    0s
+     0     0    0.38095    0   57   -0.00044    0.38095      -     -    0s
+     0     0    0.37597    0   52   -0.00044    0.37597      -     -    0s
+     0     0    0.37536    0   55   -0.00044    0.37536      -     -    0s
+     0     0    0.37536    0   55   -0.00044    0.37536      -     -    0s
+     0     0    0.37058    0   54   -0.00044    0.37058      -     -    0s
+     0     0    0.37057    0   55   -0.00044    0.37057      -     -    0s
+     0     0    0.36645    0   55   -0.00044    0.36645      -     -    0s
+     0     0    0.36291    0   55   -0.00044    0.36291      -     -    0s
+     0     0    0.36224    0   55   -0.00044    0.36224      -     -    0s
+     0     0    0.36224    0   55   -0.00044    0.36224      -     -    0s
+     0     0    0.35862    0   57   -0.00044    0.35862      -     -    0s
+     0     0    0.35553    0   57   -0.00044    0.35553      -     -    0s
+     0     0    0.35287    0   57   -0.00044    0.35287      -     -    0s
+     0     0    0.35060    0   56   -0.00044    0.35060      -     -    0s
+     0     0    0.35059    0   59   -0.00044    0.35059      -     -    0s
+     0     0    0.34864    0   64   -0.00044    0.34864      -     -    0s
+     0     0    0.34864    0   64   -0.00044    0.34864      -     -    0s
+     0     0    0.34696    0   59   -0.00044    0.34696      -     -    0s
+H    0     0                      -0.0003359    0.34696      -     -    0s
+     0     0    0.34696    0   57   -0.00034    0.34696      -     -    0s
+     0     0    0.34552    0   57   -0.00034    0.34552      -     -    0s
+     0     0    0.34429    0   57   -0.00034    0.34429      -     -    0s
+     0     0    0.34429    0   57   -0.00034    0.34429      -     -    0s
+     0     2    0.33472    0   52   -0.00034    0.33472      -     -    0s
+*    8     7               7      -0.0002371    0.05069      -   6.9    0s
+*   15     2               7      -0.0001284   -0.00003  78.9%  14.9    0s
+
+Cutting planes:
+  Learned: 7
+  Gomory: 2
+  Implied bound: 12
+  Clique: 1
+  MIR: 40
+  Flow cover: 10
+  RLT: 1
+  Relax-and-lift: 2
+
+Explored 18 nodes (1156 simplex iterations) in 0.43 seconds (0.08 work units)
+Thread count was 1 (of 1 available processors)
+
+Solution count 6: -0.000128428 -0.000237097 -0.000335887 ... -0.00435666
+No other solutions better than -0.000128428
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.284275200000e-04, best bound -1.284275200000e-04, gap 0.0000%
+
+Wrote result file 'MILP_solution.8rUCYA.sol'
+
+
+Gurobi 9.5.1 (linux64, gurobi_cl) logging started Mon Mar 21 19:40:39 2022
+
+Set parameter Username
+Set parameter TimeLimit to value 180
+Set parameter LogFile to value "gurobi.log"
+Academic license - for non-commercial use only - expires 2023-03-13
+Using license file /opt/gurobi951/gurobi.lic
+
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Copyright (c) 2022, Gurobi Optimization, LLC
+
+Read LP format model from file MILP_lpmodel.hMGkmY.lp
+Reading time = 0.01 seconds
+: 530 rows, 343 columns, 924 nonzeros
+Thread count: 1 physical cores, 1 logical processors, using up to 1 threads
+Optimize a model with 530 rows, 343 columns and 924 nonzeros
+Model fingerprint: 0x00b147f0
+Variable types: 320 continuous, 23 integer (23 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-01, 5e+01]
+Presolve removed 530 rows and 343 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 1 available processors)
+
+Solution count 1: 0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 0.000000000000e+00, best bound 0.000000000000e+00, gap 0.0000%
+
+Wrote result file 'MILP_solution.OR22Jl.sol'
+
+
+Gurobi 9.5.1 (linux64, gurobi_cl) logging started Mon Mar 21 20:06:24 2022
+
+Set parameter Username
+Set parameter LogFile to value "gurobi.log"
+Academic license - for non-commercial use only - expires 2023-03-13
+Using license file /opt/gurobi951/gurobi.lic
+
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Copyright (c) 2022, Gurobi Optimization, LLC
+
+Read LP format model from file MILP_lpmodel.bN1Z0o.lp
+Reading time = 0.00 seconds
+: 35 rows, 18 columns, 76 nonzeros
+Thread count: 1 physical cores, 1 logical processors, using up to 1 threads
+Optimize a model with 35 rows, 18 columns and 76 nonzeros
+Model fingerprint: 0x1c2f8a8a
+Variable types: 6 continuous, 12 integer (11 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+03]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+03]
+  RHS range        [1e+00, 1e+03]
+Found heuristic solution: objective -0.0000000
+Presolve removed 28 rows and 14 columns
+Presolve time: 0.00s
+Presolved: 7 rows, 4 columns, 16 nonzeros
+Variable types: 0 continuous, 4 integer (1 binary)
+Found heuristic solution: objective 4.0000000
+
+Root relaxation: objective 1.980000e+03, 2 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    1980.0000000 1980.00000  0.00%     -    0s
+
+Explored 1 nodes (2 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 1 available processors)
+
+Solution count 3: 1980 4 -0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.980000000000e+03, best bound 1.980000000000e+03, gap 0.0000%
+
+Wrote result file 'MILP_solution.GVkv2t.sol'
+
+
+Gurobi 9.5.1 (linux64, gurobi_cl) logging started Mon Mar 21 20:06:24 2022
+
+Set parameter Username
+Set parameter LogFile to value "gurobi.log"
+Academic license - for non-commercial use only - expires 2023-03-13
+Using license file /opt/gurobi951/gurobi.lic
+
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Copyright (c) 2022, Gurobi Optimization, LLC
+
+Read LP format model from file MILP_lpmodel.vyvG5y.lp
+Reading time = 0.00 seconds
+: 31 rows, 16 columns, 64 nonzeros
+Thread count: 1 physical cores, 1 logical processors, using up to 1 threads
+Optimize a model with 31 rows, 16 columns and 64 nonzeros
+Model fingerprint: 0x20761692
+Variable types: 5 continuous, 11 integer (10 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+01]
+  RHS range        [1e+00, 1e+01]
+Found heuristic solution: objective -0.0000000
+Presolve removed 31 rows and 16 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 1 available processors)
+
+Solution count 2: 27 -0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.700000000000e+01, best bound 2.700000000000e+01, gap 0.0000%
+
+Wrote result file 'MILP_solution.QJWR8D.sol'
+
+
+Gurobi 9.5.1 (linux64, gurobi_cl) logging started Mon Mar 21 20:06:24 2022
+
+Set parameter Username
+Set parameter LogFile to value "gurobi.log"
+Academic license - for non-commercial use only - expires 2023-03-13
+Using license file /opt/gurobi951/gurobi.lic
+
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Copyright (c) 2022, Gurobi Optimization, LLC
+
+Read LP format model from file MILP_lpmodel.R6cseJ.lp
+Reading time = 0.00 seconds
+: 26 rows, 14 columns, 50 nonzeros
+Thread count: 1 physical cores, 1 logical processors, using up to 1 threads
+Optimize a model with 26 rows, 14 columns and 50 nonzeros
+Model fingerprint: 0xc0c4b483
+Variable types: 4 continuous, 10 integer (9 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 26 rows and 14 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 1 available processors)
+
+Solution count 1: -0 
+No other solutions better than -0
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -0.000000000000e+00, best bound -0.000000000000e+00, gap 0.0000%
+
+Wrote result file 'MILP_solution.2TV2jO.sol'
+
+
+Gurobi 9.5.1 (linux64, gurobi_cl) logging started Mon Mar 21 20:06:24 2022
+
+Set parameter Username
+Set parameter TimeLimit to value 180
+Set parameter LogFile to value "gurobi.log"
+Academic license - for non-commercial use only - expires 2023-03-13
+Using license file /opt/gurobi951/gurobi.lic
+
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Copyright (c) 2022, Gurobi Optimization, LLC
+
+Read LP format model from file MILP_lpmodel.h52CrT.lp
+Reading time = 0.01 seconds
+: 912 rows, 582 columns, 2204 nonzeros
+Thread count: 1 physical cores, 1 logical processors, using up to 1 threads
+Optimize a model with 912 rows, 582 columns and 2204 nonzeros
+Model fingerprint: 0x62c2b47d
+Variable types: 408 continuous, 174 integer (116 binary)
+Coefficient statistics:
+  Matrix range     [1e-02, 5e+01]
+  Objective range  [1e-05, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-01, 4e+00]
+Found heuristic solution: objective -0.0043567
+Presolve removed 478 rows and 286 columns
+Presolve time: 0.01s
+Presolved: 434 rows, 296 columns, 1251 nonzeros
+Variable types: 148 continuous, 148 integer (90 binary)
+Found heuristic solution: objective -0.0007706
+
+Root relaxation: objective 8.581009e-01, 236 iterations, 0.01 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.85810    0   48   -0.00077    0.85810      -     -    0s
+     0     0    0.83206    0   58   -0.00077    0.83206      -     -    0s
+     0     0    0.78889    0   59   -0.00077    0.78889      -     -    0s
+     0     0    0.67223    0   53   -0.00077    0.67223      -     -    0s
+     0     0    0.67219    0   53   -0.00077    0.67219      -     -    0s
+     0     0    0.62760    0   66   -0.00077    0.62760      -     -    0s
+H    0     0                      -0.0004446    0.62760      -     -    0s
+     0     0    0.62264    0   58   -0.00044    0.62264      -     -    0s
+     0     0    0.42553    0   47   -0.00044    0.42553      -     -    0s
+     0     0    0.42152    0   46   -0.00044    0.42152      -     -    0s
+     0     0    0.42100    0   50   -0.00044    0.42100      -     -    0s
+     0     0    0.42100    0   50   -0.00044    0.42100      -     -    0s
+     0     0    0.38400    0   52   -0.00044    0.38400      -     -    0s
+     0     0    0.38104    0   53   -0.00044    0.38104      -     -    0s
+     0     0    0.38095    0   57   -0.00044    0.38095      -     -    0s
+     0     0    0.37597    0   52   -0.00044    0.37597      -     -    0s
+     0     0    0.37536    0   55   -0.00044    0.37536      -     -    0s
+     0     0    0.37536    0   55   -0.00044    0.37536      -     -    0s
+     0     0    0.37058    0   54   -0.00044    0.37058      -     -    0s
+     0     0    0.37057    0   55   -0.00044    0.37057      -     -    0s
+     0     0    0.36645    0   55   -0.00044    0.36645      -     -    0s
+     0     0    0.36291    0   55   -0.00044    0.36291      -     -    0s
+     0     0    0.36224    0   55   -0.00044    0.36224      -     -    0s
+     0     0    0.36224    0   55   -0.00044    0.36224      -     -    0s
+     0     0    0.35862    0   57   -0.00044    0.35862      -     -    0s
+     0     0    0.35553    0   57   -0.00044    0.35553      -     -    0s
+     0     0    0.35287    0   57   -0.00044    0.35287      -     -    0s
+     0     0    0.35060    0   56   -0.00044    0.35060      -     -    0s
+     0     0    0.35059    0   59   -0.00044    0.35059      -     -    0s
+     0     0    0.34864    0   64   -0.00044    0.34864      -     -    0s
+     0     0    0.34864    0   64   -0.00044    0.34864      -     -    0s
+     0     0    0.34696    0   59   -0.00044    0.34696      -     -    0s
+H    0     0                      -0.0003359    0.34696      -     -    0s
+     0     0    0.34696    0   57   -0.00034    0.34696      -     -    0s
+     0     0    0.34552    0   57   -0.00034    0.34552      -     -    0s
+     0     0    0.34429    0   57   -0.00034    0.34429      -     -    0s
+     0     0    0.34429    0   57   -0.00034    0.34429      -     -    0s
+     0     2    0.33472    0   52   -0.00034    0.33472      -     -    0s
+*    8     7               7      -0.0002371    0.05069      -   6.9    0s
+*   15     2               7      -0.0001284   -0.00003  78.9%  14.9    0s
+
+Cutting planes:
+  Learned: 7
+  Gomory: 2
+  Implied bound: 12
+  Clique: 1
+  MIR: 40
+  Flow cover: 10
+  RLT: 1
+  Relax-and-lift: 2
+
+Explored 18 nodes (1156 simplex iterations) in 0.30 seconds (0.08 work units)
+Thread count was 1 (of 1 available processors)
+
+Solution count 6: -0.000128428 -0.000237097 -0.000335887 ... -0.00435666
+No other solutions better than -0.000128428
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.284275200000e-04, best bound -1.284275200000e-04, gap 0.0000%
+
+Wrote result file 'MILP_solution.sQVezY.sol'
+
+
+Gurobi 9.5.1 (linux64, gurobi_cl) logging started Mon Mar 21 20:06:24 2022
+
+Set parameter Username
+Set parameter TimeLimit to value 180
+Set parameter LogFile to value "gurobi.log"
+Academic license - for non-commercial use only - expires 2023-03-13
+Using license file /opt/gurobi951/gurobi.lic
+
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Copyright (c) 2022, Gurobi Optimization, LLC
+
+Read LP format model from file MILP_lpmodel.vQbgu4.lp
+Reading time = 0.00 seconds
+: 530 rows, 343 columns, 924 nonzeros
+Thread count: 1 physical cores, 1 logical processors, using up to 1 threads
+Optimize a model with 530 rows, 343 columns and 924 nonzeros
+Model fingerprint: 0x00b147f0
+Variable types: 320 continuous, 23 integer (23 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-01, 5e+01]
+Presolve removed 530 rows and 343 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 1 available processors)
+
+Solution count 1: 0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 0.000000000000e+00, best bound 0.000000000000e+00, gap 0.0000%
+
+Wrote result file 'MILP_solution.60Zhpa.sol'
+
+
+Gurobi 9.5.1 (linux64, gurobi_cl) logging started Mon Mar 21 20:11:31 2022
+
+Set parameter Username
+Set parameter LogFile to value "gurobi.log"
+Academic license - for non-commercial use only - expires 2023-03-13
+Using license file /opt/gurobi951/gurobi.lic
+
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Copyright (c) 2022, Gurobi Optimization, LLC
+
+Read LP format model from file MILP_lpmodel.ifrPbg.lp
+Reading time = 0.00 seconds
+: 35 rows, 18 columns, 76 nonzeros
+Thread count: 1 physical cores, 1 logical processors, using up to 1 threads
+Optimize a model with 35 rows, 18 columns and 76 nonzeros
+Model fingerprint: 0x1c2f8a8a
+Variable types: 6 continuous, 12 integer (11 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+03]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+03]
+  RHS range        [1e+00, 1e+03]
+Found heuristic solution: objective -0.0000000
+Presolve removed 28 rows and 14 columns
+Presolve time: 0.00s
+Presolved: 7 rows, 4 columns, 16 nonzeros
+Variable types: 0 continuous, 4 integer (1 binary)
+Found heuristic solution: objective 4.0000000
+
+Root relaxation: objective 1.980000e+03, 2 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    1980.0000000 1980.00000  0.00%     -    0s
+
+Explored 1 nodes (2 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 1 available processors)
+
+Solution count 3: 1980 4 -0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.980000000000e+03, best bound 1.980000000000e+03, gap 0.0000%
+
+Wrote result file 'MILP_solution.nQHKtO.sol'
+
+
+Gurobi 9.5.1 (linux64, gurobi_cl) logging started Mon Mar 21 20:11:31 2022
+
+Set parameter Username
+Set parameter LogFile to value "gurobi.log"
+Academic license - for non-commercial use only - expires 2023-03-13
+Using license file /opt/gurobi951/gurobi.lic
+
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Copyright (c) 2022, Gurobi Optimization, LLC
+
+Read LP format model from file MILP_lpmodel.yHznNm.lp
+Reading time = 0.00 seconds
+: 31 rows, 16 columns, 64 nonzeros
+Thread count: 1 physical cores, 1 logical processors, using up to 1 threads
+Optimize a model with 31 rows, 16 columns and 64 nonzeros
+Model fingerprint: 0x20761692
+Variable types: 5 continuous, 11 integer (10 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+01]
+  RHS range        [1e+00, 1e+01]
+Found heuristic solution: objective -0.0000000
+Presolve removed 31 rows and 16 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 1 available processors)
+
+Solution count 2: 27 -0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.700000000000e+01, best bound 2.700000000000e+01, gap 0.0000%
+
+Wrote result file 'MILP_solution.3I206U.sol'
+
+
+Gurobi 9.5.1 (linux64, gurobi_cl) logging started Mon Mar 21 20:11:31 2022
+
+Set parameter Username
+Set parameter LogFile to value "gurobi.log"
+Academic license - for non-commercial use only - expires 2023-03-13
+Using license file /opt/gurobi951/gurobi.lic
+
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Copyright (c) 2022, Gurobi Optimization, LLC
+
+Read LP format model from file MILP_lpmodel.c9w4rt.lp
+Reading time = 0.00 seconds
+: 26 rows, 14 columns, 50 nonzeros
+Thread count: 1 physical cores, 1 logical processors, using up to 1 threads
+Optimize a model with 26 rows, 14 columns and 50 nonzeros
+Model fingerprint: 0xc0c4b483
+Variable types: 4 continuous, 10 integer (9 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 26 rows and 14 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 1 available processors)
+
+Solution count 1: -0 
+No other solutions better than -0
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -0.000000000000e+00, best bound -0.000000000000e+00, gap 0.0000%
+
+Wrote result file 'MILP_solution.lcd8M1.sol'
+
+
+Gurobi 9.5.1 (linux64, gurobi_cl) logging started Mon Mar 21 20:11:31 2022
+
+Set parameter Username
+Set parameter TimeLimit to value 180
+Set parameter LogFile to value "gurobi.log"
+Academic license - for non-commercial use only - expires 2023-03-13
+Using license file /opt/gurobi951/gurobi.lic
+
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Copyright (c) 2022, Gurobi Optimization, LLC
+
+Read LP format model from file MILP_lpmodel.SMtf9z.lp
+Reading time = 0.00 seconds
+: 923 rows, 586 columns, 2221 nonzeros
+Thread count: 1 physical cores, 1 logical processors, using up to 1 threads
+Optimize a model with 923 rows, 586 columns and 2221 nonzeros
+Model fingerprint: 0x25ed848b
+Variable types: 412 continuous, 174 integer (116 binary)
+Coefficient statistics:
+  Matrix range     [1e-02, 5e+01]
+  Objective range  [1e-05, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-01, 1e+01]
+Found heuristic solution: objective -0.0042480
+Presolve removed 529 rows and 305 columns
+Presolve time: 0.00s
+Presolved: 394 rows, 281 columns, 1118 nonzeros
+Variable types: 147 continuous, 134 integer (76 binary)
+
+Root relaxation: objective 8.565891e-01, 218 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.85659    0   50   -0.00425    0.85659      -     -    0s
+H    0     0                      -0.0006619    0.85659      -     -    0s
+     0     0    0.83073    0   52   -0.00066    0.83073      -     -    0s
+     0     0    0.76766    0   56   -0.00066    0.76766      -     -    0s
+     0     0    0.65941    0   49   -0.00066    0.65941      -     -    0s
+     0     0    0.65936    0   48   -0.00066    0.65936      -     -    0s
+     0     0    0.63199    0   49   -0.00066    0.63199      -     -    0s
+     0     0    0.63198    0   49   -0.00066    0.63198      -     -    0s
+     0     0    0.63196    0   49   -0.00066    0.63196      -     -    0s
+     0     0    0.63196    0   49   -0.00066    0.63196      -     -    0s
+     0     0    0.63196    0   49   -0.00066    0.63196      -     -    0s
+     0     0    0.63196    0   48   -0.00066    0.63196      -     -    0s
+H    0     0                      -0.0004446    0.63196      -     -    0s
+     0     2    0.61463    0   48   -0.00044    0.61463      -     -    0s
+H    6     6                      -0.0002272    0.49187      -   6.0    0s
+*    7     6               7      -0.0001284    0.49187      -   7.4    0s
+
+Cutting planes:
+  Learned: 9
+  Gomory: 7
+  Clique: 1
+  MIR: 24
+  Flow cover: 11
+  RLT: 1
+
+Explored 14 nodes (768 simplex iterations) in 0.11 seconds (0.04 work units)
+Thread count was 1 (of 1 available processors)
+
+Solution count 5: -0.000128428 -0.000227218 -0.000444557 ... -0.00424799
+No other solutions better than -0.000128428
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.284275200000e-04, best bound -1.284275200000e-04, gap 0.0000%
+
+Wrote result file 'MILP_solution.732mv8.sol'
+
+
+Gurobi 9.5.1 (linux64, gurobi_cl) logging started Mon Mar 21 20:11:31 2022
+
+Set parameter Username
+Set parameter TimeLimit to value 180
+Set parameter LogFile to value "gurobi.log"
+Academic license - for non-commercial use only - expires 2023-03-13
+Using license file /opt/gurobi951/gurobi.lic
+
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Copyright (c) 2022, Gurobi Optimization, LLC
+
+Read LP format model from file MILP_lpmodel.YJwtbH.lp
+Reading time = 0.00 seconds
+: 533 rows, 343 columns, 921 nonzeros
+Thread count: 1 physical cores, 1 logical processors, using up to 1 threads
+Optimize a model with 533 rows, 343 columns and 921 nonzeros
+Model fingerprint: 0x20fe0c44
+Variable types: 320 continuous, 23 integer (23 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-01, 5e+01]
+Presolve removed 533 rows and 343 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 1 available processors)
+
+Solution count 1: 0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 0.000000000000e+00, best bound 0.000000000000e+00, gap 0.0000%
+
+Wrote result file 'MILP_solution.9fsARf.sol'
+

@@ -1,0 +1,1549 @@
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Merge!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB1  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB2  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB1  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB2  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB1  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB2  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB1  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB2  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Merge!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB2  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB3  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB2  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB3  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB2  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB3  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB2  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB3  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Merge!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB3  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB4  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB3  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB4  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB3  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB4  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB3  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB4  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Merge!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB3  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB4  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB3  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB4  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB3  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB4  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB3  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB4  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Constant!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB3  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB5  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB3  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB5  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB3  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB5  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB3  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB5  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB3  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB5  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB3  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB5  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Constant!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB2  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB6  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB2  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB6  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Constant!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Merge!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB7  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB8  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB7  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB8  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB7  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB8  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB7  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB8  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Merge!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB8  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB9  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB8  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB9  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB8  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB9  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB8  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB9  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Merge!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB9  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB10  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB9  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB10  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB9  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB10  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB9  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB10  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Merge!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB9  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB10  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB9  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB10  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB9  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB10  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB9  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB10  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Constant!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB9  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB11  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB9  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB11  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB9  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB11  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB9  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB11  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB9  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB11  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB9  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB11  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Constant!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB8  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB12  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB8  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB12  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Constant!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Merge!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB13  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB14  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB13  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB14  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB13  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB14  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB13  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB14  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Merge!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB14  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB15  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB14  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB15  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB14  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB15  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB14  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB15  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Merge!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB15  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB16  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB15  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB16  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB15  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB16  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB15  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB16  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Merge!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB15  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB16  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB15  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB16  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB15  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB16  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB15  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB16  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Constant!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB15  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB17  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB15  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB17  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB15  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB17  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB15  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB17  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB15  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB17  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB15  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB17  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Constant!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB14  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB18  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB14  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB18  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Constant!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Operator!!
+
+
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Merge!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB2  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB3  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB2  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB3  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB2  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB3  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB2  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB3  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Merge!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB3  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB4  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB3  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB4  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB3  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB4  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB3  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB4  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Merge!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB3  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB4  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB3  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB4  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB3  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB4  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB3  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB4  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Merge!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB8  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB9  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB8  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB9  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB8  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB9  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB8  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB9  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Merge!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB9  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB10  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB9  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB10  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB9  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB10  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB9  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB10  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Merge!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB9  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB10  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB9  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB10  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB9  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB10  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB9  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB10  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Merge!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB14  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB15  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB14  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB15  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB14  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB15  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB14  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB15  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Merge!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB15  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB16  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB15  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB16  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB15  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB16  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB15  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB16  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Starting a new consumer of type type = "Merge!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB15  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB16  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB15  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB16  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB15  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB16  has the following modified control dependencies:     Has no modified control dependencies!!
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB15  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB16  has the following modified control dependencies:     Has no modified control dependencies!!
+

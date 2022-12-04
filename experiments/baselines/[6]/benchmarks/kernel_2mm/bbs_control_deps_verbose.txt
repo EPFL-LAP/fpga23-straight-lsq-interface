@@ -1,0 +1,197 @@
+
+****************************************
+
+Currently studying the control dependencies of BB13
+BB13 is not control dependent on BB1!!
+BB13 is not control dependent on BB2!!
+BB13 is not control dependent on BB3!!
+BB13 is not control dependent on BB4!!
+BB13 is not control dependent on BB5!!
+BB13 is not control dependent on BB6!!
+BB13 is not control dependent on BB7!!
+BB13 is not control dependent on BB8!!
+BB13 is not control dependent on BB9!!
+BB13 is not control dependent on BB10!!
+BB13 is not control dependent on BB11!!
+BB13 is not control dependent on BB12!!
+
+****************************************
+
+Currently studying the control dependencies of BB12
+BB12 is not control dependent on BB1!!
+BB12 is not control dependent on BB2!!
+BB12 is not control dependent on BB3!!
+BB12 is not control dependent on BB4!!
+BB12 is not control dependent on BB5!!
+BB12 is not control dependent on BB6!!
+BB12 is not control dependent on BB7!!
+BB12 is not control dependent on BB8!!
+BB12 is not control dependent on BB9!!
+BB12 is not control dependent on BB10!!
+BB12 is not control dependent on BB11!!
+
+****************************************
+
+Currently studying the control dependencies of BB11
+BB11 is not control dependent on BB1!!
+BB11 is not control dependent on BB2!!
+BB11 is not control dependent on BB3!!
+BB11 is not control dependent on BB4!!
+BB11 is not control dependent on BB5!!
+BB11 is not control dependent on BB6!!
+BB11 is not control dependent on BB7!!
+BB11 is not control dependent on BB8!!
+BB11 is not control dependent on BB9!!
+BB11 is not control dependent on BB10!!
+
+****************************************
+
+Currently studying the control dependencies of BB10
+BB10 is not control dependent on BB1!!
+BB10 is not control dependent on BB2!!
+BB10 is not control dependent on BB3!!
+BB10 is not control dependent on BB4!!
+BB10 is not control dependent on BB5!!
+BB10 is not control dependent on BB6!!
+BB10 is not control dependent on BB7!!
+BB10 is not control dependent on BB8!!
+BB10 is not control dependent on BB9!!
+
+****************************************
+
+Currently studying the control dependencies of BB9
+BB9 is not control dependent on BB1!!
+BB9 is not control dependent on BB2!!
+BB9 is not control dependent on BB3!!
+BB9 is not control dependent on BB4!!
+BB9 is not control dependent on BB5!!
+BB9 is not control dependent on BB6!!
+BB9 is not control dependent on BB7!!
+BB9 is not control dependent on BB8!!
+
+****************************************
+
+Currently studying the control dependencies of BB8
+BB8 is not control dependent on BB1!!
+BB8 is not control dependent on BB2!!
+BB8 is not control dependent on BB3!!
+BB8 is not control dependent on BB4!!
+BB8 is not control dependent on BB5!!
+BB8 is not control dependent on BB6!!
+BB8 is not control dependent on BB7!!
+
+****************************************
+
+Currently studying the control dependencies of BB7
+BB7 is not control dependent on BB1!!
+BB7 is not control dependent on BB2!!
+BB7 is not control dependent on BB3!!
+BB7 is not control dependent on BB4!!
+BB7 is not control dependent on BB5!!
+BB7 is not control dependent on BB6!!
+
+****************************************
+
+Currently studying the control dependencies of BB6
+BB6 is not control dependent on BB1!!
+BB6 is not control dependent on BB2!!
+BB6 is not control dependent on BB3!!
+BB6 is not control dependent on BB4!!
+BB6 is not control dependent on BB5!!
+
+****************************************
+
+Currently studying the control dependencies of BB5
+BB5 is not control dependent on BB1!!
+BB5 is not control dependent on BB2!!
+BB5 is not control dependent on BB3!!
+BB5 is not control dependent on BB4!!
+
+****************************************
+
+Currently studying the control dependencies of BB4
+BB4 is not control dependent on BB1!!
+BB4 is not control dependent on BB2!!
+BB4 is not control dependent on BB3!!
+
+****************************************
+
+Currently studying the control dependencies of BB3
+BB3 is not control dependent on BB1!!
+BB3 is not control dependent on BB2!!
+
+****************************************
+
+Currently studying the control dependencies of BB2
+BB2 is not control dependent on BB1!!
+
+
+===================================================
+
+
+The entire recurisve control dependencies is:
+
+****************************************
+	BB1:
+Has no control dependencies!!
+
+
+****************************************
+	BB2:
+Has no control dependencies!!
+
+
+****************************************
+	BB3:
+Has no control dependencies!!
+
+
+****************************************
+	BB4:
+Has no control dependencies!!
+
+
+****************************************
+	BB5:
+Has no control dependencies!!
+
+
+****************************************
+	BB6:
+Has no control dependencies!!
+
+
+****************************************
+	BB7:
+Has no control dependencies!!
+
+
+****************************************
+	BB8:
+Has no control dependencies!!
+
+
+****************************************
+	BB9:
+Has no control dependencies!!
+
+
+****************************************
+	BB10:
+Has no control dependencies!!
+
+
+****************************************
+	BB11:
+Has no control dependencies!!
+
+
+****************************************
+	BB12:
+Has no control dependencies!!
+
+
+****************************************
+	BB13:
+Has no control dependencies!!
+

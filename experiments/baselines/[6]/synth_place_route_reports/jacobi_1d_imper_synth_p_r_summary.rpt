@@ -1,0 +1,13 @@
+**************************************************
+Timing Summary for the benchmarks/jacobi_1d_imper example
+The clk period constraint applied during synthesis is 4ns
+The slack is -3.224ns
+The actual clk period (CP) is 7.20ns
+The cycles count from simulation is 1320
+The total execution time is 9504ns
+ 
+**************************************************
+Area Summary for the benchmarks/jacobi_1d_imper example
+The LUTs count is  19120 
+The FFs count is  4335 
+The DSPs count is  3 

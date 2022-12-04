@@ -1,0 +1,106 @@
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2.1 (lin64) Build 2729669 Thu Dec  5 04:48:12 MST 2019
+| Date         : Fri Dec  2 03:06:17 2022
+| Host         : lapsrv6.epfl.ch running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command      : report_timing
+| Design       : jacobi_1d_imper
+| Device       : 7k160t-fbg484
+| Speed File   : -1  PRODUCTION 1.12 2017-02-17
+--------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (VIOLATED) :        -2.827ns  (required time - arrival time)
+  Source:                 Buffer_1/oehb1/data_reg_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            c_LSQ_B/loadQ/addrKnown_10_reg/R
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (clk rise@4.000ns - clk rise@0.000ns)
+  Data Path Delay:        6.334ns  (logic 1.890ns (29.839%)  route 4.444ns (70.161%))
+  Logic Levels:           16  (CARRY4=8 LUT2=2 LUT3=1 LUT4=1 LUT5=1 LUT6=3)
+  Clock Path Skew:        -0.034ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.638ns = ( 4.638 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.672ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=4409, unset)         0.672     0.672    Buffer_1/oehb1/clk
+                         FDCE                                         r  Buffer_1/oehb1/data_reg_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.209     0.881 r  Buffer_1/oehb1/data_reg_reg[3]/Q
+                         net (fo=1, unplaced)         0.581     1.462    add_33/dataOutArray[0][3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.369     1.831 r  add_33/end_out[3]_INST_0_i_1/CO[3]
+                         net (fo=1, unplaced)         0.008     1.839    add_33/end_out[3]_INST_0_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     1.899 r  add_33/end_out[7]_INST_0_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.899    add_33/end_out[7]_INST_0_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     1.959 r  add_33/end_out[11]_INST_0_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     1.959    add_33/end_out[11]_INST_0_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     2.019 r  add_33/end_out[15]_INST_0_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     2.019    add_33/end_out[15]_INST_0_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     2.079 r  add_33/end_out[19]_INST_0_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     2.079    add_33/end_out[19]_INST_0_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     2.139 r  add_33/end_out[23]_INST_0_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     2.139    add_33/end_out[23]_INST_0_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.189     2.328 f  add_33/end_out[27]_INST_0_i_1/O[3]
+                         net (fo=6, unplaced)         0.390     2.718    add_33/add_33_dataOutArray_0[27]
+                         LUT2 (Prop_lut2_I1_O)        0.142     2.860 r  add_33/end_valid_INST_0_i_12/O
+                         net (fo=1, unplaced)         0.000     2.860    icmp_34/data_reg_reg[0][1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.310     3.170 f  icmp_34/end_valid_INST_0_i_2/CO[3]
+                         net (fo=13, unplaced)        0.568     3.738    Buffer_13/fifo/dataOutArray[0][0]
+                         LUT6 (Prop_lut6_I2_O)        0.053     3.791 r  Buffer_13/fifo/full_reg_i_3__6/O
+                         net (fo=1, unplaced)         0.340     4.131    forkC_8/generateBlocks[4].regblock/full_reg_reg
+                         LUT5 (Prop_lut5_I0_O)        0.053     4.184 r  forkC_8/generateBlocks[4].regblock/full_reg_i_2__7/O
+                         net (fo=3, unplaced)         0.358     4.542    forkC_8/generateBlocks[4].regblock/reg_value_reg_0
+                         LUT4 (Prop_lut4_I0_O)        0.053     4.595 f  forkC_8/generateBlocks[4].regblock/tail[3]_i_6/O
+                         net (fo=12, unplaced)        0.388     4.983    c_LSQ_B/storeQ/io_bbpValids_0
+                         LUT6 (Prop_lut6_I0_O)        0.053     5.036 f  c_LSQ_B/storeQ/tail[3]_i_2__0/O
+                         net (fo=25, unplaced)        0.405     5.441    c_LSQ_B/loadQ/GA_io_storePortsEnable_0
+                         LUT3 (Prop_lut3_I2_O)        0.053     5.494 r  c_LSQ_B/loadQ/tail[3]_i_7/O
+                         net (fo=24, unplaced)        0.404     5.898    c_LSQ_B/loadQ/loadQ_io_bbNumLoads
+                         LUT6 (Prop_lut6_I4_O)        0.053     5.951 r  c_LSQ_B/loadQ/offsetQ_10[3]_i_1/O
+                         net (fo=9, unplaced)         0.381     6.332    c_LSQ_B/loadQ/initBits_10_6
+                         LUT2 (Prop_lut2_I1_O)        0.053     6.385 r  c_LSQ_B/loadQ/loadCompleted_10_i_1/O
+                         net (fo=4, unplaced)         0.621     7.006    c_LSQ_B/loadQ/bypassInitiated_10
+                         FDRE                                         r  c_LSQ_B/loadQ/addrKnown_10_reg/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        4.000     4.000 r  
+                                                      0.000     4.000 r  clk (IN)
+                         net (fo=4409, unset)         0.638     4.638    c_LSQ_B/loadQ/clk
+                         FDRE                                         r  c_LSQ_B/loadQ/addrKnown_10_reg/C
+                         clock pessimism              0.000     4.638    
+                         clock uncertainty           -0.035     4.603    
+                         FDRE (Setup_fdre_C_R)       -0.424     4.179    c_LSQ_B/loadQ/addrKnown_10_reg
+  -------------------------------------------------------------------
+                         required time                          4.179    
+                         arrival time                          -7.006    
+  -------------------------------------------------------------------
+                         slack                                 -2.827    
+
+
+
+
+report_timing: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 2644.172 ; gain = 200.871 ; free physical = 18631 ; free virtual = 214239

@@ -1,0 +1,355 @@
+
+****************************************
+
+Currently studying the control dependencies of BB14
+BB14 is not control dependent on BB1!!
+BB14 is not control dependent on BB2!!
+BB14 is not control dependent on BB3!!
+BB14 is not control dependent on BB4!!
+BB14 is not control dependent on BB5!!
+BB14 is not control dependent on BB6!!
+BB14 is not control dependent on BB7!!
+BB14 is not control dependent on BB8!!
+BB14 is not control dependent on BB9!!
+BB14 is not control dependent on BB10!!
+BB14 is not control dependent on BB11!!
+BB14 is not control dependent on BB12!!
+BB14 is not control dependent on BB13!!
+
+****************************************
+
+Currently studying the control dependencies of BB13
+BB13 is not control dependent on BB1!!
+BB13 is not control dependent on BB2!!
+BB13 is not control dependent on BB3!!
+BB13 is not control dependent on BB4!!
+BB13 is not control dependent on BB5!!
+BB13 is not control dependent on BB6!!
+BB13 is not control dependent on BB7!!
+BB13 is not control dependent on BB8!!
+BB13 is not control dependent on BB9!!
+BB13 is not control dependent on BB10!!
+BB13 is not control dependent on BB11!!
+BB13 is not control dependent on BB12!!
+
+****************************************
+
+Currently studying the control dependencies of BB12
+
+There are 1 paths between BB12 and BB1
+
+The size of path 0 is 12
+	One path is composed of: BB12, BB11, BB10, BB9, BB8, BB7, BB6, BB5, BB4, BB3, BB2, BB1, 
+
+There are 1 paths between BB12 and BB2
+
+The size of path 0 is 11
+	One path is composed of: BB12, BB11, BB10, BB9, BB8, BB7, BB6, BB5, BB4, BB3, BB2, 
+
+There are 1 paths between BB12 and BB3
+
+The size of path 0 is 10
+	One path is composed of: BB12, BB11, BB10, BB9, BB8, BB7, BB6, BB5, BB4, BB3, 
+
+There are 1 paths between BB12 and BB4
+
+The size of path 0 is 9
+	One path is composed of: BB12, BB11, BB10, BB9, BB8, BB7, BB6, BB5, BB4, 
+
+There are 1 paths between BB12 and BB5
+
+The size of path 0 is 8
+	One path is composed of: BB12, BB11, BB10, BB9, BB8, BB7, BB6, BB5, 
+
+There are 1 paths between BB12 and BB6
+
+The size of path 0 is 7
+	One path is composed of: BB12, BB11, BB10, BB9, BB8, BB7, BB6, 
+
+There are 1 paths between BB12 and BB7
+
+The size of path 0 is 6
+	One path is composed of: BB12, BB11, BB10, BB9, BB8, BB7, 
+
+There are 1 paths between BB12 and BB8
+
+The size of path 0 is 5
+	One path is composed of: BB12, BB11, BB10, BB9, BB8, 
+
+	BB12 is control dependent on BB8!!
+BB12 is not control dependent on BB9!!
+BB12 is not control dependent on BB10!!
+BB12 is not control dependent on BB11!!
+
+****************************************
+
+Currently studying the control dependencies of BB11
+
+There are 1 paths between BB11 and BB1
+
+The size of path 0 is 11
+	One path is composed of: BB11, BB10, BB9, BB8, BB7, BB6, BB5, BB4, BB3, BB2, BB1, 
+
+There are 1 paths between BB11 and BB2
+
+The size of path 0 is 10
+	One path is composed of: BB11, BB10, BB9, BB8, BB7, BB6, BB5, BB4, BB3, BB2, 
+
+There are 1 paths between BB11 and BB3
+
+The size of path 0 is 9
+	One path is composed of: BB11, BB10, BB9, BB8, BB7, BB6, BB5, BB4, BB3, 
+
+There are 1 paths between BB11 and BB4
+
+The size of path 0 is 8
+	One path is composed of: BB11, BB10, BB9, BB8, BB7, BB6, BB5, BB4, 
+
+There are 1 paths between BB11 and BB5
+
+The size of path 0 is 7
+	One path is composed of: BB11, BB10, BB9, BB8, BB7, BB6, BB5, 
+
+There are 1 paths between BB11 and BB6
+
+The size of path 0 is 6
+	One path is composed of: BB11, BB10, BB9, BB8, BB7, BB6, 
+
+There are 1 paths between BB11 and BB7
+
+The size of path 0 is 5
+	One path is composed of: BB11, BB10, BB9, BB8, BB7, 
+
+There are 1 paths between BB11 and BB8
+
+The size of path 0 is 4
+	One path is composed of: BB11, BB10, BB9, BB8, 
+
+	BB11 is control dependent on BB8!!
+BB11 is not control dependent on BB9!!
+BB11 is not control dependent on BB10!!
+
+****************************************
+
+Currently studying the control dependencies of BB10
+
+There are 1 paths between BB10 and BB1
+
+The size of path 0 is 10
+	One path is composed of: BB10, BB9, BB8, BB7, BB6, BB5, BB4, BB3, BB2, BB1, 
+
+There are 1 paths between BB10 and BB2
+
+The size of path 0 is 9
+	One path is composed of: BB10, BB9, BB8, BB7, BB6, BB5, BB4, BB3, BB2, 
+
+There are 1 paths between BB10 and BB3
+
+The size of path 0 is 8
+	One path is composed of: BB10, BB9, BB8, BB7, BB6, BB5, BB4, BB3, 
+
+There are 1 paths between BB10 and BB4
+
+The size of path 0 is 7
+	One path is composed of: BB10, BB9, BB8, BB7, BB6, BB5, BB4, 
+
+There are 1 paths between BB10 and BB5
+
+The size of path 0 is 6
+	One path is composed of: BB10, BB9, BB8, BB7, BB6, BB5, 
+
+There are 1 paths between BB10 and BB6
+
+The size of path 0 is 5
+	One path is composed of: BB10, BB9, BB8, BB7, BB6, 
+
+There are 1 paths between BB10 and BB7
+
+The size of path 0 is 4
+	One path is composed of: BB10, BB9, BB8, BB7, 
+
+There are 1 paths between BB10 and BB8
+
+The size of path 0 is 3
+	One path is composed of: BB10, BB9, BB8, 
+
+	BB10 is control dependent on BB8!!
+BB10 is not control dependent on BB9!!
+
+****************************************
+
+Currently studying the control dependencies of BB9
+
+There are 1 paths between BB9 and BB1
+
+The size of path 0 is 9
+	One path is composed of: BB9, BB8, BB7, BB6, BB5, BB4, BB3, BB2, BB1, 
+
+There are 1 paths between BB9 and BB2
+
+The size of path 0 is 8
+	One path is composed of: BB9, BB8, BB7, BB6, BB5, BB4, BB3, BB2, 
+
+There are 1 paths between BB9 and BB3
+
+The size of path 0 is 7
+	One path is composed of: BB9, BB8, BB7, BB6, BB5, BB4, BB3, 
+
+There are 1 paths between BB9 and BB4
+
+The size of path 0 is 6
+	One path is composed of: BB9, BB8, BB7, BB6, BB5, BB4, 
+
+There are 1 paths between BB9 and BB5
+
+The size of path 0 is 5
+	One path is composed of: BB9, BB8, BB7, BB6, BB5, 
+
+There are 1 paths between BB9 and BB6
+
+The size of path 0 is 4
+	One path is composed of: BB9, BB8, BB7, BB6, 
+
+There are 1 paths between BB9 and BB7
+
+The size of path 0 is 3
+	One path is composed of: BB9, BB8, BB7, 
+
+There are 1 paths between BB9 and BB8
+
+The size of path 0 is 2
+	One path is composed of: BB9, BB8, 
+
+	BB9 is control dependent on BB8!!
+
+****************************************
+
+Currently studying the control dependencies of BB8
+BB8 is not control dependent on BB1!!
+BB8 is not control dependent on BB2!!
+BB8 is not control dependent on BB3!!
+BB8 is not control dependent on BB4!!
+BB8 is not control dependent on BB5!!
+BB8 is not control dependent on BB6!!
+BB8 is not control dependent on BB7!!
+
+****************************************
+
+Currently studying the control dependencies of BB7
+BB7 is not control dependent on BB1!!
+BB7 is not control dependent on BB2!!
+BB7 is not control dependent on BB3!!
+BB7 is not control dependent on BB4!!
+BB7 is not control dependent on BB5!!
+BB7 is not control dependent on BB6!!
+
+****************************************
+
+Currently studying the control dependencies of BB6
+BB6 is not control dependent on BB1!!
+BB6 is not control dependent on BB2!!
+BB6 is not control dependent on BB3!!
+BB6 is not control dependent on BB4!!
+BB6 is not control dependent on BB5!!
+
+****************************************
+
+Currently studying the control dependencies of BB5
+BB5 is not control dependent on BB1!!
+BB5 is not control dependent on BB2!!
+BB5 is not control dependent on BB3!!
+BB5 is not control dependent on BB4!!
+
+****************************************
+
+Currently studying the control dependencies of BB4
+BB4 is not control dependent on BB1!!
+BB4 is not control dependent on BB2!!
+BB4 is not control dependent on BB3!!
+
+****************************************
+
+Currently studying the control dependencies of BB3
+BB3 is not control dependent on BB1!!
+BB3 is not control dependent on BB2!!
+
+****************************************
+
+Currently studying the control dependencies of BB2
+BB2 is not control dependent on BB1!!
+
+
+===================================================
+
+
+The entire recurisve control dependencies is:
+
+****************************************
+	BB1:
+Has no control dependencies!!
+
+
+****************************************
+	BB2:
+Has no control dependencies!!
+
+
+****************************************
+	BB3:
+Has no control dependencies!!
+
+
+****************************************
+	BB4:
+Has no control dependencies!!
+
+
+****************************************
+	BB5:
+Has no control dependencies!!
+
+
+****************************************
+	BB6:
+Has no control dependencies!!
+
+
+****************************************
+	BB7:
+Has no control dependencies!!
+
+
+****************************************
+	BB8:
+Has no control dependencies!!
+
+
+****************************************
+	BB9:
+8,
+
+
+****************************************
+	BB10:
+8,
+
+
+****************************************
+	BB11:
+8,
+
+
+****************************************
+	BB12:
+8,
+
+
+****************************************
+	BB13:
+Has no control dependencies!!
+
+
+****************************************
+	BB14:
+Has no control dependencies!!
+

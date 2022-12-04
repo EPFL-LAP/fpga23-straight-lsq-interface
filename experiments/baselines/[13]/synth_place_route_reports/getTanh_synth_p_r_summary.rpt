@@ -1,0 +1,13 @@
+**************************************************
+Timing Summary for the benchmarks/getTanh example
+The clk period constraint applied during synthesis is 4ns
+The slack is -5.110ns
+The actual clk period (CP) is 9.11ns
+The cycles count from simulation is 7053
+The total execution time is 64253ns
+ 
+**************************************************
+Area Summary for the benchmarks/getTanh example
+The LUTs count is  19008 
+The FFs count is  4379 
+The DSPs count is  9 

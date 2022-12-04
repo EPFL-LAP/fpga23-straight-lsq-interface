@@ -1,15 +1,7 @@
 
 /**
 
-* jacobi-1d-imper.c: This file is part of the PolyBench/C 3.2 test suite.
-
-*
-
-*
-
-* Contact: Louis-Noel Pouchet <pouchet@cse.ohio-state.edu>
-
-* Web address: http://polybench.sourceforge.net
+* jacobi-1d-imper.c: This code is adapted from the original implementation that is part of the PolyBench/C 3.2 test suite.
 
 */
 

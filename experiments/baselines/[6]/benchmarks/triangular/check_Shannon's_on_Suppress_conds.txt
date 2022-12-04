@@ -1,0 +1,84 @@
+
+********* Inside get_binary_string_minterms *******************
+	Printing the minterms_only_in_binary with dontcare bits:
+0
+
+**********************************************
+
+
+Printing the funct_vec of the expression initially
+not C1 &  + 
+
+
+
+Inside hasMultipleVariables!
+
+The list of var_index of these variables is: 
+0, 
+The size of present_variables is: 1
+Leaving hasMultipleVariables!
+
+Not many variables to do Shannon's!
+
+********* Inside get_binary_string_minterms *******************
+	Printing the minterms_only_in_binary with dontcare bits:
+0
+
+**********************************************
+
+
+Printing the funct_vec of the expression initially
+not C6 &  + 
+
+
+
+Inside hasMultipleVariables!
+
+The list of var_index of these variables is: 
+5, 
+The size of present_variables is: 1
+Leaving hasMultipleVariables!
+
+Not many variables to do Shannon's!
+
+********* Inside get_binary_string_minterms *******************
+	Printing the minterms_only_in_binary with dontcare bits:
+0
+
+**********************************************
+
+
+Printing the funct_vec of the expression initially
+not C3 &  + 
+
+
+
+Inside hasMultipleVariables!
+
+The list of var_index of these variables is: 
+2, 
+The size of present_variables is: 1
+Leaving hasMultipleVariables!
+
+Not many variables to do Shannon's!
+
+********* Inside get_binary_string_minterms *******************
+	Printing the minterms_only_in_binary with dontcare bits:
+0
+
+**********************************************
+
+
+Printing the funct_vec of the expression initially
+not C5 &  + 
+
+
+
+Inside hasMultipleVariables!
+
+The list of var_index of these variables is: 
+4, 
+The size of present_variables is: 1
+Leaving hasMultipleVariables!
+
+Not many variables to do Shannon's!

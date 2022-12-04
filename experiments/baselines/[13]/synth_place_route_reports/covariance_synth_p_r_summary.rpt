@@ -1,0 +1,13 @@
+**************************************************
+Timing Summary for the benchmarks/covariance example
+The clk period constraint applied during synthesis is 4ns
+The slack is -4.074ns
+The actual clk period (CP) is 8.07ns
+The cycles count from simulation is 37499
+The total execution time is 302767ns
+ 
+**************************************************
+Area Summary for the benchmarks/covariance example
+The LUTs count is  21468 
+The FFs count is  6236 
+The DSPs count is  3 

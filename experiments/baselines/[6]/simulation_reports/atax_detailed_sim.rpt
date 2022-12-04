@@ -1,0 +1,2659 @@
+
+
+**************************************************
+Do Dez  1 18:45:30 CET 2022
+****Executing test case examples/atax optimized ****
+filename examples/atax optimized
+/home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax
+
+
+******************************************************************
+******Dynamic High-Level Synthesis Compiler***********************
+******Andrea Guerrieri - Lana Josipovic - EPFL-LAP 2019 **********
+******Version 2.0 - Build 1.0 ************************************
+******************************************************************
+
+synthesis_optimized.tcl
+Done 
+set input file: atax.cpp
+current input filename: ./src/atax.cpp
+Done 
+Synthesize
+compile atax.cpp . -use-lsq=true Andrea: arg1:  atax.cpp arg2: . arg3 -use-lsq=true arg4
+/home/dynamatic/Dynamatic/etc/llvm-6.0/bin/clang -emit-llvm -S   -c src/atax.cpp -o .atax.cpp.ll
+rm: cannot remove '*.s': No such file or directory
+0; ModuleID = '.atax.cpp_mem2reg_constprop_simplifycfg_die.ll'
+source_filename = "src/atax.cpp"
+target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+; Function Attrs: noinline nounwind uwtable
+define i32 @_Z4ataxPA20_iPiS1_S1_([20 x i32]* %A, i32* %x, i32* %y, i32* %tmp) #0 {
+block1:
+  br label %block2
+
+block2:                                           ; preds = %block6, %block1
+  %i.04 = phi i32 [ 0, %block1 ], [ %inc29, %block6 ]
+  %"2" = zext i32 %i.04 to i64
+  %arrayidx = getelementptr inbounds i32, i32* %tmp, i64 %"2"
+  %"3" = load i32, i32* %arrayidx, align 4
+  br label %block3
+
+block3:                                           ; preds = %block3, %block2
+  %t.02 = phi i32 [ %"3", %block2 ], [ %add, %block3 ]
+  %j.01 = phi i32 [ 0, %block2 ], [ %inc, %block3 ]
+  %"5" = zext i32 %i.04 to i64
+  %"6" = zext i32 %j.01 to i64
+  %arrayidx7 = getelementptr inbounds [20 x i32], [20 x i32]* %A, i64 %"5", i64 %"6"
+  %"7" = load i32, i32* %arrayidx7, align 4
+  %"8" = zext i32 %j.01 to i64
+  %arrayidx9 = getelementptr inbounds i32, i32* %x, i64 %"8"
+  %"9" = load i32, i32* %arrayidx9, align 4
+  %mul = mul nsw i32 %"7", %"9"
+  %add = add nsw i32 %t.02, %mul
+  %inc = add nuw nsw i32 %j.01, 1
+  %cmp2 = icmp ult i32 %inc, 20
+  br i1 %cmp2, label %block3, label %block4
+
+block4:                                           ; preds = %block3
+  br label %block5
+
+block5:                                           ; preds = %block5, %block4
+  %j.13 = phi i32 [ 0, %block4 ], [ %inc24, %block5 ]
+  %"12" = zext i32 %j.13 to i64
+  %arrayidx14 = getelementptr inbounds i32, i32* %y, i64 %"12"
+  %"13" = load i32, i32* %arrayidx14, align 4
+  %"14" = zext i32 %i.04 to i64
+  %"15" = zext i32 %j.13 to i64
+  %arrayidx18 = getelementptr inbounds [20 x i32], [20 x i32]* %A, i64 %"14", i64 %"15"
+  %"16" = load i32, i32* %arrayidx18, align 4
+  %mul19 = mul nsw i32 %"16", %add
+  %add20 = add nsw i32 %"13", %mul19
+  %"17" = zext i32 %j.13 to i64
+  %arrayidx22 = getelementptr inbounds i32, i32* %y, i64 %"17"
+  store i32 %add20, i32* %arrayidx22, align 4
+  %inc24 = add nuw nsw i32 %j.13, 1
+  %cmp11 = icmp ult i32 %inc24, 20
+  br i1 %cmp11, label %block5, label %block6
+
+block6:                                           ; preds = %block5
+  %"19" = zext i32 %i.04 to i64
+  %arrayidx27 = getelementptr inbounds i32, i32* %tmp, i64 %"19"
+  store i32 %add, i32* %arrayidx27, align 4
+  %inc29 = add nuw nsw i32 %i.04, 1
+  %cmp = icmp ult i32 %inc29, 20
+  br i1 %cmp, label %block2, label %block7
+
+block7:                                           ; preds = %block6
+  ret i32 %inc29
+}
+
+; Function Attrs: noinline norecurse nounwind uwtable
+define i32 @main() #1 {
+entry:
+  %A = alloca [1 x [20 x [20 x i32]]], align 16
+  %x = alloca [1 x [20 x i32]], align 16
+  %y = alloca [1 x [20 x i32]], align 16
+  %tmp = alloca [1 x [20 x i32]], align 16
+  call void @srand(i32 13) #3
+  br label %for.body
+
+for.body:                                         ; preds = %for.inc29, %entry
+  br label %for.body3
+
+for.body3:                                        ; preds = %for.inc26, %for.body
+  %j.02 = phi i32 [ 0, %for.body ], [ %inc27, %for.inc26 ]
+  %call = call i32 @rand() #3
+  %rem = srem i32 %call, 100
+  %0 = zext i32 %j.02 to i64
+  %1 = getelementptr inbounds [1 x [20 x i32]], [1 x [20 x i32]]* %x, i64 0, i64 0, i64 %0
+  store i32 %rem, i32* %1, align 4
+  %2 = zext i32 %j.02 to i64
+  %3 = getelementptr inbounds [1 x [20 x i32]], [1 x [20 x i32]]* %y, i64 0, i64 0, i64 %2
+  store i32 0, i32* %3, align 4
+  %4 = zext i32 %j.02 to i64
+  %5 = getelementptr inbounds [1 x [20 x i32]], [1 x [20 x i32]]* %tmp, i64 0, i64 0, i64 %4
+  store i32 0, i32* %5, align 4
+  br label %for.body17
+
+for.body17:                                       ; preds = %for.body17, %for.body3
+  %x14.01 = phi i32 [ 0, %for.body3 ], [ %inc, %for.body17 ]
+  %call18 = call i32 @rand() #3
+  %rem19 = srem i32 %call18, 100
+  %6 = zext i32 %j.02 to i64
+  %7 = zext i32 %x14.01 to i64
+  %8 = getelementptr inbounds [1 x [20 x [20 x i32]]], [1 x [20 x [20 x i32]]]* %A, i64 0, i64 0, i64 %6, i64 %7
+  store i32 %rem19, i32* %8, align 4
+  %inc = add nuw nsw i32 %x14.01, 1
+  %cmp16 = icmp ult i32 %inc, 20
+  br i1 %cmp16, label %for.body17, label %for.inc26
+
+for.inc26:                                        ; preds = %for.body17
+  %inc27 = add nuw nsw i32 %j.02, 1
+  %cmp2 = icmp ult i32 %inc27, 20
+  br i1 %cmp2, label %for.body3, label %for.inc29
+
+for.inc29:                                        ; preds = %for.inc26
+  br i1 false, label %for.body, label %for.end31
+
+for.end31:                                        ; preds = %for.inc29
+  %arraydecay = getelementptr inbounds [1 x [20 x [20 x i32]]], [1 x [20 x [20 x i32]]]* %A, i64 0, i64 0, i64 0
+  %arraydecay35 = getelementptr inbounds [1 x [20 x i32]], [1 x [20 x i32]]* %x, i64 0, i64 0, i64 0
+  %arraydecay37 = getelementptr inbounds [1 x [20 x i32]], [1 x [20 x i32]]* %y, i64 0, i64 0, i64 0
+  %arraydecay39 = getelementptr inbounds [1 x [20 x i32]], [1 x [20 x i32]]* %tmp, i64 0, i64 0, i64 0
+  %call40 = call i32 @_Z4ataxPA20_iPiS1_S1_([20 x i32]* nonnull %arraydecay, i32* nonnull %arraydecay35, i32* nonnull %arraydecay37, i32* nonnull %arraydecay39)
+  ret i32 0
+}
+
+; Function Attrs: nounwind
+declare void @srand(i32) #2
+
+; Function Attrs: nounwind
+declare i32 @rand() #2
+
+attributes #0 = { noinline nounwind uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { noinline norecurse nounwind uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #2 = { nounwind "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #3 = { nounwind }
+
+!llvm.module.flags = !{!0}
+!llvm.ident = !{!1}
+
+!0 = !{i32 1, !"wchar_size", i32 4}
+!1 = !{!"clang version 6.0.1 (http://llvm.org/git/clang.git 2f27999df400d17b33cdd412fdd606a88208dfcc) (http://llvm.org/git/llvm.git 5136df4d089a086b70d452160ad5451861269498)"}
+
+
+Done 
+Done 
+Optimize
+buffers buffers -filename=./reports/atax -period=4 
+Aya: INSIDE main_shab!
+
+Aya: before parse_user_input!
+
+Aya: after parse_user_input!
+****************************************
+dataflow graph name: ./reports/atax
+milp solver: cbc
+delay: 0, period: 4
+timeout: 180
+set optimization: true
+first MG optimization: false
+****************************************
+
+Aya: after print_input!
+
+Aya: Before constructing a DF object!
+currently traversing node cst_0
+currently traversing node start_0
+currently traversing node branchC_0
+currently traversing node cst_11
+currently traversing node cst_15
+currently traversing node forkC_9
+currently traversing node fork_17
+currently traversing node phi_1
+currently traversing node load_4
+currently traversing node cst_1
+currently traversing node phiC_0
+currently traversing node branchC_1
+currently traversing node cst_12
+currently traversing node phiC_9
+currently traversing node phi_n26
+currently traversing node branchC_16
+currently traversing node fork_0
+currently traversing node forkC_13
+currently traversing node fork_16
+currently traversing node forkC_21
+currently traversing node phi_6
+currently traversing node phi_7
+currently traversing node zext_8
+currently traversing node zext_9
+currently traversing node getelementptr_10
+currently traversing node load_11
+currently traversing node load_14
+currently traversing node mul_15
+currently traversing node add_16
+currently traversing node cst_2
+currently traversing node add_17
+currently traversing node cst_3
+currently traversing node icmp_18
+currently traversing node cst_9
+currently traversing node phiC_1
+currently traversing node branchC_2
+currently traversing node phi_n6
+currently traversing node phiC_10
+currently traversing node branch_7
+currently traversing node phi_n27
+currently traversing node branch_8
+currently traversing node branch_12
+currently traversing node branchC_17
+currently traversing node fork_1
+currently traversing node fork_2
+currently traversing node fork_3
+currently traversing node fork_10
+currently traversing node forkC_14
+currently traversing node fork_19
+currently traversing node cst_4
+currently traversing node phiC_2
+currently traversing node branchC_3
+currently traversing node cst_13
+currently traversing node forkC_22
+currently traversing node phi_21
+currently traversing node load_24
+currently traversing node zext_25
+currently traversing node zext_26
+currently traversing node getelementptr_27
+currently traversing node load_28
+currently traversing node mul_29
+currently traversing node add_30
+currently traversing node store_0
+currently traversing node cst_5
+currently traversing node add_33
+currently traversing node cst_6
+currently traversing node icmp_34
+currently traversing node cst_10
+currently traversing node phiC_3
+currently traversing node branchC_4
+currently traversing node phi_n7
+currently traversing node phi_n8
+currently traversing node phiC_15
+currently traversing node branch_9
+currently traversing node phi_n28
+currently traversing node branch_13
+currently traversing node branch_15
+currently traversing node branchC_18
+currently traversing node fork_4
+currently traversing node fork_5
+currently traversing node fork_6
+currently traversing node fork_11
+currently traversing node fork_12
+currently traversing node forkC_15
+currently traversing node fork_20
+currently traversing node forkC_23
+currently traversing node store_1
+currently traversing node cst_7
+currently traversing node add_38
+currently traversing node cst_8
+currently traversing node icmp_39
+currently traversing node phiC_4
+currently traversing node branchC_5
+currently traversing node cst_14
+currently traversing node branch_6
+currently traversing node fork_18
+currently traversing node fork_7
+currently traversing node fork_8
+currently traversing node ret_0
+currently traversing node phiC_5
+currently traversing node sink_0
+currently traversing node sink_1
+currently traversing node sink_2
+currently traversing node sink_3
+currently traversing node LSQ_y
+currently traversing node MC_tmp
+currently traversing node MC_A
+currently traversing node MC_x
+currently traversing node sink_4
+currently traversing node sink_5
+currently traversing node sink_6
+currently traversing node sink_7
+currently traversing node sink_8
+currently traversing node sink_9
+currently traversing node sink_10
+currently traversing node sink_11
+currently traversing node end_0
+
+Entering DF_I check function!!
+
+Coming out of DF_I check function!!
+===================
+READING BB DOT FILE
+===================
+Reading graph name...
+Reading set of nodes...
+Reading set of edges between nodes...
+Setting entry and exit BB...
+	Entry: BB1, Exit: BB7
+Setting BB frequencies...
+BB1 : 1
+BB2 : 20
+BB3 : 400
+BB4 : 20
+BB5 : 400
+BB6 : 20
+BB7 : 1
+
+
+Aya: After constructing a DF object!
+Adding elastic buffers with period=4 and buffer_delay=0
+
+
+Aya: Before calling DF.setMilpSolver!
+
+Aya: After returning from DF.setMilpSolver!
+
+Aya: Before calling DF.addElasticBuffersBB_sc!
+======================
+ADDING ELASTIC BUFFERS
+======================
+Extracting marked graphs
+--------------------------
+Iteration 1
+ILP time: [ms] 10 
+Arcs in the CFDFC:
+	5->5:380
+Updating frequencies...
+Storing CFDFC and corresponding Marked Graph...
+--------------------------
+Iteration 2
+ILP time: [ms] 9 
+Arcs in the CFDFC:
+	3->3:380
+Updating frequencies...
+Storing CFDFC and corresponding Marked Graph...
+--------------------------
+Iteration 3
+ILP time: [ms] 7 
+Arcs in the CFDFC:
+	2->3:20
+	3->4:20
+	4->5:20
+	5->6:20
+	6->2:19
+Updating frequencies...
+Storing CFDFC and corresponding Marked Graph...
+--------------------------
+Iteration 4
+ILP time: [ms] 7 
+Arcs in the CFDFC:
+No new MG can be extracted to increase coverage.
+
+*******************
+Covered Frequency = 855, Total Frequency = 861, Coverage = 0.993031
+*******************
+
+Aya:Done Extracting marked graphs!
+
+determining buffer from/to MC_LSQ units to/from loads.
+Calculating disjoint sets of CFDFCs...
+	initialize
+	union
+	get set of unique dsu numbers
+	merge and get sub-components
+Total number of Extracted Disjoint CFDFCs: 1
+Adding Marked Graphs from CFDFCs...
+
+
+===================================
+PRINTING CHANNELS FREQUENCIES
+Freq of channel in Src_BB number 1 and dst_BB number 2 is::: 1
+Freq of channel in Src_BB number 1 and dst_BB number 1 is::: 1
+Freq of channel in Src_BB number 1 and dst_BB number 2 is::: 1
+Freq of channel in Src_BB number 1 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 1 and dst_BB number 1 is::: 1
+Freq of channel in Src_BB number 1 and dst_BB number 1 is::: 1
+Freq of channel in Src_BB number 1 and dst_BB number 1 is::: 1
+Freq of channel in Src_BB number 1 and dst_BB number 1 is::: 1
+Freq of channel in Src_BB number 1 and dst_BB number 1 is::: 1
+Freq of channel in Src_BB number 1 and dst_BB number 1 is::: 1
+Freq of channel in Src_BB number 1 and dst_BB number 2 is::: 1
+Freq of channel in Src_BB number 1 and dst_BB number 2 is::: 1
+Freq of channel in Src_BB number 1 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 1 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 2 and dst_BB number 2 is::: 20
+Freq of channel in Src_BB number 2 and dst_BB number 3 is::: 20
+Freq of channel in Src_BB number 2 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 2 and dst_BB number 3 is::: 20
+Freq of channel in Src_BB number 2 and dst_BB number 2 is::: 20
+Freq of channel in Src_BB number 2 and dst_BB number 3 is::: 20
+Freq of channel in Src_BB number 2 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 2 and dst_BB number 2 is::: 20
+Freq of channel in Src_BB number 2 and dst_BB number 2 is::: 20
+Freq of channel in Src_BB number 2 and dst_BB number 2 is::: 20
+Freq of channel in Src_BB number 2 and dst_BB number 2 is::: 20
+Freq of channel in Src_BB number 2 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 2 and dst_BB number 2 is::: 20
+Freq of channel in Src_BB number 2 and dst_BB number 3 is::: 20
+Freq of channel in Src_BB number 2 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 2 and dst_BB number 6 is::: 20
+Freq of channel in Src_BB number 2 and dst_BB number 6 is::: 20
+Freq of channel in Src_BB number 2 and dst_BB number 2 is::: 20
+Freq of channel in Src_BB number 2 and dst_BB number 2 is::: 20
+Freq of channel in Src_BB number 2 and dst_BB number 3 is::: 20
+Freq of channel in Src_BB number 2 and dst_BB number 4 is::: 20
+Freq of channel in Src_BB number 2 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 2 and dst_BB number 6 is::: 20
+Freq of channel in Src_BB number 2 and dst_BB number 6 is::: 20
+Freq of channel in Src_BB number 2 and dst_BB number 6 is::: 20
+Freq of channel in Src_BB number 2 and dst_BB number 2 is::: 20
+Freq of channel in Src_BB number 2 and dst_BB number 2 is::: 20
+Freq of channel in Src_BB number 2 and dst_BB number 2 is::: 20
+Freq of channel in Src_BB number 2 and dst_BB number 2 is::: 20
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 4 is::: 20
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 6 is::: 20
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 400
+Freq of channel in Src_BB number 4 and dst_BB number 5 is::: 20
+Freq of channel in Src_BB number 4 and dst_BB number 4 is::: 20
+Freq of channel in Src_BB number 4 and dst_BB number 5 is::: 20
+Freq of channel in Src_BB number 4 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 4 and dst_BB number 4 is::: 20
+Freq of channel in Src_BB number 4 and dst_BB number 4 is::: 20
+Freq of channel in Src_BB number 4 and dst_BB number 4 is::: 20
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 5 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 6 is::: 20
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 5 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 6 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 6 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 6 and dst_BB number 6 is::: 20
+Freq of channel in Src_BB number 6 and dst_BB number 6 is::: 20
+Freq of channel in Src_BB number 6 and dst_BB number 6 is::: 20
+Freq of channel in Src_BB number 6 and dst_BB number 6 is::: 20
+Freq of channel in Src_BB number 6 and dst_BB number 6 is::: 20
+Freq of channel in Src_BB number 6 and dst_BB number 2 is::: 19
+Freq of channel in Src_BB number 6 and dst_BB number 7 is::: 1
+Freq of channel in Src_BB number 6 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 6 and dst_BB number 2 is::: 19
+Freq of channel in Src_BB number 6 and dst_BB number 7 is::: 1
+Freq of channel in Src_BB number 6 and dst_BB number 5 is::: 400
+Freq of channel in Src_BB number 6 and dst_BB number 6 is::: 20
+Freq of channel in Src_BB number 6 and dst_BB number 6 is::: 20
+Freq of channel in Src_BB number 6 and dst_BB number 6 is::: 20
+Freq of channel in Src_BB number 6 and dst_BB number 2 is::: 19
+Freq of channel in Src_BB number 6 and dst_BB number 2 is::: 19
+Freq of channel in Src_BB number 6 and dst_BB number 6 is::: 20
+Freq of channel in Src_BB number 6 and dst_BB number 6 is::: 20
+Freq of channel in Src_BB number 7 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 7 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 0 and dst_BB number 5 is::: 0
+Freq of channel in Src_BB number 0 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 0 and dst_BB number 2 is::: 0
+Freq of channel in Src_BB number 0 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 0 and dst_BB number 3 is::: 0
+Freq of channel in Src_BB number 0 and dst_BB number 5 is::: 0
+Freq of channel in Src_BB number 0 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 0 and dst_BB number 3 is::: 0
+Freq of channel in Src_BB number 0 and dst_BB number 0 is::: 0
+
+===================================
+-------------------------------
+Initiating MILP for MG number 0
+-------------------------------
+ creating throughput vars for sub_mg0
+
+Aya: Before the loop over Blocks
+
+Aya: After the loop over Blocks
+
+Aya: Before the loop over Channels
+
+Aya: After the loop over Channels
+ creating throughput vars for sub_mg1
+
+Aya: Before the loop over Blocks
+
+Aya: After the loop over Blocks
+
+Aya: Before the loop over Channels
+
+Aya: After the loop over Channels
+ creating throughput vars for sub_mg2
+
+Aya: Before the loop over Blocks
+
+Aya: After the loop over Blocks
+
+Aya: Before the loop over Channels
+
+Aya: After the loop over Channels
+
+Aya: Done with the function createMilpVarsEB_sc
+
+Aya: done with the first loop over channels!
+
+Aya: done with the second loop over channels!
+
+Aya: done with the first loop over blocks!
+
+Aya: done with the second loop over blocks!
+
+Aya: done with createPathConstraints_sc boolean function!!
+
+Aya: done with createElasticityConstraints_sc boolean function!!
+Lana: back edge is branchC_4:out1 -> phiC_3:in2
+Lana: back edge is branch_9:out2 -> phi_21:in2
+Lana: back edge is branch_13:out2 -> phi_n7:in2
+Lana: back edge is branch_15:out2 -> phi_n8:in2
+Lana: back edge is branchC_18:out2 -> phiC_15:in2
+Lana: back edge is fork_6:out2 -> phi_n28:in2
+Lana: back edge is branchC_2:out1 -> phiC_1:in2
+Lana: back edge is branch_7:out2 -> phi_6:in2
+Lana: back edge is branch_8:out2 -> phi_7:in2
+Lana: back edge is branch_12:out2 -> phi_n6:in2
+Lana: back edge is branchC_17:out2 -> phiC_10:in2
+Lana: back edge is fork_3:out2 -> phi_n27:in2
+Lana: back edge is branchC_16:out2 -> phiC_9:in2
+Lana: back edge is branchC_2:out1 -> phiC_1:in2
+Lana: back edge is branch_7:out2 -> phi_6:in2
+Lana: back edge is branch_8:out2 -> phi_7:in2
+Lana: back edge is branch_12:out2 -> phi_n6:in2
+Lana: back edge is branchC_17:out2 -> phiC_10:in2
+Lana: back edge is fork_3:out2 -> phi_n27:in2
+Lana: back edge is branchC_4:out1 -> phiC_3:in2
+Lana: back edge is branch_9:out2 -> phi_21:in2
+Lana: back edge is branch_13:out2 -> phi_n7:in2
+Lana: back edge is branch_15:out2 -> phi_n8:in2
+Lana: back edge is branchC_18:out2 -> phiC_15:in2
+Lana: back edge is fork_6:out2 -> phi_n28:in2
+Lana: back edge is branchC_5:out1 -> phiC_0:in2
+Lana: back edge is branch_6:out2 -> phi_1:in2
+Lana: back edge is fork_8:out2 -> phi_n26:in2
+Solving MILP for elastic buffers: MG 0
+Milp time for MG 0: [ms] 180942 
+
+************************
+*** Throughput for MG 0 in disjoint MG 0: 1.00 ***
+************************
+************************
+*** Throughput for MG 1 in disjoint MG 0: 1.00 ***
+************************
+************************
+*** Throughput for MG 2 in disjoint MG 0: 1.00 ***
+************************
+Adding buffer in phi_1:out1 -> fork_0:in1 | slots: 2, trans: 0 | BB2 -> BB2 (inner)
+Adding buffer in phiC_9:out1 -> forkC_13:in1 | slots: 2, trans: 0 | BB2 -> BB2 (inner)
+Adding buffer in fork_0:out4 -> load_4:in2 | slots: 4, trans: 1 | BB2 -> BB2 (inner)
+Adding buffer in fork_0:out5 -> store_1:in2 | slots: 7, trans: 1 | BB2 -> BB6
+Adding buffer in phi_6:out1 -> add_16:in1 | slots: 2, trans: 0 | BB3 -> BB3 (inner)
+Adding buffer in phi_7:out1 -> fork_1:in1 | slots: 2, trans: 0 | BB3 -> BB3 (inner)
+Adding buffer in branchC_2:out1 -> phiC_1:in2 | slots: 2, trans: 0 | BB3 -> BB3 (inner)
+Adding buffer in phi_n6:out1 -> fork_10:in1 | slots: 2, trans: 0 | BB3 -> BB3 (inner)
+Adding buffer in phiC_10:out1 -> forkC_14:in1 | slots: 2, trans: 0 | BB3 -> BB3 (inner)
+Adding buffer in fork_3:out1 -> branch_7:in2 | slots: 6, trans: 1 | BB3 -> BB3 (inner)
+Adding buffer in fork_19:out1 -> phi_6:in1 | slots: 6, trans: 1 | BB3 -> BB3 (inner)
+Adding buffer in phi_21:out1 -> fork_4:in1 | slots: 2, trans: 0 | BB5 -> BB5 (inner)
+Adding buffer in load_24:out1 -> add_30:in1 | slots: 5, trans: 1 | BB5 -> BB5 (inner)
+Adding buffer in getelementptr_27:out1 -> load_28:in2 | slots: 4, trans: 1 | BB5 -> BB5 (inner)
+Adding buffer in phi_n7:out1 -> fork_11:in1 | slots: 2, trans: 0 | BB5 -> BB5 (inner)
+Adding buffer in phiC_15:out1 -> forkC_15:in1 | slots: 2, trans: 0 | BB5 -> BB5 (inner)
+Adding buffer in branch_15:out2 -> phi_n8:in2 | slots: 2, trans: 0 | BB5 -> BB5 (inner)
+Adding buffer in fork_6:out6 -> branchC_4:in2 | slots: 2, trans: 0 | BB5 -> BB5 (inner)
+Adding buffer in fork_6:out4 -> branch_15:in2 | slots: 6, trans: 1 | BB5 -> BB5 (inner)
+Adding buffer in fork_20:out3 -> phi_n8:in1 | slots: 7, trans: 1 | BB5 -> BB5 (inner)
+Adding buffer in forkC_23:out1 -> branchC_4:in1 | slots: 2, trans: 0 | BB5 -> BB5 (inner)
+Adding buffer in fork_8:out4 -> branchC_5:in2 | slots: 2, trans: 1 | BB6 -> BB6 (inner)
+
+*** Throughput achieved in sub MG 0: 1.00 ***
+
+
+*** Throughput achieved in sub MG 1: 1.00 ***
+
+
+*** Throughput achieved in sub MG 2: 1.00 ***
+
+--------------------------------------
+Initiating MILP for remaining channels
+--------------------------------------
+Solving MILP for channels not covered by MGs
+Milp time for remaining channels: [ms] 71 
+
+***************************
+Total MILP time: [ms] 181013
+***************************
+
+Aya: After calling DF.addElasticBuffersBB_sc!
+INSTANTIATE
+Done 
+Write hdl
+write_hdl  . ./reports/atax_optimized
+
+******************************************************************
+******Dynamic High-Level Synthesis Compiler **********************
+******Andrea Guerrieri - Lana Josipovic - EPFL-LAP 2019 **********
+******Dot to VHDL Generator***************************************
+******************************************************************
+Parsing ./reports/atax_optimized.dot
+
+Report Modules 
++--------------------------------------------------------------------------+
+|   Node_ID|                Name|         Module_type|    Inputs|   Outputs|
++--------------------------------------------------------------------------+
+|         0|               cst_0|            Constant|         1|         1|
+|         1|             start_0|               Entry|         1|         1|
+|         2|           branchC_0|              Branch|         2|         2|
+|         3|              cst_11|            Constant|         1|         1|
+|         4|              cst_15|            Constant|         1|         1|
+|         5|             forkC_9|                Fork|         1|         5|
+|         6|             fork_17|                Fork|         1|         3|
+|         7|               phi_1|                 Mux|         3|         1|
+|         8|              load_4|            Operator|         2|         2|
+|         9|               cst_1|            Constant|         1|         1|
+|        10|              phiC_0|               Merge|         2|         1|
+|        11|           branchC_1|              Branch|         2|         2|
+|        12|              cst_12|            Constant|         1|         1|
+|        13|              phiC_9|                 Mux|         3|         1|
+|        14|             phi_n26|               Merge|         2|         1|
+|        15|          branchC_16|              Branch|         2|         2|
+|        16|              fork_0|                Fork|         1|         5|
+|        17|            forkC_13|                Fork|         1|         8|
+|        18|             fork_16|                Fork|         1|         2|
+|        19|            forkC_21|                Fork|         1|         2|
+|        20|            Buffer_1|              Buffer|         1|         1|
+|        21|            Buffer_2|              Buffer|         1|         1|
+|        22|            Buffer_3|               tFifo|         1|         1|
+|        23|            Buffer_4|               tFifo|         1|         1|
+|        24|               phi_6|                 Mux|         3|         1|
+|        25|               phi_7|                 Mux|         3|         1|
+|        26|              zext_8|            Operator|         1|         1|
+|        27|              zext_9|            Operator|         1|         1|
+|        28|    getelementptr_10|            Operator|         3|         1|
+|        29|             load_11|            Operator|         2|         2|
+|        30|             load_14|            Operator|         2|         2|
+|        31|              mul_15|            Operator|         2|         1|
+|        32|              add_16|            Operator|         2|         1|
+|        33|               cst_2|            Constant|         1|         1|
+|        34|              add_17|            Operator|         2|         1|
+|        35|               cst_3|            Constant|         1|         1|
+|        36|             icmp_18|            Operator|         2|         1|
+|        37|               cst_9|            Constant|         1|         1|
+|        38|              phiC_1|               Merge|         2|         1|
+|        39|           branchC_2|              Branch|         2|         2|
+|        40|              phi_n6|                 Mux|         3|         1|
+|        41|             phiC_10|                 Mux|         3|         1|
+|        42|            branch_7|              Branch|         2|         2|
+|        43|             phi_n27|               Merge|         2|         1|
+|        44|            branch_8|              Branch|         2|         2|
+|        45|           branch_12|              Branch|         2|         2|
+|        46|          branchC_17|              Branch|         2|         2|
+|        47|              fork_1|                Fork|         1|         3|
+|        48|              fork_2|                Fork|         1|         2|
+|        49|              fork_3|                Fork|         1|         6|
+|        50|             fork_10|                Fork|         1|         2|
+|        51|            forkC_14|                Fork|         1|         4|
+|        52|             fork_19|                Fork|         1|         4|
+|        53|            Buffer_5|              Buffer|         1|         1|
+|        54|            Buffer_6|              Buffer|         1|         1|
+|        55|            Buffer_7|              Buffer|         1|         1|
+|        56|            Buffer_8|              Buffer|         1|         1|
+|        57|            Buffer_9|              Buffer|         1|         1|
+|        58|           Buffer_10|               tFifo|         1|         1|
+|        59|           Buffer_11|               tFifo|         1|         1|
+|        60|               cst_4|            Constant|         1|         1|
+|        61|              phiC_2|               Merge|         1|         1|
+|        62|           branchC_3|              Branch|         2|         2|
+|        63|              cst_13|            Constant|         1|         1|
+|        64|            forkC_22|                Fork|         1|         2|
+|        65|              phi_21|                 Mux|         3|         1|
+|        66|             load_24|            Operator|         2|         2|
+|        67|             zext_25|            Operator|         1|         1|
+|        68|             zext_26|            Operator|         1|         1|
+|        69|    getelementptr_27|            Operator|         3|         1|
+|        70|             load_28|            Operator|         2|         2|
+|        71|              mul_29|            Operator|         2|         1|
+|        72|              add_30|            Operator|         2|         1|
+|        73|             store_0|            Operator|         2|         2|
+|        74|               cst_5|            Constant|         1|         1|
+|        75|              add_33|            Operator|         2|         1|
+|        76|               cst_6|            Constant|         1|         1|
+|        77|             icmp_34|            Operator|         2|         1|
+|        78|              cst_10|            Constant|         1|         1|
+|        79|              phiC_3|               Merge|         2|         1|
+|        80|           branchC_4|              Branch|         2|         2|
+|        81|              phi_n7|                 Mux|         3|         1|
+|        82|              phi_n8|                 Mux|         3|         1|
+|        83|             phiC_15|                 Mux|         3|         1|
+|        84|            branch_9|              Branch|         2|         2|
+|        85|             phi_n28|               Merge|         2|         1|
+|        86|           branch_13|              Branch|         2|         2|
+|        87|           branch_15|              Branch|         2|         2|
+|        88|          branchC_18|              Branch|         2|         2|
+|        89|              fork_4|                Fork|         1|         4|
+|        90|              fork_5|                Fork|         1|         2|
+|        91|              fork_6|                Fork|         1|         6|
+|        92|             fork_11|                Fork|         1|         2|
+|        93|             fork_12|                Fork|         1|         2|
+|        94|            forkC_15|                Fork|         1|         4|
+|        95|             fork_20|                Fork|         1|         4|
+|        96|            forkC_23|                Fork|         1|         2|
+|        97|           Buffer_12|              Buffer|         1|         1|
+|        98|           Buffer_13|               tFifo|         1|         1|
+|        99|           Buffer_14|               tFifo|         1|         1|
+|       100|           Buffer_15|              Buffer|         1|         1|
+|       101|           Buffer_16|              Buffer|         1|         1|
+|       102|           Buffer_17|              Buffer|         1|         1|
+|       103|           Buffer_18|              Buffer|         1|         1|
+|       104|           Buffer_19|               tFifo|         1|         1|
+|       105|           Buffer_20|               tFifo|         1|         1|
+|       106|           Buffer_21|              Buffer|         1|         1|
+|       107|             store_1|            Operator|         2|         2|
+|       108|               cst_7|            Constant|         1|         1|
+|       109|              add_38|            Operator|         2|         1|
+|       110|               cst_8|            Constant|         1|         1|
+|       111|             icmp_39|            Operator|         2|         1|
+|       112|              phiC_4|               Merge|         1|         1|
+|       113|           branchC_5|              Branch|         2|         2|
+|       114|              cst_14|            Constant|         1|         1|
+|       115|            branch_6|              Branch|         2|         2|
+|       116|             fork_18|                Fork|         1|         2|
+|       117|              fork_7|                Fork|         1|         2|
+|       118|              fork_8|                Fork|         1|         4|
+|       119|           Buffer_22|               tFifo|         1|         1|
+|       120|               ret_0|            Operator|         1|         1|
+|       121|              phiC_5|               Merge|         1|         1|
+|       122|              sink_0|                Sink|         1|         0|
+|       123|              sink_1|                Sink|         1|         0|
+|       124|              sink_2|                Sink|         1|         0|
+|       125|              sink_3|                Sink|         1|         0|
+|       126|               LSQ_y|                 LSQ|         4|         2|
+|       127|              MC_tmp|                  MC|         4|         2|
+|       128|                MC_A|                  MC|         5|         3|
+|       129|                MC_x|                  MC|         4|         2|
+|       130|              sink_4|                Sink|         1|         0|
+|       131|              sink_5|                Sink|         1|         0|
+|       132|              sink_6|                Sink|         1|         0|
+|       133|              sink_7|                Sink|         1|         0|
+|       134|              sink_8|                Sink|         1|         0|
+|       135|              sink_9|                Sink|         1|         0|
+|       136|             sink_10|                Sink|         1|         0|
+|       137|             sink_11|                Sink|         1|         0|
+|       138|               end_0|                Exit|         5|         1|
++--------------------------------------------------------------------------+
+Generating ./reports/atax_optimized.vhd
+Generating LSQ 0 component...
+lsq_generate ./reports/atax_optimized_lsq0_configuration.json
+[[35minfo[0m] [0.008] Elaborating design...
+[[35minfo[0m] [3.077] Done elaborating.
+Total FIRRTL Compile Time: 19642.5 ms
+
+Done
+
+
+
+Done 
+Exit...
+Goodbye!
+
+
+examples/atax
+atax
+[INFO  CAnalyzer] Return identified: end of type int (return value).
+[INFO  CAnalyzer] Parsing parameter in_float_t A[20][20]
+array length 400
+[INFO  CAnalyzer] Parameter identified: A of type in_float_t[400].
+[INFO  CAnalyzer] Parsing parameter in_float_t x[20]
+array length 20
+[INFO  CAnalyzer] Parameter identified: x of type in_float_t[20].
+[INFO  CAnalyzer] Parsing parameter inout_float_t y[20]
+array length 20
+[INFO  CAnalyzer] Parameter identified: y of type inout_float_t[20].
+[INFO  CAnalyzer] Parsing parameter inout_float_t tmp[20]
+array length 20
+[INFO  CAnalyzer] Parameter identified: tmp of type inout_float_t[20].
+i0
+[INFO  CAnalyzer] Actual type of "A" is "int" (32 bits).
+i1
+[INFO  CAnalyzer] Actual type of "x" is "int" (32 bits).
+i2
+[INFO  CAnalyzer] Actual type of "y" is "int" (32 bits).
+i3
+[INFO  CAnalyzer] Actual type of "tmp" is "int" (32 bits).
+[INFO  CVER] Compiling C files [gcc ../C_SRC/hls_verify_atax.c -I../C_SRC -o ../C_SRC/hls_verify_atax.out]
+[INFO  CVER] Cleaning C output files [rm -rf ../C_OUT]
+[INFO  CVER] Cleaning existing input files [rm -rf ../INPUT_VECTORS]
+[INFO  CVER] Creating C output files directory [mkdir -p ../C_OUT]
+[INFO  CVER] Creating input files directory [mkdir -p ../INPUT_VECTORS]
+[INFO  CVER] Executing C test-bench [../C_SRC/hls_verify_atax.out]
+[INFO  CVER] C simulation finished. Outputs saved in directory ../C_OUT.
+[INFO  VVER] Generating VHDL testbench for entity atax
+[INFO  VVER] Transaction number computed : 1
+[INFO  VVER] Copying supplementary files: [cp /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/hls_verifier/HlsVerifier/build/resources/template_two_port_RAM.vhd ../VHDL_SRC/two_port_RAM.vhd]
+[INFO  VVER] Copying supplementary files: [cp /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/hls_verifier/HlsVerifier/build/resources/template_single_argument.vhd ../VHDL_SRC/single_argument.vhd]
+[INFO  VVER] Copying supplementary files: [cp /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/hls_verifier/HlsVerifier/build/resources/template_simpackage.vhd ../VHDL_SRC/simpackage.vhd]
+[INFO  VVER] Copying supplementary files: [cp /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/hls_verifier/HlsVerifier/build/resources/modelsim.ini ./modelsim.ini]
+[INFO  VVER] Cleaning VHDL output files [rm -rf ../VHDL_OUT]
+[INFO  VVER] Creating VHDL output files directory [mkdir -p ../VHDL_OUT]
+[INFO  VVER] Executing modelsim: [vsim -c -do simulation.do]
+Reading pref.tcl
+
+# 10.5b
+
+# do simulation.do
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work work 
+# Modifying modelsim.ini
+# Loading project simulation
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:49:02 on Dec 01,2022
+# vlog -work work /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/LSQ_y.v 
+# -- Compiling module STORE_QUEUE_LSQ_y
+# -- Compiling module LOAD_QUEUE_LSQ_y
+# -- Compiling module GROUP_ALLOCATOR_LSQ_y
+# -- Compiling module LOAD_PORT_LSQ_y
+# -- Compiling module STORE_DATA_PORT_LSQ_y
+# -- Compiling module LSQ_y
+# 
+# Top level modules:
+# 	LSQ_y
+# End time: 18:49:02 on Dec 01,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Compile of LSQ_y.v was successful.
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:49:02 on Dec 01,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/hls_verify_atax_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Loading package NUMERIC_STD
+# ** Error: (vcom-11) Could not find work.sim_package.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/hls_verify_atax_tb.vhd(9): (vcom-1195) Cannot find expanded name "work.sim_package".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/hls_verify_atax_tb.vhd(9): Unknown expanded name.
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/hls_verify_atax_tb.vhd(13): VHDL Compiler exiting
+# End time: 18:49:02 on Dec 01,2022, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:49:02 on Dec 01,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/delay_buffer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity delay_buffer
+# -- Compiling architecture arch of delay_buffer
+# End time: 18:49:02 on Dec 01,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Compile of delay_buffer.vhd was successful.
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:49:02 on Dec 01,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/arithmetic_units.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Error: (vcom-11) Could not find work.customtypes.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/arithmetic_units.vhd(8): (vcom-1195) Cannot find expanded name "work.customTypes".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/arithmetic_units.vhd(8): Unknown expanded name.
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/arithmetic_units.vhd(10): VHDL Compiler exiting
+# End time: 18:49:02 on Dec 01,2022, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:49:02 on Dec 01,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/sharing_components.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Error: (vcom-11) Could not find work.customtypes.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/sharing_components.vhd(6): (vcom-1195) Cannot find expanded name "work.customTypes".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/sharing_components.vhd(6): Unknown expanded name.
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/sharing_components.vhd(8): VHDL Compiler exiting
+# End time: 18:49:02 on Dec 01,2022, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:49:03 on Dec 01,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/elastic_components.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package customTypes
+# -- Loading package customTypes
+# -- Compiling entity andN
+# -- Compiling architecture vanilla of andn
+# -- Compiling entity nandN
+# -- Compiling architecture arch of nandn
+# -- Compiling entity orN
+# -- Compiling architecture vanilla of orN
+# -- Compiling entity norN
+# -- Compiling architecture arch of norN
+# -- Compiling entity join
+# -- Compiling architecture arch of join
+# -- Loading entity andN
+# -- Loading package NUMERIC_STD
+# -- Compiling entity TEHB
+# -- Compiling architecture arch of TEHB
+# -- Compiling entity OEHB
+# -- Compiling architecture arch of OEHB
+# -- Compiling entity elasticBuffer
+# -- Compiling architecture arch of elasticBuffer
+# -- Loading entity TEHB
+# -- Loading entity OEHB
+# -- Compiling entity buffer_bx_op
+# -- Compiling architecture arch of buffer_bx_op
+# -- Compiling entity join_bx_op
+# -- Compiling architecture arch of join_bx_op
+# -- Loading entity join
+# -- Compiling entity end_node
+# -- Compiling architecture arch of end_node
+# -- Compiling entity branchSimple
+# -- Compiling architecture arch of branchSimple
+# -- Compiling entity branch
+# -- Compiling architecture arch of branch
+# -- Loading entity branchSimple
+# -- Compiling entity eagerFork_RegisterBLock
+# -- Compiling architecture arch of eagerFork_RegisterBLock
+# -- Compiling entity fork
+# -- Compiling architecture arch of fork
+# -- Loading entity orN
+# -- Loading entity eagerFork_RegisterBLock
+# -- Compiling entity lazyfork
+# -- Compiling architecture arch of lazyfork
+# -- Compiling entity merge
+# -- Compiling architecture arch of merge
+# -- Compiling entity merge_notehb
+# -- Compiling architecture arch of merge_notehb
+# -- Compiling entity start_node_new
+# -- Compiling architecture arch of start_node_new
+# -- Loading entity elasticBuffer
+# -- Compiling entity aya_start_node
+# -- Compiling architecture arch of aya_start_node
+# -- Compiling entity start_node
+# -- Compiling architecture arch of start_node
+# -- Compiling entity sink
+# -- Compiling architecture arch of sink
+# -- Compiling entity source
+# -- Compiling architecture arch of source
+# -- Compiling entity elasticFifoInner
+# -- Compiling architecture arch of elasticFifoInner
+# -- Compiling entity nontranspFifo
+# -- Compiling architecture arch of nontranspFifo
+# -- Loading entity elasticFifoInner
+# -- Compiling entity transpFIFO
+# -- Compiling architecture arch of transpFIFO
+# -- Compiling entity load_op
+# -- Compiling architecture arch of load_op
+# -- Compiling entity Const
+# -- Compiling architecture arch of Const
+# -- Compiling entity write_memory_single_inside
+# -- Compiling architecture arch of write_memory_single_inside
+# -- Compiling entity store_op
+# -- Compiling architecture arch of store_op
+# -- Loading entity write_memory_single_inside
+# -- Loading package MATH_REAL
+# -- Compiling entity Inj
+# -- Compiling architecture arch of Inj
+# -- Compiling entity mux
+# -- Compiling architecture arch of mux
+# -- Compiling entity cntrlMerge
+# -- Compiling architecture arch of cntrlMerge
+# -- Loading entity merge_notehb
+# -- Loading entity fork
+# -- Compiling entity lsq_load_op
+# -- Compiling architecture arch of lsq_load_op
+# -- Compiling entity lsq_store_op
+# -- Compiling architecture arch of lsq_store_op
+# End time: 18:49:03 on Dec 01,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Compile of elastic_components.vhd was successful.
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:49:03 on Dec 01,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package customTypes
+# -- Compiling entity atax
+# -- Compiling architecture behavioral of atax
+# -- Loading entity Const
+# -- Loading entity start_node
+# -- Loading entity branch
+# -- Loading entity fork
+# -- Loading package MATH_REAL
+# -- Loading entity mux
+# ** Error: (vcom-11) Could not find work.mc_load_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(3030): (vcom-1195) Cannot find expanded name "work.mc_load_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(3030): Unknown expanded name.
+# -- Loading entity merge
+# -- Loading entity elasticBuffer
+# -- Loading entity transpFIFO
+# ** Error: (vcom-11) Could not find work.zext_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(3327): (vcom-1195) Cannot find expanded name "work.zext_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(3327): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.zext_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(3339): (vcom-1195) Cannot find expanded name "work.zext_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(3339): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.getelementptr_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(3351): (vcom-1195) Cannot find expanded name "work.getelementptr_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(3351): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.mc_load_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(3369): (vcom-1195) Cannot find expanded name "work.mc_load_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(3369): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.mc_load_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(3387): (vcom-1195) Cannot find expanded name "work.mc_load_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(3387): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.mul_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(3405): (vcom-1195) Cannot find expanded name "work.mul_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(3405): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.add_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(3420): (vcom-1195) Cannot find expanded name "work.add_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(3420): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.add_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(3447): (vcom-1195) Cannot find expanded name "work.add_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(3447): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.icmp_ult_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(3474): (vcom-1195) Cannot find expanded name "work.icmp_ult_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(3474): Unknown expanded name.
+# -- Loading entity lsq_load_op
+# ** Error: (vcom-11) Could not find work.zext_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(3963): (vcom-1195) Cannot find expanded name "work.zext_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(3963): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.zext_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(3975): (vcom-1195) Cannot find expanded name "work.zext_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(3975): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.getelementptr_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(3987): (vcom-1195) Cannot find expanded name "work.getelementptr_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(3987): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.mc_load_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(4005): (vcom-1195) Cannot find expanded name "work.mc_load_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(4005): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.mul_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(4023): (vcom-1195) Cannot find expanded name "work.mul_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(4023): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.add_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(4038): (vcom-1195) Cannot find expanded name "work.add_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(4038): Unknown expanded name.
+# -- Loading entity lsq_store_op
+# ** Error: (vcom-11) Could not find work.add_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(4083): (vcom-1195) Cannot find expanded name "work.add_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(4083): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.icmp_ult_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(4110): (vcom-1195) Cannot find expanded name "work.icmp_ult_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(4110): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.mc_store_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(4581): (vcom-1195) Cannot find expanded name "work.mc_store_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(4581): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.add_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(4611): (vcom-1195) Cannot find expanded name "work.add_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(4611): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.icmp_ult_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(4638): (vcom-1195) Cannot find expanded name "work.icmp_ult_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(4638): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.ret_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(4776): (vcom-1195) Cannot find expanded name "work.ret_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(4776): Unknown expanded name.
+# -- Loading entity sink
+# ** Error: (vcom-11) Could not find work.memcont.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(4866): (vcom-1195) Cannot find expanded name "work.MemCont".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(4866): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.memcont.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(4896): (vcom-1195) Cannot find expanded name "work.MemCont".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(4896): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.memcont.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(4932): (vcom-1195) Cannot find expanded name "work.MemCont".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(4932): Unknown expanded name.
+# -- Loading entity end_node
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd(5054): VHDL Compiler exiting
+# End time: 18:49:03 on Dec 01,2022, Elapsed time: 0:00:00
+# Errors: 76, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:49:03 on Dec 01,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/mul_wrapper.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package customTypes
+# -- Compiling entity mul_op
+# -- Compiling architecture arch of mul_op
+# -- Loading entity join
+# ** Error: (vcom-11) Could not find work.mul_4_stage.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/mul_wrapper.vhd(45): (vcom-1195) Cannot find expanded name "work.mul_4_stage".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/mul_wrapper.vhd(45): Unknown expanded name.
+# -- Loading entity delay_buffer
+# -- Loading entity OEHB
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/mul_wrapper.vhd(76): VHDL Compiler exiting
+# End time: 18:49:03 on Dec 01,2022, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:49:03 on Dec 01,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/MemCont.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package customTypes
+# -- Compiling entity read_priority
+# -- Compiling architecture arch of read_priority
+# -- Compiling entity read_address_mux
+# -- Compiling architecture arch of read_address_mux
+# -- Compiling entity read_address_ready
+# -- Compiling architecture arch of read_address_ready
+# -- Compiling entity read_data_signals
+# -- Compiling architecture arch of read_data_signals
+# -- Compiling entity read_memory_arbiter
+# -- Compiling architecture arch of read_memory_arbiter
+# -- Loading entity read_priority
+# -- Loading entity read_address_mux
+# -- Loading entity read_address_ready
+# -- Loading entity read_data_signals
+# -- Compiling entity write_priority
+# -- Compiling architecture arch of write_priority
+# -- Compiling entity write_address_mux
+# -- Compiling architecture arch of write_address_mux
+# -- Compiling entity write_address_ready
+# -- Compiling architecture arch of write_address_ready
+# -- Compiling entity write_data_signals
+# -- Compiling architecture arch of write_data_signals
+# -- Compiling entity write_memory_arbiter
+# -- Compiling architecture arch of write_memory_arbiter
+# -- Loading entity write_priority
+# -- Loading entity write_address_mux
+# -- Loading entity write_address_ready
+# -- Loading entity write_data_signals
+# -- Compiling entity elasticBufferDummy
+# -- Compiling architecture arch of elasticBufferDummy
+# -- Compiling entity mc_load_op
+# -- Compiling architecture arch of mc_load_op
+# -- Loading entity TEHB
+# -- Compiling entity mc_store_op
+# -- Compiling architecture arch of mc_store_op
+# -- Loading entity join
+# -- Compiling entity MemCont
+# -- Compiling architecture arch of MemCont
+# -- Loading entity read_memory_arbiter
+# -- Loading entity write_memory_arbiter
+# ** Warning: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/MemCont.vhd(840): (vcom-1514) Range choice direction (downto) does not determine aggregate index range direction (to).
+# End time: 18:49:03 on Dec 01,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# Compile of MemCont.vhd was successful.
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:49:03 on Dec 01,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/multipliers.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mul_4_stage
+# -- Compiling architecture behav of mul_4_stage
+# -- Compiling entity mul_8_stage
+# -- Compiling architecture behav of mul_8_stage
+# End time: 18:49:03 on Dec 01,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Compile of multipliers.vhd was successful.
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:49:03 on Dec 01,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/simpackage.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package NUMERIC_STD
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling package sim_package
+# -- Compiling package body sim_package
+# -- Loading package sim_package
+# End time: 18:49:03 on Dec 01,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Compile of simpackage.vhd was successful.
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:49:03 on Dec 01,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/two_port_RAM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package sim_package
+# -- Compiling entity two_port_RAM
+# -- Compiling architecture behav of two_port_RAM
+# ** Warning: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/two_port_RAM.vhd(41): (vcom-1236) Shared variables must be of a protected type.
+# End time: 18:49:03 on Dec 01,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# Compile of two_port_RAM.vhd was successful.
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:49:03 on Dec 01,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/single_argument.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package sim_package
+# -- Compiling entity single_argument
+# -- Compiling architecture behav of single_argument
+# ** Warning: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/single_argument.vhd(34): (vcom-1236) Shared variables must be of a protected type.
+# End time: 18:49:03 on Dec 01,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# Compile of single_argument.vhd was successful.
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:49:03 on Dec 01,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/hls_verify_atax_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Loading package NUMERIC_STD
+# -- Loading package sim_package
+# -- Compiling entity atax_tb
+# -- Compiling architecture behav of atax_tb
+# ** Warning: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/hls_verify_atax_tb.vhd(111): (vcom-1236) Shared variables must be of a protected type.
+# -- Loading package customTypes
+# -- Loading entity atax
+# -- Loading entity single_argument
+# -- Loading entity two_port_RAM
+# End time: 18:49:03 on Dec 01,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# Compile of hls_verify_atax_tb.vhd was successful.
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:49:03 on Dec 01,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/arithmetic_units.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package customTypes
+# -- Compiling entity ret_op
+# -- Compiling architecture arch of ret_op
+# -- Loading entity TEHB
+# -- Compiling entity add_op
+# -- Compiling architecture arch of add_op
+# -- Loading entity join
+# -- Compiling entity sub_op
+# -- Compiling architecture arch of sub_op
+# -- Compiling entity and_op
+# -- Compiling architecture arch of and_op
+# -- Compiling entity or_op
+# -- Compiling architecture arch of or_op
+# -- Compiling entity xor_op
+# -- Compiling architecture arch of xor_op
+# -- Compiling entity sext_op
+# -- Compiling architecture arch of sext_op
+# -- Compiling entity zext_op
+# -- Compiling architecture arch of zext_op
+# -- Compiling entity shl_op
+# -- Compiling architecture arch of shl_op
+# -- Compiling entity ashr_op
+# -- Compiling architecture arch of ashr_op
+# -- Compiling entity lshr_op
+# -- Compiling architecture arch of lshr_op
+# -- Compiling entity antitokens
+# -- Compiling architecture arch of antitokens
+# -- Compiling entity select_op
+# -- Compiling architecture arch of select_op
+# -- Loading entity antitokens
+# -- Compiling entity icmp_eq_op
+# -- Compiling architecture arch of icmp_eq_op
+# -- Compiling entity icmp_ne_op
+# -- Compiling architecture arch of icmp_ne_op
+# -- Compiling entity icmp_ugt_op
+# -- Compiling architecture arch of icmp_ugt_op
+# -- Compiling entity icmp_uge_op
+# -- Compiling architecture arch of icmp_uge_op
+# -- Compiling entity icmp_sgt_op
+# -- Compiling architecture arch of icmp_sgt_op
+# -- Compiling entity icmp_sge_op
+# -- Compiling architecture arch of icmp_sge_op
+# -- Compiling entity icmp_ult_op
+# -- Compiling architecture arch of icmp_ult_op
+# -- Compiling entity icmp_ule_op
+# -- Compiling architecture arch of icmp_ule_op
+# -- Compiling entity icmp_slt_op
+# -- Compiling architecture arch of icmp_slt_op
+# -- Compiling entity icmp_sle_op
+# -- Compiling architecture arch of icmp_sle_op
+# -- Compiling entity getelementptr_op
+# -- Compiling architecture arch of getelementptr_op
+# -- Compiling entity fcmp_oeq_op
+# -- Compiling architecture arch of fcmp_oeq_op
+# -- Loading entity delay_buffer
+# -- Compiling entity fcmp_ogt_op
+# -- Compiling architecture arch of fcmp_ogt_op
+# -- Compiling entity fcmp_oge_op
+# -- Compiling architecture arch of fcmp_oge_op
+# -- Compiling entity fcmp_olt_op
+# -- Compiling architecture arch of fcmp_olt_op
+# -- Compiling entity fcmp_ole_op
+# -- Compiling architecture arch of fcmp_ole_op
+# -- Compiling entity fcmp_one_op
+# -- Compiling architecture arch of fcmp_one_op
+# -- Compiling entity fcmp_ord_op
+# -- Compiling architecture arch of fcmp_ord_op
+# -- Compiling entity fcmp_uno_op
+# -- Compiling architecture arch of fcmp_uno_op
+# -- Compiling entity fcmp_ueq_op
+# -- Compiling architecture arch of fcmp_ueq_op
+# -- Compiling entity fcmp_uge_op
+# -- Compiling architecture arch of fcmp_uge_op
+# -- Compiling entity fcmp_ult_op
+# -- Compiling architecture arch of fcmp_ult_op
+# -- Compiling entity fcmp_ule
+# -- Compiling architecture arch of fcmp_ule
+# -- Compiling entity fcmp_une
+# -- Compiling architecture arch of fcmp_une
+# -- Compiling entity fcmp_ugt
+# -- Compiling architecture arch of fcmp_ugt
+# -- Compiling entity fadd_op
+# -- Compiling architecture arch of fadd_op
+# -- Loading entity OEHB
+# -- Compiling entity fsub_op
+# -- Compiling architecture arch of fsub_op
+# -- Compiling entity fmul_op
+# -- Compiling architecture arch of fmul_op
+# -- Compiling entity fneg_op
+# -- Compiling architecture arch of fneg_op
+# -- Compiling entity udiv_op
+# -- Compiling architecture arch of udiv_op
+# -- Compiling entity sdiv_op
+# -- Compiling architecture arch of sdiv_op
+# -- Compiling entity fdiv_op
+# -- Compiling architecture arch of fdiv_op
+# -- Compiling entity srem_op
+# -- Compiling architecture arch of srem_op
+# -- Compiling entity urem_op
+# -- Compiling architecture arch of urem_op
+# -- Compiling entity frem_op
+# -- Compiling architecture arch of frem_op
+# -- Compiling entity sinf_op
+# -- Compiling architecture arch of sinf_op
+# -- Compiling entity cosf_op
+# -- Compiling architecture arch of cosf_op
+# -- Compiling entity sqrtf_op
+# -- Compiling architecture arch of sqrtf_op
+# -- Compiling entity expf_op
+# -- Compiling architecture arch of expf_op
+# -- Compiling entity exp2f_op
+# -- Compiling architecture arch of exp2f_op
+# -- Compiling entity logf_op
+# -- Compiling architecture arch of logf_op
+# -- Compiling entity log2f_op
+# -- Compiling architecture arch of log2f_op
+# -- Compiling entity log10f_op
+# -- Compiling architecture arch of log10f_op
+# -- Compiling entity fabsf_op
+# -- Compiling architecture arch of fabsf_op
+# -- Compiling entity trunc_op
+# -- Compiling architecture arch of trunc_op
+# -- Compiling entity floorf_op
+# -- Compiling architecture arch of floorf_op
+# -- Compiling entity ceilf_op
+# -- Compiling architecture arch of ceilf_op
+# -- Compiling entity roundf_op
+# -- Compiling architecture arch of roundf_op
+# -- Compiling entity fminf_op
+# -- Compiling architecture arch of fminf_op
+# -- Compiling entity fmaxf_op
+# -- Compiling architecture arch of fmaxf_op
+# -- Compiling entity powf_op
+# -- Compiling architecture arch of powf_op
+# -- Compiling entity fabsf_op
+# -- Compiling architecture arch of fabsf_op
+# -- Compiling entity copysignf_op
+# -- Compiling architecture arch of copysignf_op
+# -- Compiling entity sitofp_op
+# -- Compiling architecture arch of sitofp_op
+# End time: 18:49:03 on Dec 01,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Compile of arithmetic_units.vhd was successful.
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:49:03 on Dec 01,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/sharing_components.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package customTypes
+# -- Compiling entity branchGen
+# -- Compiling architecture arch of branchGen
+# -- Loading entity join
+# -- Compiling entity merge_one_hot
+# -- Compiling architecture arch of merge_one_hot
+# -- Loading entity TEHB
+# -- Compiling entity distributor
+# -- Compiling architecture arch of distributor
+# -- Loading entity branchGen
+# -- Compiling package selectorTypes
+# -- Compiling entity bypassFIFO
+# -- Compiling architecture arch of bypassFIFO
+# -- Loading entity transpFIFO
+# -- Loading package selectorTypes
+# -- Compiling entity input_selector
+# -- Compiling architecture arch of input_selector
+# -- Loading entity merge_one_hot
+# -- Loading entity bypassFIFO
+# -- Compiling entity selector
+# -- Compiling architecture arch of selector
+# -- Loading entity input_selector
+# -- Loading entity fork
+# -- Loading package MATH_REAL
+# -- Loading entity mux
+# End time: 18:49:03 on Dec 01,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Compile of sharing_components.vhd was successful.
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:49:03 on Dec 01,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package customTypes
+# -- Compiling entity atax
+# -- Compiling architecture behavioral of atax
+# -- Loading entity Const
+# -- Loading entity start_node
+# -- Loading entity branch
+# -- Loading entity fork
+# -- Loading package MATH_REAL
+# -- Loading entity mux
+# -- Loading entity mc_load_op
+# -- Loading entity merge
+# -- Loading entity elasticBuffer
+# -- Loading entity transpFIFO
+# -- Loading entity zext_op
+# -- Loading entity getelementptr_op
+# -- Loading entity mul_op
+# -- Loading entity add_op
+# -- Loading entity icmp_ult_op
+# -- Loading entity lsq_load_op
+# -- Loading entity lsq_store_op
+# -- Loading entity mc_store_op
+# -- Loading entity ret_op
+# -- Loading entity sink
+# -- Loading entity MemCont
+# -- Loading entity end_node
+# End time: 18:49:03 on Dec 01,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Compile of atax_optimized.vhd was successful.
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:49:03 on Dec 01,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/mul_wrapper.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package customTypes
+# -- Compiling entity mul_op
+# -- Compiling architecture arch of mul_op
+# -- Loading entity join
+# -- Loading entity mul_4_stage
+# -- Loading entity delay_buffer
+# -- Loading entity OEHB
+# End time: 18:49:04 on Dec 01,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Compile of mul_wrapper.vhd was successful.
+# All compile dependencies have been resolved.vlog -work work -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/LSQ_y.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# -- Compiling module STORE_QUEUE_LSQ_y
+# -- Compiling module LOAD_QUEUE_LSQ_y
+# -- Compiling module GROUP_ALLOCATOR_LSQ_y
+# -- Compiling module LOAD_PORT_LSQ_y
+# -- Compiling module STORE_DATA_PORT_LSQ_y
+# -- Compiling module LSQ_y
+# 
+# Top level modules:
+# 	LSQ_y
+ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/delay_buffer.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity delay_buffer
+# -- Compiling architecture arch of delay_buffer
+ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/elastic_components.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package customTypes
+# -- Loading package customTypes
+# -- Compiling entity andN
+# -- Compiling architecture vanilla of andn
+# -- Compiling entity nandN
+# -- Compiling architecture arch of nandn
+# -- Compiling entity orN
+# -- Compiling architecture vanilla of orN
+# -- Compiling entity norN
+# -- Compiling architecture arch of norN
+# -- Compiling entity join
+# -- Compiling architecture arch of join
+# -- Loading entity andN
+# -- Loading package NUMERIC_STD
+# -- Compiling entity TEHB
+# -- Compiling architecture arch of TEHB
+# -- Compiling entity OEHB
+# -- Compiling architecture arch of OEHB
+# -- Compiling entity elasticBuffer
+# -- Compiling architecture arch of elasticBuffer
+# -- Loading entity TEHB
+# -- Loading entity OEHB
+# -- Compiling entity buffer_bx_op
+# -- Compiling architecture arch of buffer_bx_op
+# -- Compiling entity join_bx_op
+# -- Compiling architecture arch of join_bx_op
+# -- Loading entity join
+# -- Compiling entity end_node
+# -- Compiling architecture arch of end_node
+# -- Compiling entity branchSimple
+# -- Compiling architecture arch of branchSimple
+# -- Compiling entity branch
+# -- Compiling architecture arch of branch
+# -- Loading entity branchSimple
+# -- Compiling entity eagerFork_RegisterBLock
+# -- Compiling architecture arch of eagerFork_RegisterBLock
+# -- Compiling entity fork
+# -- Compiling architecture arch of fork
+# -- Loading entity orN
+# -- Loading entity eagerFork_RegisterBLock
+# -- Compiling entity lazyfork
+# -- Compiling architecture arch of lazyfork
+# -- Compiling entity merge
+# -- Compiling architecture arch of merge
+# -- Compiling entity merge_notehb
+# -- Compiling architecture arch of merge_notehb
+# -- Compiling entity start_node_new
+# -- Compiling architecture arch of start_node_new
+# -- Loading entity elasticBuffer
+# -- Compiling entity aya_start_node
+# -- Compiling architecture arch of aya_start_node
+# -- Compiling entity start_node
+# -- Compiling architecture arch of start_node
+# -- Compiling entity sink
+# -- Compiling architecture arch of sink
+# -- Compiling entity source
+# -- Compiling architecture arch of source
+# -- Compiling entity elasticFifoInner
+# -- Compiling architecture arch of elasticFifoInner
+# -- Compiling entity nontranspFifo
+# -- Compiling architecture arch of nontranspFifo
+# -- Loading entity elasticFifoInner
+# -- Compiling entity transpFIFO
+# -- Compiling architecture arch of transpFIFO
+# -- Compiling entity load_op
+# -- Compiling architecture arch of load_op
+# -- Compiling entity Const
+# -- Compiling architecture arch of Const
+# -- Compiling entity write_memory_single_inside
+# -- Compiling architecture arch of write_memory_single_inside
+# -- Compiling entity store_op
+# -- Compiling architecture arch of store_op
+# -- Loading entity write_memory_single_inside
+# -- Loading package MATH_REAL
+# -- Compiling entity Inj
+# -- Compiling architecture arch of Inj
+# -- Compiling entity mux
+# -- Compiling architecture arch of mux
+# -- Compiling entity cntrlMerge
+# -- Compiling architecture arch of cntrlMerge
+# -- Loading entity merge_notehb
+# -- Loading entity fork
+# -- Compiling entity lsq_load_op
+# -- Compiling architecture arch of lsq_load_op
+# -- Compiling entity lsq_store_op
+# -- Compiling architecture arch of lsq_store_op
+ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/MemCont.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package customTypes
+# -- Compiling entity read_priority
+# -- Compiling architecture arch of read_priority
+# -- Compiling entity read_address_mux
+# -- Compiling architecture arch of read_address_mux
+# -- Compiling entity read_address_ready
+# -- Compiling architecture arch of read_address_ready
+# -- Compiling entity read_data_signals
+# -- Compiling architecture arch of read_data_signals
+# -- Compiling entity read_memory_arbiter
+# -- Compiling architecture arch of read_memory_arbiter
+# -- Loading entity read_priority
+# -- Loading entity read_address_mux
+# -- Loading entity read_address_ready
+# -- Loading entity read_data_signals
+# -- Compiling entity write_priority
+# -- Compiling architecture arch of write_priority
+# -- Compiling entity write_address_mux
+# -- Compiling architecture arch of write_address_mux
+# -- Compiling entity write_address_ready
+# -- Compiling architecture arch of write_address_ready
+# -- Compiling entity write_data_signals
+# -- Compiling architecture arch of write_data_signals
+# -- Compiling entity write_memory_arbiter
+# -- Compiling architecture arch of write_memory_arbiter
+# -- Loading entity write_priority
+# -- Loading entity write_address_mux
+# -- Loading entity write_address_ready
+# -- Loading entity write_data_signals
+# -- Compiling entity elasticBufferDummy
+# -- Compiling architecture arch of elasticBufferDummy
+# -- Compiling entity mc_load_op
+# -- Compiling architecture arch of mc_load_op
+# -- Loading entity TEHB
+# -- Compiling entity mc_store_op
+# -- Compiling architecture arch of mc_store_op
+# -- Loading entity join
+# -- Compiling entity MemCont
+# -- Compiling architecture arch of MemCont
+# -- Loading entity read_memory_arbiter
+# -- Loading entity write_memory_arbiter
+# ** Warning: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/MemCont.vhd(840): (vcom-1514) Range choice direction (downto) does not determine aggregate index range direction (to).
+ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/multipliers.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mul_4_stage
+# -- Compiling architecture behav of mul_4_stage
+# -- Compiling entity mul_8_stage
+# -- Compiling architecture behav of mul_8_stage
+ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/simpackage.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package NUMERIC_STD
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling package sim_package
+# -- Compiling package body sim_package
+# -- Loading package sim_package
+ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/two_port_RAM.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package sim_package
+# -- Compiling entity two_port_RAM
+# -- Compiling architecture behav of two_port_RAM
+# ** Warning: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/two_port_RAM.vhd(41): (vcom-1236) Shared variables must be of a protected type.
+ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/single_argument.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package sim_package
+# -- Compiling entity single_argument
+# -- Compiling architecture behav of single_argument
+# ** Warning: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/single_argument.vhd(34): (vcom-1236) Shared variables must be of a protected type.
+ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/hls_verify_atax_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Loading package NUMERIC_STD
+# -- Loading package sim_package
+# -- Compiling entity atax_tb
+# -- Compiling architecture behav of atax_tb
+# ** Warning: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/hls_verify_atax_tb.vhd(111): (vcom-1236) Shared variables must be of a protected type.
+# -- Loading package customTypes
+# -- Loading entity atax
+# -- Loading entity single_argument
+# -- Loading entity two_port_RAM
+ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/arithmetic_units.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package customTypes
+# -- Compiling entity ret_op
+# -- Compiling architecture arch of ret_op
+# -- Loading entity TEHB
+# -- Compiling entity add_op
+# -- Compiling architecture arch of add_op
+# -- Loading entity join
+# -- Compiling entity sub_op
+# -- Compiling architecture arch of sub_op
+# -- Compiling entity and_op
+# -- Compiling architecture arch of and_op
+# -- Compiling entity or_op
+# -- Compiling architecture arch of or_op
+# -- Compiling entity xor_op
+# -- Compiling architecture arch of xor_op
+# -- Compiling entity sext_op
+# -- Compiling architecture arch of sext_op
+# -- Compiling entity zext_op
+# -- Compiling architecture arch of zext_op
+# -- Compiling entity shl_op
+# -- Compiling architecture arch of shl_op
+# -- Compiling entity ashr_op
+# -- Compiling architecture arch of ashr_op
+# -- Compiling entity lshr_op
+# -- Compiling architecture arch of lshr_op
+# -- Compiling entity antitokens
+# -- Compiling architecture arch of antitokens
+# -- Compiling entity select_op
+# -- Compiling architecture arch of select_op
+# -- Loading entity antitokens
+# -- Compiling entity icmp_eq_op
+# -- Compiling architecture arch of icmp_eq_op
+# -- Compiling entity icmp_ne_op
+# -- Compiling architecture arch of icmp_ne_op
+# -- Compiling entity icmp_ugt_op
+# -- Compiling architecture arch of icmp_ugt_op
+# -- Compiling entity icmp_uge_op
+# -- Compiling architecture arch of icmp_uge_op
+# -- Compiling entity icmp_sgt_op
+# -- Compiling architecture arch of icmp_sgt_op
+# -- Compiling entity icmp_sge_op
+# -- Compiling architecture arch of icmp_sge_op
+# -- Compiling entity icmp_ult_op
+# -- Compiling architecture arch of icmp_ult_op
+# -- Compiling entity icmp_ule_op
+# -- Compiling architecture arch of icmp_ule_op
+# -- Compiling entity icmp_slt_op
+# -- Compiling architecture arch of icmp_slt_op
+# -- Compiling entity icmp_sle_op
+# -- Compiling architecture arch of icmp_sle_op
+# -- Compiling entity getelementptr_op
+# -- Compiling architecture arch of getelementptr_op
+# -- Compiling entity fcmp_oeq_op
+# -- Compiling architecture arch of fcmp_oeq_op
+# -- Loading entity delay_buffer
+# -- Compiling entity fcmp_ogt_op
+# -- Compiling architecture arch of fcmp_ogt_op
+# -- Compiling entity fcmp_oge_op
+# -- Compiling architecture arch of fcmp_oge_op
+# -- Compiling entity fcmp_olt_op
+# -- Compiling architecture arch of fcmp_olt_op
+# -- Compiling entity fcmp_ole_op
+# -- Compiling architecture arch of fcmp_ole_op
+# -- Compiling entity fcmp_one_op
+# -- Compiling architecture arch of fcmp_one_op
+# -- Compiling entity fcmp_ord_op
+# -- Compiling architecture arch of fcmp_ord_op
+# -- Compiling entity fcmp_uno_op
+# -- Compiling architecture arch of fcmp_uno_op
+# -- Compiling entity fcmp_ueq_op
+# -- Compiling architecture arch of fcmp_ueq_op
+# -- Compiling entity fcmp_uge_op
+# -- Compiling architecture arch of fcmp_uge_op
+# -- Compiling entity fcmp_ult_op
+# -- Compiling architecture arch of fcmp_ult_op
+# -- Compiling entity fcmp_ule
+# -- Compiling architecture arch of fcmp_ule
+# -- Compiling entity fcmp_une
+# -- Compiling architecture arch of fcmp_une
+# -- Compiling entity fcmp_ugt
+# -- Compiling architecture arch of fcmp_ugt
+# -- Compiling entity fadd_op
+# -- Compiling architecture arch of fadd_op
+# -- Loading entity OEHB
+# -- Compiling entity fsub_op
+# -- Compiling architecture arch of fsub_op
+# -- Compiling entity fmul_op
+# -- Compiling architecture arch of fmul_op
+# -- Compiling entity fneg_op
+# -- Compiling architecture arch of fneg_op
+# -- Compiling entity udiv_op
+# -- Compiling architecture arch of udiv_op
+# -- Compiling entity sdiv_op
+# -- Compiling architecture arch of sdiv_op
+# -- Compiling entity fdiv_op
+# -- Compiling architecture arch of fdiv_op
+# -- Compiling entity srem_op
+# -- Compiling architecture arch of srem_op
+# -- Compiling entity urem_op
+# -- Compiling architecture arch of urem_op
+# -- Compiling entity frem_op
+# -- Compiling architecture arch of frem_op
+# -- Compiling entity sinf_op
+# -- Compiling architecture arch of sinf_op
+# -- Compiling entity cosf_op
+# -- Compiling architecture arch of cosf_op
+# -- Compiling entity sqrtf_op
+# -- Compiling architecture arch of sqrtf_op
+# -- Compiling entity expf_op
+# -- Compiling architecture arch of expf_op
+# -- Compiling entity exp2f_op
+# -- Compiling architecture arch of exp2f_op
+# -- Compiling entity logf_op
+# -- Compiling architecture arch of logf_op
+# -- Compiling entity log2f_op
+# -- Compiling architecture arch of log2f_op
+# -- Compiling entity log10f_op
+# -- Compiling architecture arch of log10f_op
+# -- Compiling entity fabsf_op
+# -- Compiling architecture arch of fabsf_op
+# -- Compiling entity trunc_op
+# -- Compiling architecture arch of trunc_op
+# -- Compiling entity floorf_op
+# -- Compiling architecture arch of floorf_op
+# -- Compiling entity ceilf_op
+# -- Compiling architecture arch of ceilf_op
+# -- Compiling entity roundf_op
+# -- Compiling architecture arch of roundf_op
+# -- Compiling entity fminf_op
+# -- Compiling architecture arch of fminf_op
+# -- Compiling entity fmaxf_op
+# -- Compiling architecture arch of fmaxf_op
+# -- Compiling entity powf_op
+# -- Compiling architecture arch of powf_op
+# -- Compiling entity fabsf_op
+# -- Compiling architecture arch of fabsf_op
+# -- Compiling entity copysignf_op
+# -- Compiling architecture arch of copysignf_op
+# -- Compiling entity sitofp_op
+# -- Compiling architecture arch of sitofp_op
+ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/sharing_components.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package customTypes
+# -- Compiling entity branchGen
+# -- Compiling architecture arch of branchGen
+# -- Loading entity join
+# -- Compiling entity merge_one_hot
+# -- Compiling architecture arch of merge_one_hot
+# -- Loading entity TEHB
+# -- Compiling entity distributor
+# -- Compiling architecture arch of distributor
+# -- Loading entity branchGen
+# -- Compiling package selectorTypes
+# -- Compiling entity bypassFIFO
+# -- Compiling architecture arch of bypassFIFO
+# -- Loading entity transpFIFO
+# -- Loading package selectorTypes
+# -- Compiling entity input_selector
+# -- Compiling architecture arch of input_selector
+# -- Loading entity merge_one_hot
+# -- Loading entity bypassFIFO
+# -- Compiling entity selector
+# -- Compiling architecture arch of selector
+# -- Loading entity input_selector
+# -- Loading entity fork
+# -- Loading package MATH_REAL
+# -- Loading entity mux
+ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/atax_optimized.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package customTypes
+# -- Compiling entity atax
+# -- Compiling architecture behavioral of atax
+# -- Loading entity Const
+# -- Loading entity start_node
+# -- Loading entity branch
+# -- Loading entity fork
+# -- Loading package MATH_REAL
+# -- Loading entity mux
+# -- Loading entity mc_load_op
+# -- Loading entity merge
+# -- Loading entity elasticBuffer
+# -- Loading entity transpFIFO
+# -- Loading entity zext_op
+# -- Loading entity getelementptr_op
+# -- Loading entity mul_op
+# -- Loading entity add_op
+# -- Loading entity icmp_ult_op
+# -- Loading entity lsq_load_op
+# -- Loading entity lsq_store_op
+# -- Loading entity mc_store_op
+# -- Loading entity ret_op
+# -- Loading entity sink
+# -- Loading entity MemCont
+# -- Loading entity end_node
+ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/mul_wrapper.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package customTypes
+# -- Compiling entity mul_op
+# -- Compiling architecture arch of mul_op
+# -- Loading entity join
+# -- Loading entity mul_4_stage
+# -- Loading entity delay_buffer
+# -- Loading entity OEHB
+ModelSim> # 13 compiles, 0 failed with no errors.
+# vsim atax_tb 
+# Start time: 18:49:05 on Dec 01,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Loading work.sim_package(body)
+# Loading work.customtypes
+# Loading work.atax_tb(behav)
+# Loading ieee.math_real(body)
+# Loading work.atax(behavioral)
+# Loading work.const(arch)
+# Loading work.start_node(arch)
+# Loading work.elasticbuffer(arch)
+# Loading work.tehb(arch)
+# Loading work.oehb(arch)
+# Loading work.branch(arch)
+# Loading work.join(arch)
+# Loading work.andn(vanilla)
+# Loading work.branchsimple(arch)
+# Loading work.fork(arch)
+# Loading work.orn(vanilla)
+# Loading work.eagerfork_registerblock(arch)
+# Loading work.mux(arch)
+# Loading work.mc_load_op(arch)
+# Loading work.merge(arch)
+# Loading work.transpfifo(arch)
+# Loading work.elasticfifoinner(arch)
+# Loading work.zext_op(arch)
+# Loading work.getelementptr_op(arch)
+# Loading work.mul_op(arch)
+# Loading work.mul_4_stage(behav)
+# Loading work.delay_buffer(arch)
+# Loading work.add_op(arch)
+# Loading work.icmp_ult_op(arch)
+# Loading work.lsq_load_op(arch)
+# Loading work.lsq_store_op(arch)
+# Loading work.mc_store_op(arch)
+# Loading work.ret_op(arch)
+# Loading work.sink(arch)
+# Loading work.LSQ_y
+# Loading work.STORE_QUEUE_LSQ_y
+# Loading work.LOAD_QUEUE_LSQ_y
+# Loading work.GROUP_ALLOCATOR_LSQ_y
+# Loading work.LOAD_PORT_LSQ_y
+# Loading work.STORE_DATA_PORT_LSQ_y
+# Loading work.memcont(arch)
+# Loading work.read_memory_arbiter(arch)
+# Loading work.read_priority(arch)
+# Loading work.read_address_mux(arch)
+# Loading work.read_address_ready(arch)
+# Loading work.read_data_signals(arch)
+# Loading work.write_memory_arbiter(arch)
+# Loading work.write_priority(arch)
+# Loading work.write_address_mux(arch)
+# Loading work.write_address_ready(arch)
+# Loading work.write_data_signals(arch)
+# Loading work.end_node(arch)
+# Loading work.single_argument(behav)
+# Loading work.two_port_ram(behav)
+# ** Warning: Design size of 36145 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# ** Warning: (vsim-8683) Uninitialized out port /atax_tb/duv/end_0/eReadyArray(3) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /atax_tb/duv/end_0/eReadyArray(2) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /atax_tb/duv/end_0/eReadyArray(1) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /atax_tb/duv/end_0/eReadyArray(0) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /atax_tb/duv/y_we1 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /atax_tb/duv/y_dout1(31 downto 0) has no driver.
+# This port will contribute value (32'hXXXXXXXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /atax_tb/duv/tmp_we1 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /atax_tb/duv/tmp_dout1(31 downto 0) has no driver.
+# This port will contribute value (32'hXXXXXXXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /atax_tb/duv/A_we1 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /atax_tb/duv/A_dout1(31 downto 0) has no driver.
+# This port will contribute value (32'hXXXXXXXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /atax_tb/duv/x_we1 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /atax_tb/duv/x_dout1(31 downto 0) has no driver.
+# This port will contribute value (32'hXXXXXXXX) to the signal network.
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/icmp_39
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phiC_15
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phiC_15
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phiC_15
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phiC_15
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phi_n8
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phi_n8
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phi_n8
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phi_n8
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phi_n7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phi_n7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phi_n7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phi_n7
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/icmp_34
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/getelementptr_27
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/getelementptr_27
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/getelementptr_27
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phi_21
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phi_21
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phi_21
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phi_21
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phiC_10
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phiC_10
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phiC_10
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phiC_10
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phi_n6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phi_n6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phi_n6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phi_n6
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/icmp_18
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/getelementptr_10
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/getelementptr_10
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/getelementptr_10
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phi_7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phi_7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phi_7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phi_7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phi_6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phi_6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phi_6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phi_6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phiC_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phiC_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phiC_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phiC_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phi_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phi_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phi_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /atax_tb/duv/phi_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /atax_tb/duv/getelementptr_27
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /atax_tb/duv/getelementptr_27
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 3  Instance: /atax_tb/duv/icmp_34
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /atax_tb/duv/getelementptr_10
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /atax_tb/duv/getelementptr_10
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 3  Instance: /atax_tb/duv/icmp_18
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 3  Instance: /atax_tb/duv/icmp_39
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 3  Instance: /atax_tb/duv/phi_21
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 3  Instance: /atax_tb/duv/phi_21
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 3  Instance: /atax_tb/duv/phi_21
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 3  Instance: /atax_tb/duv/phi_21
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 3  Instance: /atax_tb/duv/phi_7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 3  Instance: /atax_tb/duv/phi_7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 3  Instance: /atax_tb/duv/phi_7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 3  Instance: /atax_tb/duv/phi_7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 3  Instance: /atax_tb/duv/phi_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 3  Instance: /atax_tb/duv/phi_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 3  Instance: /atax_tb/duv/phi_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 3  Instance: /atax_tb/duv/phi_1
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/icmp_39
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/icmp_34
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/icmp_18
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phiC_15
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phiC_15
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phiC_15
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phiC_15
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phi_n8
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phi_n8
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phi_n8
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phi_n8
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phi_n7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phi_n7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phi_n7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phi_n7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phi_21
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phi_21
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phi_21
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phi_21
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phiC_10
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phiC_10
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phiC_10
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phiC_10
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phi_n6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phi_n6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phi_n6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phi_n6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phi_7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phi_7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phi_7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phi_7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phi_6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phi_6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phi_6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phi_6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phiC_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phiC_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phiC_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phiC_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phi_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phi_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phi_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 4  Instance: /atax_tb/duv/phi_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phi_n8
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phi_n8
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phi_n8
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phi_n8
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phiC_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phiC_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phiC_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phiC_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phi_6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phi_6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phi_6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phi_6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phi_7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phi_7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phi_7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phi_7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phi_n6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phi_n6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phi_n6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phi_n6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phiC_10
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phiC_10
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phiC_10
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phiC_10
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phi_21
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phi_21
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phi_21
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phi_21
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phi_n7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phi_n7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phi_n7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phi_n7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phiC_15
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phiC_15
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phiC_15
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phiC_15
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phi_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phi_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phi_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 5  Instance: /atax_tb/duv/phi_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phi_n8
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phi_n8
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phi_n8
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phi_n8
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phiC_15
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phiC_15
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phiC_15
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phiC_15
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phi_n7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phi_n7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phi_n7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phi_n7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phi_21
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phi_21
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phi_21
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phi_21
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phiC_10
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phiC_10
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phiC_10
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phiC_10
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phi_n6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phi_n6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phi_n6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phi_n6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phi_7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phi_7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phi_7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phi_7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phi_6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phi_6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phi_6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phi_6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phiC_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phiC_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phiC_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phiC_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phi_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phi_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phi_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 6  Instance: /atax_tb/duv/phi_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phi_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phi_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phi_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phi_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phiC_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phiC_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phiC_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phiC_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phi_7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phi_7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phi_7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phi_7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phi_21
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phi_21
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phi_21
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phi_21
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phi_n8
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phi_n8
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phi_n8
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phi_n8
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phiC_10
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phiC_10
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phiC_10
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phiC_10
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phiC_15
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phiC_15
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phiC_15
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phiC_15
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phi_n6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phi_n6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phi_n6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phi_n6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phi_n7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phi_n7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phi_n7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 7  Instance: /atax_tb/duv/phi_n7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 8  Instance: /atax_tb/duv/phi_n6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 8  Instance: /atax_tb/duv/phi_n6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 8  Instance: /atax_tb/duv/phi_n6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 8  Instance: /atax_tb/duv/phi_n6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 8  Instance: /atax_tb/duv/phi_n7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 8  Instance: /atax_tb/duv/phi_n7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 8  Instance: /atax_tb/duv/phi_n7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 8  Instance: /atax_tb/duv/phi_n7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 8  Instance: /atax_tb/duv/phiC_10
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 8  Instance: /atax_tb/duv/phiC_10
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 8  Instance: /atax_tb/duv/phiC_10
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 8  Instance: /atax_tb/duv/phiC_10
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 8  Instance: /atax_tb/duv/phiC_15
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 8  Instance: /atax_tb/duv/phiC_15
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 8  Instance: /atax_tb/duv/phiC_15
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 8  Instance: /atax_tb/duv/phiC_15
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 8  Instance: /atax_tb/duv/phi_6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 8  Instance: /atax_tb/duv/phi_6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 8  Instance: /atax_tb/duv/phi_6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 8  Instance: /atax_tb/duv/phi_6
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 8  Instance: /atax_tb/duv/phiC_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 8  Instance: /atax_tb/duv/phiC_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 8  Instance: /atax_tb/duv/phiC_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 8  Instance: /atax_tb/duv/phiC_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 9  Instance: /atax_tb/duv/phiC_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 9  Instance: /atax_tb/duv/phiC_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 9  Instance: /atax_tb/duv/phiC_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 9  Instance: /atax_tb/duv/phiC_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 9  Instance: /atax_tb/duv/phi_7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 9  Instance: /atax_tb/duv/phi_7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 9  Instance: /atax_tb/duv/phi_7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 9  Instance: /atax_tb/duv/phi_7
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 9  Instance: /atax_tb/duv/phi_21
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 9  Instance: /atax_tb/duv/phi_21
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 9  Instance: /atax_tb/duv/phi_21
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 9  Instance: /atax_tb/duv/phi_21
+# ** Note: simulation done!
+#    Time: 3994 ns  Iteration: 1  Instance: /atax_tb
+# ** Failure: NORMAL EXIT (note: failure is to force the simulator to stop)
+#    Time: 3994 ns  Iteration: 1  Process: /atax_tb/generate_sim_done_proc File: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/hls_verify_atax_tb.vhd
+# Break in Process generate_sim_done_proc at /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/hls_verify_atax_tb.vhd line 389
+# Stopped at /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/atax/sim/VHDL_SRC/hls_verify_atax_tb.vhd line 389
+# End time: 18:49:19 on Dec 01,2022, Elapsed time: 0:00:14
+# Errors: 0, Warnings: 277
+
+--- Comparison Results ---
+
+Comparison of [end] : Pass
+output_end.dat
+output_tmp.dat
+output_y.dat

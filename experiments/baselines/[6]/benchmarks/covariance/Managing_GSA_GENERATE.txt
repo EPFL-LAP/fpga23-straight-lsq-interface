@@ -1,0 +1,46 @@
+
+
+*******************************************************
+	Starting a new LSQ!!!!
+
+
+
+============================================
+
+The control dependencies before modifications are:  
+ProducerBB: BB5  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB11  has the following modified control dependencies:     8,
+
+
+
+*****************************************
+
+
+	New (Producer,Consumer) pair:
+ProducerBB: BB5  has the following modified control dependencies:     Has no modified control dependencies!!
+
+ConsumerBB: BB11  has the following modified control dependencies:     8,
+
+
+*******************************************
+
+Found 1 paths
+Printing path number 0 details
+11 -> 10 -> 9 -> 8 -> 7 -> 6 -> 5 -> 4 -> 3 -> 2 -> 1 -> 
+
+*******************************************
+
+Found 1 paths
+Printing path number 0 details
+5 -> 4 -> 3 -> 2 -> 1 -> 
+
+
+###########################################################
+
+
+
+	Let's check what came out!!
+
+
+No need to insert a GENERATE!!

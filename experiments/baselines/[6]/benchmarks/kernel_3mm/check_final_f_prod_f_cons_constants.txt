@@ -1,0 +1,886 @@
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB3, BB5)
+
+Consumer of type type = "Constant!!
+
+
+		 Triggering the normal non-loop addSuppress case!!!!
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  1 
+
+
+	 Don't need to add a SUPPRESS!!
+
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB3, BB5)
+
+Consumer of type type = "Constant!!
+
+
+		 Triggering the normal non-loop addSuppress case!!!!
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  1 
+
+
+	 Don't need to add a SUPPRESS!!
+
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB2, BB6)
+
+Consumer of type type = "Constant!!
+
+
+		 Triggering the normal non-loop addSuppress case!!!!
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  1 
+
+
+	 Don't need to add a SUPPRESS!!
+
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB2, BB6)
+
+Consumer of type type = "Constant!!
+
+
+		 Triggering the normal non-loop addSuppress case!!!!
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  1 
+
+
+	 Don't need to add a SUPPRESS!!
+
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB1, BB7)
+
+Consumer of type type = "Constant!!
+
+
+		 Triggering the normal non-loop addSuppress case!!!!
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  1 
+
+
+	 Don't need to add a SUPPRESS!!
+
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB9, BB11)
+
+Consumer of type type = "Constant!!
+
+
+		 Triggering the normal non-loop addSuppress case!!!!
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  1 
+
+
+	 Don't need to add a SUPPRESS!!
+
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB9, BB11)
+
+Consumer of type type = "Constant!!
+
+
+		 Triggering the normal non-loop addSuppress case!!!!
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  1 
+
+
+	 Don't need to add a SUPPRESS!!
+
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB8, BB12)
+
+Consumer of type type = "Constant!!
+
+
+		 Triggering the normal non-loop addSuppress case!!!!
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  1 
+
+
+	 Don't need to add a SUPPRESS!!
+
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB8, BB12)
+
+Consumer of type type = "Constant!!
+
+
+		 Triggering the normal non-loop addSuppress case!!!!
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  1 
+
+
+	 Don't need to add a SUPPRESS!!
+
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB1, BB13)
+
+Consumer of type type = "Constant!!
+
+
+		 Triggering the normal non-loop addSuppress case!!!!
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  1 
+
+
+	 Don't need to add a SUPPRESS!!
+
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB15, BB17)
+
+Consumer of type type = "Constant!!
+
+
+		 Triggering the normal non-loop addSuppress case!!!!
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  1 
+
+
+	 Don't need to add a SUPPRESS!!
+
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB15, BB17)
+
+Consumer of type type = "Constant!!
+
+
+		 Triggering the normal non-loop addSuppress case!!!!
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  1 
+
+
+	 Don't need to add a SUPPRESS!!
+
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB14, BB18)
+
+Consumer of type type = "Constant!!
+
+
+		 Triggering the normal non-loop addSuppress case!!!!
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  1 
+
+
+	 Don't need to add a SUPPRESS!!
+
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB14, BB18)
+
+Consumer of type type = "Constant!!
+
+
+		 Triggering the normal non-loop addSuppress case!!!!
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  1 
+
+
+	 Don't need to add a SUPPRESS!!
+
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB3, BB5)
+
+Consumer of type type = "Constant!!
+
+
+		 Triggering the normal non-loop addSuppress case!!!!
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  1 
+
+
+	 Don't need to add a SUPPRESS!!
+
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB9, BB11)
+
+Consumer of type type = "Constant!!
+
+
+		 Triggering the normal non-loop addSuppress case!!!!
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  1 
+
+
+	 Don't need to add a SUPPRESS!!
+
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB15, BB17)
+
+Consumer of type type = "Constant!!
+
+
+		 Triggering the normal non-loop addSuppress case!!!!
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  1 
+
+
+	 Don't need to add a SUPPRESS!!
+
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB15, BB17)
+
+Consumer of type type = "Constant!!
+
+
+		 Triggering the normal non-loop addSuppress case!!!!
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  1 
+
+
+	 Don't need to add a SUPPRESS!!
+
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB3, BB5)
+
+Consumer of type type = "Constant!!
+
+
+		 Triggering the normal non-loop addSuppress case!!!!
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  1 
+
+
+	 Don't need to add a SUPPRESS!!
+
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB9, BB11)
+
+Consumer of type type = "Constant!!
+
+
+		 Triggering the normal non-loop addSuppress case!!!!
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  1 
+
+
+	 Don't need to add a SUPPRESS!!
+
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB1, BB2)
+
+Consumer of type type = "Merge!!
+
+
+		 Triggering the normal non-loop addSuppress case!!!!
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  1 
+
+
+	 Don't need to add a SUPPRESS!!
+
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB2, BB2)
+
+Consumer of type type = "Merge!!
+
+
+		 Triggering the producer == consumer case!!!!
+
+	 NEW DEUBUG INFO: The original producer is in BB1
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  C6 &  + 
+
+
+	 Add a SUPPRESS with f_supp = 
+ not C6 &  + 
+
+
+	Right before calling applyShannon, the size of f_supp is: 1
+
+	Inside applyShannon
+
+	Printing the f_supp after converting it to string
+0 + 
+
+
+F_SUPP is a single condition!!
+	The condition is inverted!!
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB2, BB3)
+
+Consumer of type type = "Merge!!
+
+
+		 Triggering the normal non-loop addSuppress case!!!!
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  1 
+
+
+	 Don't need to add a SUPPRESS!!
+
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB3, BB3)
+
+Consumer of type type = "Merge!!
+
+
+		 Triggering the producer == consumer case!!!!
+
+	 NEW DEUBUG INFO: The original producer is in BB1
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  C5 &  + 
+
+
+	 Add a SUPPRESS with f_supp = 
+ not C5 &  + 
+
+
+	Right before calling applyShannon, the size of f_supp is: 1
+
+	Inside applyShannon
+
+	Printing the f_supp after converting it to string
+0 + 
+
+
+F_SUPP is a single condition!!
+	The condition is inverted!!
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB3, BB4)
+
+Consumer of type type = "Merge!!
+
+
+		 Triggering the normal non-loop addSuppress case!!!!
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  1 
+
+
+	 Don't need to add a SUPPRESS!!
+
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB4, BB4)
+
+Consumer of type type = "Merge!!
+
+
+		 Triggering the producer == consumer case!!!!
+
+	 NEW DEUBUG INFO: The original producer is in BB1
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  C4 &  + 
+
+
+	 Add a SUPPRESS with f_supp = 
+ not C4 &  + 
+
+
+	Right before calling applyShannon, the size of f_supp is: 1
+
+	Inside applyShannon
+
+	Printing the f_supp after converting it to string
+0 + 
+
+
+F_SUPP is a single condition!!
+	The condition is inverted!!
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB1, BB8)
+
+Consumer of type type = "Merge!!
+
+
+		 Triggering the normal non-loop addSuppress case!!!!
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  1 
+
+
+	 Don't need to add a SUPPRESS!!
+
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB8, BB8)
+
+Consumer of type type = "Merge!!
+
+
+		 Triggering the producer == consumer case!!!!
+
+	 NEW DEUBUG INFO: The original producer is in BB1
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  C12 &  + 
+
+
+	 Add a SUPPRESS with f_supp = 
+ not C12 &  + 
+
+
+	Right before calling applyShannon, the size of f_supp is: 1
+
+	Inside applyShannon
+
+	Printing the f_supp after converting it to string
+0 + 
+
+
+F_SUPP is a single condition!!
+	The condition is inverted!!
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB8, BB9)
+
+Consumer of type type = "Merge!!
+
+
+		 Triggering the normal non-loop addSuppress case!!!!
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  1 
+
+
+	 Don't need to add a SUPPRESS!!
+
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB9, BB9)
+
+Consumer of type type = "Merge!!
+
+
+		 Triggering the producer == consumer case!!!!
+
+	 NEW DEUBUG INFO: The original producer is in BB1
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  C11 &  + 
+
+
+	 Add a SUPPRESS with f_supp = 
+ not C11 &  + 
+
+
+	Right before calling applyShannon, the size of f_supp is: 1
+
+	Inside applyShannon
+
+	Printing the f_supp after converting it to string
+0 + 
+
+
+F_SUPP is a single condition!!
+	The condition is inverted!!
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB9, BB10)
+
+Consumer of type type = "Merge!!
+
+
+		 Triggering the normal non-loop addSuppress case!!!!
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  1 
+
+
+	 Don't need to add a SUPPRESS!!
+
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB10, BB10)
+
+Consumer of type type = "Merge!!
+
+
+		 Triggering the producer == consumer case!!!!
+
+	 NEW DEUBUG INFO: The original producer is in BB1
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  C10 &  + 
+
+
+	 Add a SUPPRESS with f_supp = 
+ not C10 &  + 
+
+
+	Right before calling applyShannon, the size of f_supp is: 1
+
+	Inside applyShannon
+
+	Printing the f_supp after converting it to string
+0 + 
+
+
+F_SUPP is a single condition!!
+	The condition is inverted!!
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB1, BB14)
+
+Consumer of type type = "Merge!!
+
+
+		 Triggering the normal non-loop addSuppress case!!!!
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  1 
+
+
+	 Don't need to add a SUPPRESS!!
+
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB14, BB14)
+
+Consumer of type type = "Merge!!
+
+
+		 Triggering the producer == consumer case!!!!
+
+	 NEW DEUBUG INFO: The original producer is in BB1
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  C18 &  + 
+
+
+	 Add a SUPPRESS with f_supp = 
+ not C18 &  + 
+
+
+	Right before calling applyShannon, the size of f_supp is: 1
+
+	Inside applyShannon
+
+	Printing the f_supp after converting it to string
+0 + 
+
+
+F_SUPP is a single condition!!
+	The condition is inverted!!
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB14, BB15)
+
+Consumer of type type = "Merge!!
+
+
+		 Triggering the normal non-loop addSuppress case!!!!
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  1 
+
+
+	 Don't need to add a SUPPRESS!!
+
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB15, BB15)
+
+Consumer of type type = "Merge!!
+
+
+		 Triggering the producer == consumer case!!!!
+
+	 NEW DEUBUG INFO: The original producer is in BB1
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  C17 &  + 
+
+
+	 Add a SUPPRESS with f_supp = 
+ not C17 &  + 
+
+
+	Right before calling applyShannon, the size of f_supp is: 1
+
+	Inside applyShannon
+
+	Printing the f_supp after converting it to string
+0 + 
+
+
+F_SUPP is a single condition!!
+	The condition is inverted!!
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB15, BB16)
+
+Consumer of type type = "Merge!!
+
+
+		 Triggering the normal non-loop addSuppress case!!!!
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  1 
+
+
+	 Don't need to add a SUPPRESS!!
+
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB16, BB16)
+
+Consumer of type type = "Merge!!
+
+
+		 Triggering the producer == consumer case!!!!
+
+	 NEW DEUBUG INFO: The original producer is in BB1
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  C16 &  + 
+
+
+	 Add a SUPPRESS with f_supp = 
+ not C16 &  + 
+
+
+	Right before calling applyShannon, the size of f_supp is: 1
+
+	Inside applyShannon
+
+	Printing the f_supp after converting it to string
+0 + 
+
+
+F_SUPP is a single condition!!
+	The condition is inverted!!

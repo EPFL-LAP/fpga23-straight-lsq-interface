@@ -1,0 +1,743 @@
+
+
+******************************************************************
+******Dynamic High-Level Synthesis Compiler***********************
+******Andrea Guerrieri - Lana Josipovic - EPFL-LAP 2019 **********
+******Version 2.0 - Build 1.0 ************************************
+******************************************************************
+
+synthesis_optimized.tcl
+Done 
+set input file: triangular.cpp
+current input filename: ./src/triangular.cpp
+Done 
+Synthesize
+compile triangular.cpp . -use-lsq=true Andrea: arg1:  triangular.cpp arg2: . arg3 -use-lsq=true arg4
+/home/dynamatic/Dynamatic/etc/llvm-6.0/bin/clang -emit-llvm -S   -c src/triangular.cpp -o .triangular.cpp.ll
+rm: cannot remove '*.s': No such file or directory
+0Time elapsed: 1e-06s.
+; ModuleID = '.triangular.cpp_mem2reg_constprop_simplifycfg_die.ll'
+source_filename = "src/triangular.cpp"
+target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+; Function Attrs: noinline nounwind uwtable
+define i32 @_Z10triangularPiPA100_ii(i32* %x, [100 x i32]* %A, i32 %n) #0 {
+block1:
+  %sub = add nsw i32 %n, -1
+  %cmp4 = icmp sgt i32 %n, 0
+  br i1 %cmp4, label %block2, label %block7
+
+block2:                                           ; preds = %block1
+  br label %block3
+
+block3:                                           ; preds = %block6, %block2
+  %i.05 = phi i32 [ %sub, %block2 ], [ %dec15, %block6 ]
+  %cmp31 = icmp sgt i32 %i.05, 0
+  br i1 %cmp31, label %block4, label %block6
+
+block4:                                           ; preds = %block3
+  br label %block5
+
+block5:                                           ; preds = %block5, %block4
+  %k.02.in = phi i32 [ %i.05, %block4 ], [ %k.02, %block5 ]
+  %k.02 = add nsw i32 %k.02.in, -1
+  %idxprom = sext i32 %k.02 to i64
+  %idxprom5 = sext i32 %i.05 to i64
+  %arrayidx6 = getelementptr inbounds [100 x i32], [100 x i32]* %A, i64 %idxprom, i64 %idxprom5
+  %"5" = load i32, i32* %arrayidx6, align 4
+  %idxprom7 = sext i32 %i.05 to i64
+  %arrayidx8 = getelementptr inbounds i32, i32* %x, i64 %idxprom7
+  %"6" = load i32, i32* %arrayidx8, align 4
+  %mul = mul nsw i32 %"5", %"6"
+  %idxprom9 = sext i32 %k.02 to i64
+  %idxprom11 = sext i32 %n to i64
+  %arrayidx12 = getelementptr inbounds [100 x i32], [100 x i32]* %A, i64 %idxprom9, i64 %idxprom11
+  %"7" = load i32, i32* %arrayidx12, align 4
+  %sub13 = sub nsw i32 %"7", %mul
+  store i32 %sub13, i32* %arrayidx12, align 4
+  %cmp3 = icmp sgt i32 %k.02.in, 1
+  br i1 %cmp3, label %block5, label %block6
+
+block6:                                           ; preds = %block5, %block3
+  %dec15 = add nsw i32 %i.05, -1
+  %cmp = icmp sgt i32 %i.05, 0
+  br i1 %cmp, label %block3, label %block7
+
+block7:                                           ; preds = %block6, %block1
+  %i.0.lcssa = phi i32 [ %sub, %block1 ], [ %dec15, %block6 ]
+  %add = add nsw i32 %i.0.lcssa, %n
+  ret i32 %add
+}
+
+; Function Attrs: noinline norecurse nounwind uwtable
+define i32 @main() #1 {
+entry:
+  %xArray = alloca [1 x [100 x i32]], align 16
+  %A = alloca [1 x [100 x [100 x i32]]], align 16
+  %n = alloca [1 x i32], align 4
+  br label %for.body
+
+for.body:                                         ; preds = %for.inc22, %entry
+  %0 = getelementptr inbounds [1 x i32], [1 x i32]* %n, i64 0, i64 0
+  store i32 100, i32* %0, align 4
+  br label %for.body3
+
+for.body3:                                        ; preds = %for.inc19, %for.body
+  %x.02 = phi i32 [ 0, %for.body ], [ %inc20, %for.inc19 ]
+  %call = call i32 @rand() #3
+  %rem = srem i32 %call, 1000
+  %1 = zext i32 %x.02 to i64
+  %2 = getelementptr inbounds [1 x [100 x i32]], [1 x [100 x i32]]* %xArray, i64 0, i64 0, i64 %1
+  store i32 %rem, i32* %2, align 4
+  br label %for.body10
+
+for.body10:                                       ; preds = %for.body10, %for.body3
+  %y.01 = phi i32 [ 0, %for.body3 ], [ %inc, %for.body10 ]
+  %call11 = call i32 @rand() #3
+  %rem12 = srem i32 %call11, 1000
+  %3 = zext i32 %y.01 to i64
+  %4 = zext i32 %x.02 to i64
+  %5 = getelementptr inbounds [1 x [100 x [100 x i32]]], [1 x [100 x [100 x i32]]]* %A, i64 0, i64 0, i64 %3, i64 %4
+  store i32 %rem12, i32* %5, align 4
+  %inc = add nuw nsw i32 %y.01, 1
+  %cmp9 = icmp ult i32 %inc, 10
+  br i1 %cmp9, label %for.body10, label %for.inc19
+
+for.inc19:                                        ; preds = %for.body10
+  %inc20 = add nuw nsw i32 %x.02, 1
+  %cmp2 = icmp ult i32 %inc20, 100
+  br i1 %cmp2, label %for.body3, label %for.inc22
+
+for.inc22:                                        ; preds = %for.inc19
+  br i1 false, label %for.body, label %for.end24
+
+for.end24:                                        ; preds = %for.inc22
+  %arraydecay = getelementptr inbounds [1 x [100 x i32]], [1 x [100 x i32]]* %xArray, i64 0, i64 0, i64 0
+  %arraydecay30 = getelementptr inbounds [1 x [100 x [100 x i32]]], [1 x [100 x [100 x i32]]]* %A, i64 0, i64 0, i64 0
+  %arrayidx32 = getelementptr inbounds [1 x i32], [1 x i32]* %n, i64 0, i64 0
+  %6 = load i32, i32* %arrayidx32, align 4
+  %call33 = call i32 @_Z10triangularPiPA100_ii(i32* nonnull %arraydecay, [100 x i32]* nonnull %arraydecay30, i32 %6)
+  ret i32 0
+}
+
+; Function Attrs: nounwind
+declare i32 @rand() #2
+
+attributes #0 = { noinline nounwind uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { noinline norecurse nounwind uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #2 = { nounwind "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #3 = { nounwind }
+
+!llvm.module.flags = !{!0}
+!llvm.ident = !{!1}
+
+!0 = !{i32 1, !"wchar_size", i32 4}
+!1 = !{!"clang version 6.0.1 (http://llvm.org/git/clang.git 2f27999df400d17b33cdd412fdd606a88208dfcc) (http://llvm.org/git/llvm.git 5136df4d089a086b70d452160ad5451861269498)"}
+
+
+Done 
+Done 
+Optimize
+buffers buffers -filename=./reports/triangular -period=4 ****************************************
+dataflow graph name: ./reports/triangular
+milp solver: cbc
+delay: 0, period: 4
+timeout: 180
+set optimization: true
+first MG optimization: false
+****************************************
+currently traversing node n
+currently traversing node cst_0
+currently traversing node add_0
+currently traversing node cst_1
+currently traversing node icmp_1
+currently traversing node brCst_block2
+currently traversing node phi_4
+currently traversing node cst_2
+currently traversing node icmp_5
+currently traversing node brCst_block4
+currently traversing node phi_8
+currently traversing node cst_3
+currently traversing node add_9
+currently traversing node sext_10
+currently traversing node sext_11
+currently traversing node getelementptr_12
+currently traversing node load_13
+currently traversing node load_16
+currently traversing node mul_17
+currently traversing node sext_18
+currently traversing node sext_19
+currently traversing node getelementptr_20
+currently traversing node load_21
+currently traversing node sub_22
+currently traversing node store_0
+currently traversing node cst_4
+currently traversing node icmp_23
+currently traversing node cst_5
+currently traversing node add_25
+currently traversing node cst_6
+currently traversing node icmp_26
+currently traversing node phi_28
+currently traversing node add_29
+currently traversing node ret_0
+currently traversing node cst_7
+currently traversing node cst_8
+currently traversing node phi_n0
+currently traversing node phi_n1
+currently traversing node phi_n2
+currently traversing node phi_n3
+currently traversing node phi_n4
+currently traversing node phi_n5
+currently traversing node phi_n6
+currently traversing node phi_n7
+currently traversing node phi_n8
+currently traversing node phi_n9
+currently traversing node fork_0
+currently traversing node fork_2
+currently traversing node fork_3
+currently traversing node fork_4
+currently traversing node fork_5
+currently traversing node fork_8
+currently traversing node fork_10
+currently traversing node fork_11
+currently traversing node fork_12
+currently traversing node branch_0
+currently traversing node branch_1
+currently traversing node fork_13
+currently traversing node branch_2
+currently traversing node branch_3
+currently traversing node fork_14
+currently traversing node branch_4
+currently traversing node branch_5
+currently traversing node fork_15
+currently traversing node branch_6
+currently traversing node branch_7
+currently traversing node branch_8
+currently traversing node fork_16
+currently traversing node branch_9
+currently traversing node branch_10
+currently traversing node branch_11
+currently traversing node fork_17
+currently traversing node branch_12
+currently traversing node branch_13
+currently traversing node fork_18
+currently traversing node LSQ_A
+currently traversing node MC_A
+currently traversing node MC_x
+currently traversing node cst_9
+currently traversing node end_0
+currently traversing node start_0
+currently traversing node forkC_20
+currently traversing node branchC_14
+currently traversing node phiC_10
+currently traversing node forkC_21
+currently traversing node branchC_15
+currently traversing node phiC_11
+currently traversing node forkC_22
+currently traversing node branchC_16
+currently traversing node phiC_12
+currently traversing node forkC_23
+currently traversing node branchC_17
+currently traversing node phiC_13
+currently traversing node forkC_24
+currently traversing node branchC_18
+currently traversing node phiC_14
+currently traversing node forkC_25
+currently traversing node branchC_19
+currently traversing node phiC_15
+currently traversing node sink_0
+currently traversing node sink_1
+currently traversing node sink_2
+currently traversing node sink_3
+currently traversing node sink_4
+currently traversing node sink_5
+currently traversing node sink_6
+currently traversing node sink_7
+currently traversing node sink_8
+===================
+READING BB DOT FILE
+===================
+Reading graph name...
+Reading set of nodes...
+Reading set of edges between nodes...
+Setting entry and exit BB...
+	Entry: BB1, Exit: BB7
+Setting BB frequencies...
+BB1 : 1
+BB2 : 1
+BB3 : 100
+BB4 : 99
+BB5 : 4950
+BB6 : 100
+BB7 : 1
+
+Adding elastic buffers with period=4 and buffer_delay=0
+
+======================
+ADDING ELASTIC BUFFERS
+======================
+Extracting marked graphs
+--------------------------
+Iteration 1
+ILP time: [ms] 10 
+Arcs in the CFDFC:
+	5->5:4851
+Updating frequencies...
+Storing CFDFC and corresponding Marked Graph...
+--------------------------
+Iteration 2
+ILP time: [ms] 8 
+Arcs in the CFDFC:
+	3->4:99
+	4->5:99
+	5->6:99
+	6->3:99
+Updating frequencies...
+Storing CFDFC and corresponding Marked Graph...
+--------------------------
+Iteration 3
+ILP time: [ms] 6 
+Arcs in the CFDFC:
+No new MG can be extracted to increase coverage.
+
+*******************
+Covered Frequency = 5247, Total Frequency = 5251, Coverage = 0.999238
+*******************
+
+Aya:Done Extracting marked graphs!
+
+determining buffer from/to MC_LSQ units to/from loads.
+Calculating disjoint sets of CFDFCs...
+	initialize
+	union
+	get set of unique dsu numbers
+	merge and get sub-components
+Total number of Extracted Disjoint CFDFCs: 1
+Adding Marked Graphs from CFDFCs...
+
+
+===================================
+PRINTING CHANNELS FREQUENCIES
+Freq of channel in Src_BB number 1 and dst_BB number 1 is::: 1
+Freq of channel in Src_BB number 1 and dst_BB number 1 is::: 1
+Freq of channel in Src_BB number 1 and dst_BB number 1 is::: 1
+Freq of channel in Src_BB number 1 and dst_BB number 1 is::: 1
+Freq of channel in Src_BB number 1 and dst_BB number 1 is::: 1
+Freq of channel in Src_BB number 2 and dst_BB number 2 is::: 1
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 100
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 100
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 100
+Freq of channel in Src_BB number 4 and dst_BB number 4 is::: 99
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 5 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 6 and dst_BB number 6 is::: 100
+Freq of channel in Src_BB number 6 and dst_BB number 6 is::: 100
+Freq of channel in Src_BB number 6 and dst_BB number 6 is::: 100
+Freq of channel in Src_BB number 6 and dst_BB number 6 is::: 100
+Freq of channel in Src_BB number 7 and dst_BB number 7 is::: 1
+Freq of channel in Src_BB number 7 and dst_BB number 7 is::: 1
+Freq of channel in Src_BB number 7 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 2 and dst_BB number 2 is::: 1
+Freq of channel in Src_BB number 2 and dst_BB number 2 is::: 1
+Freq of channel in Src_BB number 7 and dst_BB number 7 is::: 1
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 100
+Freq of channel in Src_BB number 6 and dst_BB number 6 is::: 100
+Freq of channel in Src_BB number 6 and dst_BB number 6 is::: 100
+Freq of channel in Src_BB number 4 and dst_BB number 4 is::: 99
+Freq of channel in Src_BB number 4 and dst_BB number 4 is::: 99
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 1 and dst_BB number 1 is::: 1
+Freq of channel in Src_BB number 1 and dst_BB number 1 is::: 1
+Freq of channel in Src_BB number 1 and dst_BB number 1 is::: 1
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 100
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 100
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 6 and dst_BB number 6 is::: 100
+Freq of channel in Src_BB number 6 and dst_BB number 6 is::: 100
+Freq of channel in Src_BB number 4 and dst_BB number 4 is::: 99
+Freq of channel in Src_BB number 4 and dst_BB number 4 is::: 99
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 1 and dst_BB number 2 is::: 1
+Freq of channel in Src_BB number 1 and dst_BB number 7 is::: 0
+Freq of channel in Src_BB number 1 and dst_BB number 7 is::: 0
+Freq of channel in Src_BB number 1 and dst_BB number 2 is::: 1
+Freq of channel in Src_BB number 1 and dst_BB number 1 is::: 1
+Freq of channel in Src_BB number 1 and dst_BB number 1 is::: 1
+Freq of channel in Src_BB number 1 and dst_BB number 1 is::: 1
+Freq of channel in Src_BB number 2 and dst_BB number 3 is::: 1
+Freq of channel in Src_BB number 2 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 2 and dst_BB number 3 is::: 1
+Freq of channel in Src_BB number 2 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 2 and dst_BB number 2 is::: 1
+Freq of channel in Src_BB number 2 and dst_BB number 2 is::: 1
+Freq of channel in Src_BB number 2 and dst_BB number 2 is::: 1
+Freq of channel in Src_BB number 3 and dst_BB number 6 is::: 1
+Freq of channel in Src_BB number 3 and dst_BB number 4 is::: 99
+Freq of channel in Src_BB number 3 and dst_BB number 6 is::: 1
+Freq of channel in Src_BB number 3 and dst_BB number 4 is::: 99
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 100
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 100
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 100
+Freq of channel in Src_BB number 4 and dst_BB number 5 is::: 99
+Freq of channel in Src_BB number 4 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 4 and dst_BB number 5 is::: 99
+Freq of channel in Src_BB number 4 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 4 and dst_BB number 5 is::: 99
+Freq of channel in Src_BB number 4 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 4 and dst_BB number 4 is::: 99
+Freq of channel in Src_BB number 4 and dst_BB number 4 is::: 99
+Freq of channel in Src_BB number 4 and dst_BB number 4 is::: 99
+Freq of channel in Src_BB number 4 and dst_BB number 4 is::: 99
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 5 and dst_BB number 6 is::: 99
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 6 is::: 99
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 6 and dst_BB number 3 is::: 99
+Freq of channel in Src_BB number 6 and dst_BB number 7 is::: 1
+Freq of channel in Src_BB number 6 and dst_BB number 7 is::: 1
+Freq of channel in Src_BB number 6 and dst_BB number 3 is::: 99
+Freq of channel in Src_BB number 6 and dst_BB number 6 is::: 100
+Freq of channel in Src_BB number 6 and dst_BB number 6 is::: 100
+Freq of channel in Src_BB number 6 and dst_BB number 6 is::: 100
+Freq of channel in Src_BB number 0 and dst_BB number 5 is::: 0
+Freq of channel in Src_BB number 0 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 0 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 0 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 0 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 0 and dst_BB number 5 is::: 0
+Freq of channel in Src_BB number 0 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 0 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 0 and dst_BB number 5 is::: 0
+Freq of channel in Src_BB number 0 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 5 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 1 and dst_BB number 1 is::: 1
+Freq of channel in Src_BB number 1 and dst_BB number 1 is::: 1
+Freq of channel in Src_BB number 1 and dst_BB number 1 is::: 1
+Freq of channel in Src_BB number 1 and dst_BB number 1 is::: 1
+Freq of channel in Src_BB number 1 and dst_BB number 2 is::: 1
+Freq of channel in Src_BB number 1 and dst_BB number 7 is::: 0
+Freq of channel in Src_BB number 2 and dst_BB number 2 is::: 1
+Freq of channel in Src_BB number 2 and dst_BB number 2 is::: 1
+Freq of channel in Src_BB number 2 and dst_BB number 2 is::: 1
+Freq of channel in Src_BB number 2 and dst_BB number 3 is::: 1
+Freq of channel in Src_BB number 2 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 100
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 100
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 100
+Freq of channel in Src_BB number 3 and dst_BB number 3 is::: 100
+Freq of channel in Src_BB number 3 and dst_BB number 4 is::: 99
+Freq of channel in Src_BB number 3 and dst_BB number 6 is::: 1
+Freq of channel in Src_BB number 4 and dst_BB number 4 is::: 99
+Freq of channel in Src_BB number 4 and dst_BB number 4 is::: 99
+Freq of channel in Src_BB number 4 and dst_BB number 4 is::: 99
+Freq of channel in Src_BB number 4 and dst_BB number 5 is::: 99
+Freq of channel in Src_BB number 4 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 0 is::: 0
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 5 is::: 4950
+Freq of channel in Src_BB number 5 and dst_BB number 6 is::: 99
+Freq of channel in Src_BB number 6 and dst_BB number 6 is::: 100
+Freq of channel in Src_BB number 6 and dst_BB number 6 is::: 100
+Freq of channel in Src_BB number 6 and dst_BB number 6 is::: 100
+Freq of channel in Src_BB number 6 and dst_BB number 6 is::: 100
+Freq of channel in Src_BB number 6 and dst_BB number 3 is::: 99
+Freq of channel in Src_BB number 6 and dst_BB number 7 is::: 1
+Freq of channel in Src_BB number 7 and dst_BB number 7 is::: 1
+Freq of channel in Src_BB number 7 and dst_BB number 0 is::: 0
+
+===================================
+-------------------------------
+Initiating MILP for MG number 0
+-------------------------------
+ creating throughput vars for sub_mg0
+
+Aya: Before the loop over Blocks
+
+Aya: After the loop over Blocks
+
+Aya: Before the loop over Channels
+
+Aya: After the loop over Channels
+ creating throughput vars for sub_mg1
+
+Aya: Before the loop over Blocks
+
+Aya: After the loop over Blocks
+
+Aya: Before the loop over Channels
+
+Aya: After the loop over Channels
+
+Aya: Done with the function createMilpVarsEB_sc
+
+Aya: done with the first loop over channels!
+
+Aya: done with the second loop over channels!
+
+Aya: done with the first loop over blocks!
+
+Aya: done with the second loop over blocks!
+
+Aya: done with createPathConstraints_sc boolean function!!
+
+Aya: done with createElasticityConstraints_sc boolean function!!
+Lana: back edge is branch_9:out1 -> phi_8:in3
+Lana: back edge is branch_10:out1 -> phi_n8:in2
+Lana: back edge is branch_11:out1 -> phi_n9:in2
+Lana: back edge is branchC_18:out1 -> phiC_13:in2
+Lana: back edge is branch_9:out1 -> phi_8:in3
+Lana: back edge is branch_10:out1 -> phi_n8:in2
+Lana: back edge is branch_11:out1 -> phi_n9:in2
+Lana: back edge is branch_12:out1 -> phi_4:in3
+Lana: back edge is branch_13:out1 -> phi_n3:in2
+Lana: back edge is branchC_18:out1 -> phiC_13:in2
+Lana: back edge is branchC_19:out1 -> phiC_11:in2
+Solving MILP for elastic buffers: MG 0
+Milp time for MG 0: [ms] 181901 
+
+************************
+*** Throughput for MG 0 in disjoint MG 0: 1.00 ***
+************************
+************************
+*** Throughput for MG 1 in disjoint MG 0: 0.50 ***
+************************
+Adding buffer in phi_4:out1 -> fork_2:in1 | slots: 1, trans: 0 | BB3 -> BB3 (inner)
+Adding buffer in add_9:out1 -> fork_4:in1 | slots: 2, trans: 0 | BB5 -> BB5 (inner)
+Adding buffer in icmp_23:out1 -> fork_17:in1 | slots: 2, trans: 0 | BB5 -> BB5 (inner)
+Adding buffer in cst_8:out1 -> getelementptr_20:in3 | slots: 3, trans: 0 | BB5 -> BB5 (inner)
+Adding buffer in phi_n8:out1 -> fork_11:in1 | slots: 2, trans: 0 | BB5 -> BB5 (inner)
+Adding buffer in phi_n9:out1 -> fork_12:in1 | slots: 2, trans: 0 | BB5 -> BB5 (inner)
+Adding buffer in fork_4:out2 -> sext_18:in1 | slots: 1, trans: 1 | BB5 -> BB5 (inner)
+Adding buffer in branch_9:out1 -> phi_8:in3 | slots: 1, trans: 1 | BB5 -> BB5 (inner)
+Adding buffer in branch_10:out1 -> phi_n8:in2 | slots: 1, trans: 1 | BB5 -> BB5 (inner)
+Adding buffer in fork_17:out1 -> branch_11:in2 | slots: 1, trans: 1 | BB5 -> BB5 (inner)
+Adding buffer in fork_18:out1 -> branch_13:in2 | slots: 1, trans: 1 | BB6 -> BB6 (inner)
+Adding buffer in phiC_11:out1 -> forkC_22:in1 | slots: 1, trans: 0 | BB3 -> BB3 (inner)
+Adding buffer in forkC_24:out3 -> cst_7:in1 | slots: 2, trans: 0 | BB5 -> BB5 (inner)
+Adding buffer in forkC_24:out7 -> branchC_18:in1 | slots: 2, trans: 0 | BB5 -> BB5 (inner)
+Adding buffer in branchC_18:out1 -> phiC_13:in2 | slots: 1, trans: 1 | BB5 -> BB5 (inner)
+
+*** Throughput achieved in sub MG 0: 1.00 ***
+
+
+*** Throughput achieved in sub MG 1: 0.50 ***
+
+--------------------------------------
+Initiating MILP for remaining channels
+--------------------------------------
+Solving MILP for channels not covered by MGs
+Milp time for remaining channels: [ms] 62 
+
+Adding buffer in phi_28:out1 -> add_29:in1 | slots: 1, trans: 0 | BB7 -> BB7 (inner)
+Adding buffer in branch_4:out2 -> phi_n4:in1 | slots: 1, trans: 0 | BB3 -> BB6
+Adding buffer in branch_5:out2 -> phi_n5:in1 | slots: 1, trans: 0 | BB3 -> BB6
+Adding buffer in branch_13:out2 -> phi_n2:in2 | slots: 1, trans: 0 | BB6 -> BB7
+***************************
+Total MILP time: [ms] 181963
+***************************
+INSTANTIATE
+Done 
+Write hdl
+write_hdl  . ./reports/triangular_optimized
+
+******************************************************************
+******Dynamic High-Level Synthesis Compiler **********************
+******Andrea Guerrieri - Lana Josipovic - EPFL-LAP 2019 **********
+******Dot to VHDL Generator***************************************
+******************************************************************
+Parsing ./reports/triangular_optimized.dot
+
+Report Modules 
++--------------------------------------------------------------------------+
+|   Node_ID|                Name|         Module_type|    Inputs|   Outputs|
++--------------------------------------------------------------------------+
+|         0|                   n|               Entry|         1|         1|
+|         1|               cst_0|            Constant|         1|         1|
+|         2|               add_0|            Operator|         2|         1|
+|         3|               cst_1|            Constant|         1|         1|
+|         4|              icmp_1|            Operator|         2|         1|
+|         5|              fork_0|                Fork|         1|         3|
+|         6|            branch_0|              Branch|         2|         2|
+|         7|            branch_1|              Branch|         2|         2|
+|         8|             fork_13|                Fork|         1|         3|
+|         9|             start_0|               Entry|         1|         1|
+|        10|            forkC_20|                Fork|         1|         3|
+|        11|          branchC_14|              Branch|         2|         2|
+|        12|        brCst_block2|            Constant|         1|         1|
+|        13|              phi_n0|               Merge|         1|         1|
+|        14|              phi_n1|               Merge|         1|         1|
+|        15|            branch_2|              Branch|         2|         2|
+|        16|            branch_3|              Branch|         2|         2|
+|        17|             fork_14|                Fork|         1|         3|
+|        18|             phiC_10|               Merge|         1|         1|
+|        19|            forkC_21|                Fork|         1|         2|
+|        20|          branchC_15|              Branch|         2|         2|
+|        21|               phi_4|                 Mux|         3|         1|
+|        22|               cst_2|            Constant|         1|         1|
+|        23|              icmp_5|            Operator|         2|         1|
+|        24|              phi_n3|               Merge|         2|         1|
+|        25|              fork_2|                Fork|         1|         2|
+|        26|            branch_4|              Branch|         2|         2|
+|        27|            branch_5|              Branch|         2|         2|
+|        28|             fork_15|                Fork|         1|         3|
+|        29|             phiC_11|          CntrlMerge|         2|         2|
+|        30|            forkC_22|                Fork|         1|         2|
+|        31|          branchC_16|              Branch|         2|         2|
+|        32|            Buffer_1|              Buffer|         1|         1|
+|        33|            Buffer_9|              Buffer|         1|         1|
+|        34|           Buffer_10|              Buffer|         1|         1|
+|        35|           Buffer_16|              Buffer|         1|         1|
+|        36|        brCst_block4|            Constant|         1|         1|
+|        37|              phi_n6|               Merge|         1|         1|
+|        38|              phi_n7|               Merge|         1|         1|
+|        39|             fork_10|                Fork|         1|         2|
+|        40|            branch_6|              Branch|         2|         2|
+|        41|            branch_7|              Branch|         2|         2|
+|        42|            branch_8|              Branch|         2|         2|
+|        43|             fork_16|                Fork|         1|         4|
+|        44|             phiC_12|               Merge|         1|         1|
+|        45|            forkC_23|                Fork|         1|         2|
+|        46|          branchC_17|              Branch|         2|         2|
+|        47|               phi_8|                 Mux|         3|         1|
+|        48|               cst_3|            Constant|         1|         1|
+|        49|               add_9|            Operator|         2|         1|
+|        50|             sext_10|            Operator|         1|         1|
+|        51|             sext_11|            Operator|         1|         1|
+|        52|    getelementptr_12|            Operator|         3|         1|
+|        53|             load_13|            Operator|         2|         2|
+|        54|             load_16|            Operator|         2|         2|
+|        55|              mul_17|            Operator|         2|         1|
+|        56|             sext_18|            Operator|         1|         1|
+|        57|             sext_19|            Operator|         1|         1|
+|        58|    getelementptr_20|            Operator|         3|         1|
+|        59|             load_21|            Operator|         2|         2|
+|        60|              sub_22|            Operator|         2|         1|
+|        61|             store_0|            Operator|         2|         2|
+|        62|               cst_4|            Constant|         1|         1|
+|        63|             icmp_23|            Operator|         2|         1|
+|        64|               cst_7|            Constant|         1|         1|
+|        65|               cst_8|            Constant|         1|         1|
+|        66|              phi_n8|               Merge|         2|         1|
+|        67|              phi_n9|               Merge|         2|         1|
+|        68|              fork_3|                Fork|         1|         2|
+|        69|              fork_4|                Fork|         1|         3|
+|        70|              fork_5|                Fork|         1|         2|
+|        71|             fork_11|                Fork|         1|         3|
+|        72|             fork_12|                Fork|         1|         2|
+|        73|            branch_9|              Branch|         2|         2|
+|        74|           branch_10|              Branch|         2|         2|
+|        75|           branch_11|              Branch|         2|         2|
+|        76|             fork_17|                Fork|         1|         4|
+|        77|               cst_9|            Constant|         1|         1|
+|        78|             phiC_13|          CntrlMerge|         2|         2|
+|        79|            forkC_24|                Fork|         1|         7|
+|        80|          branchC_18|              Branch|         2|         2|
+|        81|            Buffer_2|              Buffer|         1|         1|
+|        82|            Buffer_3|              Buffer|         1|         1|
+|        83|            Buffer_5|               nFifo|         1|         1|
+|        84|            Buffer_6|              Buffer|         1|         1|
+|        85|            Buffer_7|              Buffer|         1|         1|
+|        86|            Buffer_8|                TEHB|         1|         1|
+|        87|           Buffer_11|                TEHB|         1|         1|
+|        88|           Buffer_12|                TEHB|         1|         1|
+|        89|           Buffer_13|                TEHB|         1|         1|
+|        90|           Buffer_17|              Buffer|         1|         1|
+|        91|           Buffer_18|              Buffer|         1|         1|
+|        92|           Buffer_19|                TEHB|         1|         1|
+|        93|               cst_5|            Constant|         1|         1|
+|        94|              add_25|            Operator|         2|         1|
+|        95|               cst_6|            Constant|         1|         1|
+|        96|             icmp_26|            Operator|         2|         1|
+|        97|              phi_n4|               Merge|         2|         1|
+|        98|              phi_n5|               Merge|         2|         1|
+|        99|              fork_8|                Fork|         1|         2|
+|       100|           branch_12|              Branch|         2|         2|
+|       101|           branch_13|              Branch|         2|         2|
+|       102|             fork_18|                Fork|         1|         3|
+|       103|             phiC_14|               Merge|         2|         1|
+|       104|            forkC_25|                Fork|         1|         3|
+|       105|          branchC_19|              Branch|         2|         2|
+|       106|           Buffer_14|              Buffer|         1|         1|
+|       107|           Buffer_15|                TEHB|         1|         1|
+|       108|              phi_28|                 Mux|         3|         1|
+|       109|              add_29|            Operator|         2|         1|
+|       110|               ret_0|            Operator|         1|         1|
+|       111|              phi_n2|               Merge|         2|         1|
+|       112|             phiC_15|          CntrlMerge|         2|         2|
+|       113|            Buffer_4|              Buffer|         1|         1|
+|       114|               LSQ_A|                 LSQ|         5|         5|
+|       115|                MC_A|                  MC|         5|         3|
+|       116|                MC_x|                  MC|         4|         2|
+|       117|               end_0|                Exit|         4|         1|
+|       118|              sink_0|                Sink|         1|         0|
+|       119|              sink_1|                Sink|         1|         0|
+|       120|              sink_2|                Sink|         1|         0|
+|       121|              sink_3|                Sink|         1|         0|
+|       122|              sink_4|                Sink|         1|         0|
+|       123|              sink_5|                Sink|         1|         0|
+|       124|              sink_6|                Sink|         1|         0|
+|       125|              sink_7|                Sink|         1|         0|
+|       126|              sink_8|                Sink|         1|         0|
++--------------------------------------------------------------------------+
+Generating ./reports/triangular_optimized.vhd
+Generating LSQ 0 component...
+lsq_generate ./reports/triangular_optimized_lsq0_configuration.json
+[[35minfo[0m] [0.006] Elaborating design...
+[[35minfo[0m] [2.842] Done elaborating.
+Total FIRRTL Compile Time: 17976.4 ms
+
+Done
+
+
+
+Done 
+Exit...
+Goodbye!
+
+

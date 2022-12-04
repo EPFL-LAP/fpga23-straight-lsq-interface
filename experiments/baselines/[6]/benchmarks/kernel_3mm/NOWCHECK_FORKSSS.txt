@@ -1,0 +1,617 @@
+
+Node Name: "cst_0"
+
+Node Name: "phi_1"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "cst_1"
+
+Node Name: "phi_3"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "zext_4"
+
+Node Name: "zext_5"
+
+Node Name: "getelementptr_6"
+
+Node Name: "load_7"
+
+Node Name: "phi_9"
+
+Node Name: "cst_2"
+
+Node Name: "phi_10"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "zext_11"
+
+Node Name: "zext_12"
+
+Node Name: "getelementptr_13"
+
+Node Name: "load_14"
+
+Node Name: "zext_15"
+
+Node Name: "zext_16"
+
+Node Name: "getelementptr_17"
+
+Node Name: "load_18"
+
+Node Name: "mul_19"
+
+Node Name: "add_20"
+
+Node Name: "cst_3"
+
+Node Name: "add_21"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "cst_4"
+
+Node Name: "icmp_22"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "zext_24"
+
+Node Name: "zext_25"
+
+Node Name: "getelementptr_26"
+
+Node Name: "store_0"
+
+Node Name: "cst_5"
+
+Node Name: "add_27"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "cst_6"
+
+Node Name: "icmp_28"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "cst_7"
+
+Node Name: "add_30"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "cst_8"
+
+Node Name: "icmp_31"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "brCst_block7"
+
+Node Name: "cst_9"
+
+Node Name: "phi_34"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "cst_10"
+
+Node Name: "phi_36"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "zext_37"
+
+Node Name: "zext_38"
+
+Node Name: "getelementptr_39"
+
+Node Name: "load_40"
+
+Node Name: "phi_42"
+
+Node Name: "cst_11"
+
+Node Name: "phi_43"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "zext_44"
+
+Node Name: "zext_45"
+
+Node Name: "getelementptr_46"
+
+Node Name: "load_47"
+
+Node Name: "zext_48"
+
+Node Name: "zext_49"
+
+Node Name: "getelementptr_50"
+
+Node Name: "load_51"
+
+Node Name: "mul_52"
+
+Node Name: "add_53"
+
+Node Name: "cst_12"
+
+Node Name: "add_54"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "cst_13"
+
+Node Name: "icmp_55"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "zext_57"
+
+Node Name: "zext_58"
+
+Node Name: "getelementptr_59"
+
+Node Name: "store_1"
+
+Node Name: "cst_14"
+
+Node Name: "add_60"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "cst_15"
+
+Node Name: "icmp_61"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "cst_16"
+
+Node Name: "add_63"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "cst_17"
+
+Node Name: "icmp_64"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "brCst_block13"
+
+Node Name: "cst_18"
+
+Node Name: "phi_67"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "cst_19"
+
+Node Name: "phi_69"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "zext_70"
+
+Node Name: "zext_71"
+
+Node Name: "getelementptr_72"
+
+Node Name: "load_73"
+
+Node Name: "phi_75"
+
+Node Name: "cst_20"
+
+Node Name: "phi_76"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "zext_77"
+
+Node Name: "zext_78"
+
+Node Name: "getelementptr_79"
+
+Node Name: "load_80"
+
+Node Name: "zext_81"
+
+Node Name: "zext_82"
+
+Node Name: "getelementptr_83"
+
+Node Name: "load_84"
+
+Node Name: "mul_85"
+
+Node Name: "add_86"
+
+Node Name: "cst_21"
+
+Node Name: "add_87"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "cst_22"
+
+Node Name: "icmp_88"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "zext_90"
+
+Node Name: "zext_91"
+
+Node Name: "getelementptr_92"
+
+Node Name: "store_2"
+
+Node Name: "cst_23"
+
+Node Name: "add_93"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "cst_24"
+
+Node Name: "icmp_94"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "cst_25"
+
+Node Name: "add_96"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "cst_26"
+
+Node Name: "icmp_97"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "ret_0"
+
+Node Name: "cst_27"
+
+Node Name: "cst_28"
+
+Node Name: "cst_29"
+
+Node Name: "cst_30"
+
+Node Name: "cst_31"
+
+Node Name: "cst_32"
+
+Node Name: "cst_33"
+
+Node Name: "cst_34"
+
+Node Name: "cst_35"
+
+Node Name: "cst_36"
+
+Node Name: "cst_37"
+
+Node Name: "cst_38"
+
+Node Name: "start_0"
+Entered the big if_condition
+Entered the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "branchC_0"
+
+Node Name: "cst_39"
+
+Node Name: "phiC_0"
+
+Node Name: "branchC_1"
+
+Node Name: "cst_40"
+
+Node Name: "phiC_1"
+
+Node Name: "branchC_2"
+
+Node Name: "cst_41"
+
+Node Name: "phiC_2"
+
+Node Name: "branchC_3"
+
+Node Name: "phiC_3"
+
+Node Name: "branchC_4"
+
+Node Name: "phiC_4"
+
+Node Name: "branchC_5"
+
+Node Name: "phiC_5"
+
+Node Name: "branchC_6"
+
+Node Name: "cst_42"
+
+Node Name: "phiC_6"
+
+Node Name: "branchC_7"
+
+Node Name: "cst_43"
+
+Node Name: "phiC_7"
+
+Node Name: "branchC_8"
+
+Node Name: "cst_44"
+
+Node Name: "phiC_8"
+
+Node Name: "branchC_9"
+
+Node Name: "phiC_9"
+
+Node Name: "branchC_10"
+
+Node Name: "phiC_10"
+
+Node Name: "branchC_11"
+
+Node Name: "phiC_11"
+
+Node Name: "branchC_12"
+
+Node Name: "cst_45"
+
+Node Name: "phiC_12"
+
+Node Name: "branchC_13"
+
+Node Name: "cst_46"
+
+Node Name: "phiC_13"
+
+Node Name: "branchC_14"
+
+Node Name: "cst_47"
+
+Node Name: "phiC_14"
+
+Node Name: "branchC_15"
+
+Node Name: "phiC_15"
+
+Node Name: "branchC_16"
+
+Node Name: "phiC_16"
+
+Node Name: "branchC_17"
+
+Node Name: "phiC_17"
+
+Node Name: "sink_0"
+
+Node Name: "sink_1"
+
+Node Name: "sink_2"
+
+Node Name: "sink_3"
+
+Node Name: "sink_4"
+
+Node Name: "sink_5"
+
+Node Name: "sink_6"
+
+Node Name: "sink_7"
+
+Node Name: "sink_8"
+
+Node Name: "sink_9"
+
+Node Name: "LSQ_E"
+
+Node Name: "LSQ_F"
+
+Node Name: "MC_E"
+
+Node Name: "MC_A"
+
+Node Name: "MC_B"
+
+Node Name: "MC_F"
+
+Node Name: "MC_C"
+
+Node Name: "MC_D"
+
+Node Name: "MC_G"
+
+Node Name: "cst_48"
+
+Node Name: "cst_49"
+
+Node Name: "cst_50"
+
+Node Name: "phi_n18"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "phi_n19"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "phi_n22"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "phi_n23"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "phi_n24"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "phi_n27"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "phi_n28"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "phi_n29"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "phi_n32"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "phiC_33"
+Entered the big if_condition
+Entered the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "phiC_34"
+Entered the big if_condition
+Entered the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "phiC_36"
+Entered the big if_condition
+Entered the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "phiC_48"
+Entered the big if_condition
+Entered the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "phiC_49"
+Entered the big if_condition
+Entered the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "phiC_51"
+Entered the big if_condition
+Entered the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "phiC_63"
+Entered the big if_condition
+Entered the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "phiC_64"
+Entered the big if_condition
+Entered the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "phiC_66"
+Entered the big if_condition
+Entered the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "branch_18"
+
+Node Name: "phi_n114"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "cst_51"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "branch_19"
+
+Node Name: "phi_n115"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "branch_20"
+
+Node Name: "phi_n116"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "branch_21"
+
+Node Name: "branch_23"
+
+Node Name: "phi_n117"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "branch_24"
+
+Node Name: "phi_n118"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "branch_25"
+
+Node Name: "phi_n119"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "branch_26"
+
+Node Name: "branch_28"
+
+Node Name: "phi_n120"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "branch_29"
+
+Node Name: "phi_n121"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "branch_30"
+
+Node Name: "phi_n122"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "branch_31"
+
+Node Name: "branch_34"
+
+Node Name: "branch_35"
+
+Node Name: "branch_36"
+
+Node Name: "branch_37"
+
+Node Name: "branch_38"
+
+Node Name: "branch_39"
+
+Node Name: "branch_40"
+
+Node Name: "branch_41"
+
+Node Name: "branch_42"
+
+Node Name: "branchC_43"
+
+Node Name: "branchC_44"
+
+Node Name: "branchC_45"
+
+Node Name: "branchC_46"
+
+Node Name: "branchC_47"
+
+Node Name: "branchC_48"
+
+Node Name: "branchC_49"
+
+Node Name: "branchC_50"
+
+Node Name: "branchC_51"
+Finished looping, about to go to Redundant things function

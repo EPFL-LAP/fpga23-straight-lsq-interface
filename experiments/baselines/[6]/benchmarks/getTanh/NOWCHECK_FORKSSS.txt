@@ -1,0 +1,109 @@
+
+Node Name: "cst_0"
+
+Node Name: "phi_1"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "load_4"
+
+Node Name: "load_7"
+
+Node Name: "cst_1"
+
+Node Name: "icmp_8"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "mul_10"
+
+Node Name: "cst_2"
+
+Node Name: "add_11"
+
+Node Name: "mul_12"
+
+Node Name: "cst_3"
+
+Node Name: "add_13"
+
+Node Name: "mul_14"
+
+Node Name: "cst_4"
+
+Node Name: "phi_16"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "store_0"
+
+Node Name: "cst_5"
+
+Node Name: "add_19"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "cst_6"
+
+Node Name: "icmp_20"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "ret_0"
+
+Node Name: "start_0"
+Entered the big if_condition
+Entered the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "branchC_0"
+
+Node Name: "cst_7"
+
+Node Name: "phiC_0"
+
+Node Name: "branchC_1"
+
+Node Name: "phiC_1"
+
+Node Name: "branchC_2"
+
+Node Name: "cst_8"
+
+Node Name: "phiC_2"
+
+Node Name: "branchC_3"
+
+Node Name: "phiC_3"
+
+Node Name: "sink_0"
+
+Node Name: "sink_1"
+
+Node Name: "sink_2"
+
+Node Name: "LSQ_A"
+
+Node Name: "MC_addr"
+
+Node Name: "phiC_4"
+Entered the big if_condition
+Entered the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "branch_4"
+
+Node Name: "phi_n10"
+Entered the big if_condition
+Didn't enter the enode->CntrlSuccs->size() == 0 condition
+
+Node Name: "cst_9"
+
+Node Name: "branch_5"
+
+Node Name: "branch_9"
+
+Node Name: "branch_10"
+
+Node Name: "branchC_11"
+
+Node Name: "branchC_13"
+Finished looping, about to go to Redundant things function

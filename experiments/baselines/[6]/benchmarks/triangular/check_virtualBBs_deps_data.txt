@@ -1,0 +1,36 @@
+
+	 The index of the llvm_predBB is 1
+
+
+===================================================
+
+
+	 VirtualBB between BB1 and BB7
+
+
+ Printing all the piers of that path!
+1, 
+
+	BB8:
+1,
+
+
+	 The index of the llvm_predBB is 6
+
+
+===================================================
+
+
+	 VirtualBB between BB6 and BB7
+
+
+ Printing all the piers of that path!
+1, 
+
+
+ Printing all the piers of that path!
+1, 
+
+	BB8:
+1,
+

@@ -1,0 +1,66 @@
+
+
+*******************************************************
+	Starting a new LSQ!!!!
+
+
+
+	Inside is_common_loop with BB5 and BB16!
+
+
+Printing the predecessors of a LSQ enode:	0 in BB5, 0 in BB16, 
+
+***********************************************************
+
+Printing the details of all Groups in the G graph
+
+
+***********************************************************
+
+	 For Group with first_bb_idx = 5
+
+The first_bb_idx of Predecessor Groups are:   NOTHING!
+The first_bb_idx of Successor Groups are:  16, 
+
+
+
+***********************************************************
+
+	 For Group with first_bb_idx = 16
+
+The first_bb_idx of Predecessor Groups are:  5, 
+
+The first_bb_idx of Successor Groups are:   NOTHING!
+
+
+*******************************************************
+	Starting a new LSQ!!!!
+
+
+
+	Inside is_common_loop with BB11 and BB16!
+
+
+Printing the predecessors of a LSQ enode:	0 in BB11, 0 in BB16, 
+
+***********************************************************
+
+Printing the details of all Groups in the G graph
+
+
+***********************************************************
+
+	 For Group with first_bb_idx = 11
+
+The first_bb_idx of Predecessor Groups are:   NOTHING!
+The first_bb_idx of Successor Groups are:  16, 
+
+
+
+***********************************************************
+
+	 For Group with first_bb_idx = 16
+
+The first_bb_idx of Predecessor Groups are:  11, 
+
+The first_bb_idx of Successor Groups are:   NOTHING!

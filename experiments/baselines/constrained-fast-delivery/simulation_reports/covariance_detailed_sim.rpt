@@ -1,10 +1,10 @@
 
 
 **************************************************
-Mo Nov 28 13:10:30 CET 2022
-****Executing test case examples/new_covariance optimized ****
-filename examples/new_covariance optimized
-/home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance
+So Dez  4 15:24:50 CET 2022
+****Executing test case benchmarks/covariance optimized ****
+filename benchmarks/covariance optimized
+/home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance
 
 
 ******************************************************************
@@ -15,20 +15,20 @@ filename examples/new_covariance optimized
 
 synthesis_optimized.tcl
 Done 
-set input file: new_covariance.cpp
-current input filename: ./src/new_covariance.cpp
+set input file: covariance.cpp
+current input filename: ./src/covariance.cpp
 Done 
 Synthesize
-compile new_covariance.cpp . -use-lsq=true Andrea: arg1:  new_covariance.cpp arg2: . arg3 -use-lsq=true arg4
-/home/dynamatic/Dynamatic/etc/llvm-6.0/bin/clang -emit-llvm -S   -c src/new_covariance.cpp -o .new_covariance.cpp.ll
+compile covariance.cpp . -use-lsq=true Andrea: arg1:  covariance.cpp arg2: . arg3 -use-lsq=true arg4
+/home/dynamatic/Dynamatic/etc/llvm-6.0/bin/clang -emit-llvm -S   -c src/covariance.cpp -o .covariance.cpp.ll
 rm: cannot remove '*.s': No such file or directory
-0; ModuleID = '.new_covariance.cpp_mem2reg_constprop_simplifycfg_die.ll'
-source_filename = "src/new_covariance.cpp"
+0; ModuleID = '.covariance.cpp_mem2reg_constprop_simplifycfg_die.ll'
+source_filename = "src/covariance.cpp"
 target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
 target triple = "x86_64-unknown-linux-gnu"
 
 ; Function Attrs: noinline nounwind uwtable
-define i32 @_Z14new_covariancePA32_iS0_([32 x i32]* %data, [32 x i32]* %cov) #0 {
+define i32 @_Z10covariancePA32_iS0_([32 x i32]* %data, [32 x i32]* %cov) #0 {
 block1:
   br label %block2
 
@@ -240,7 +240,7 @@ for.inc95:                                        ; preds = %for.end82, %for.bod
 for.end97:                                        ; preds = %for.inc95
   %arraydecay = getelementptr inbounds [32 x [32 x i32]], [32 x [32 x i32]]* %data_, i64 0, i64 0
   %arraydecay98 = getelementptr inbounds [32 x [32 x i32]], [32 x [32 x i32]]* %cov_, i64 0, i64 0
-  %call99 = call i32 @_Z14new_covariancePA32_iS0_([32 x i32]* nonnull %arraydecay, [32 x i32]* nonnull %arraydecay98)
+  %call99 = call i32 @_Z10covariancePA32_iS0_([32 x i32]* nonnull %arraydecay, [32 x i32]* nonnull %arraydecay98)
   ret i32 0
 }
 
@@ -265,14 +265,14 @@ attributes #3 = { nounwind }
 Done 
 Done 
 Optimize
-buffers buffers -filename=./reports/new_covariance -period=4 
+buffers buffers -filename=./reports/covariance -period=4 
 Aya: INSIDE main_shab!
 
 Aya: before parse_user_input!
 
 Aya: after parse_user_input!
 ****************************************
-dataflow graph name: ./reports/new_covariance
+dataflow graph name: ./reports/covariance
 milp solver: cbc
 delay: 0, period: 4
 timeout: 180
@@ -557,7 +557,7 @@ ADDING ELASTIC BUFFERS
 Extracting marked graphs
 --------------------------
 Iteration 1
-ILP time: [ms] 14 
+ILP time: [ms] 15 
 Arcs in the CFDFC:
 	11->11:16368
 Updating frequencies...
@@ -580,14 +580,14 @@ Updating frequencies...
 Storing CFDFC and corresponding Marked Graph...
 --------------------------
 Iteration 4
-ILP time: [ms] 12 
+ILP time: [ms] 11 
 Arcs in the CFDFC:
 	3->3:992
 Updating frequencies...
 Storing CFDFC and corresponding Marked Graph...
 --------------------------
 Iteration 5
-ILP time: [ms] 10 
+ILP time: [ms] 12 
 Arcs in the CFDFC:
 	8->9:32
 	9->10:32
@@ -610,7 +610,7 @@ Updating frequencies...
 Storing CFDFC and corresponding Marked Graph...
 --------------------------
 Iteration 7
-ILP time: [ms] 9 
+ILP time: [ms] 8 
 Arcs in the CFDFC:
 No new MG can be extracted to increase coverage.
 
@@ -1081,7 +1081,7 @@ Lana: back edge is branchC_12:out1 -> phiC_6:in2
 Lana: back edge is branch_18:out2 -> phi_28:in2
 Lana: back edge is fork_19:out2 -> phi_n72:in2
 Solving MILP for elastic buffers: MG 0
-Milp time for MG 0: [ms] 181212 
+Milp time for MG 0: [ms] 169173 
 
 ************************
 *** Throughput for MG 0 in disjoint MG 0: 1.00 ***
@@ -1194,7 +1194,7 @@ Lana: back edge is branchC_5:out1 -> phiC_0:in2
 Lana: back edge is branch_13:out2 -> phi_1:in2
 Lana: back edge is fork_9:out2 -> phi_n69:in2
 Solving MILP for elastic buffers: MG 1
-Milp time for MG 1: [ms] 152187 
+Milp time for MG 1: [ms] 136322 
 
 ************************
 *** Throughput for MG 2 in disjoint MG 1: 1.00 ***
@@ -1239,26 +1239,26 @@ Adding buffer in fork_9:out4 -> branchC_5:in2 | slots: 2, trans: 1 | BB6 -> BB6 
 Initiating MILP for remaining channels
 --------------------------------------
 Solving MILP for channels not covered by MGs
-Milp time for remaining channels: [ms] 135 
+Milp time for remaining channels: [ms] 100 
 
 Adding buffer in phiC_5:out1 -> forkC_44:in1 | slots: 1, trans: 0 | BB7 -> BB7 (inner)
 Adding buffer in branchC_7:out2 -> phiC_11:in1 | slots: 1, trans: 0 | BB8 -> BB13
 ***************************
-Total MILP time: [ms] 333534
+Total MILP time: [ms] 305595
 ***************************
 
 Aya: After calling DF.addElasticBuffersBB_sc!
 INSTANTIATE
 Done 
 Write hdl
-write_hdl  . ./reports/new_covariance_optimized
+write_hdl  . ./reports/covariance_optimized
 
 ******************************************************************
 ******Dynamic High-Level Synthesis Compiler **********************
 ******Andrea Guerrieri - Lana Josipovic - EPFL-LAP 2019 **********
 ******Dot to VHDL Generator***************************************
 ******************************************************************
-Parsing ./reports/new_covariance_optimized.dot
+Parsing ./reports/covariance_optimized.dot
 
 Report Modules 
 +--------------------------------------------------------------------------+
@@ -1538,12 +1538,12 @@ Report Modules
 |       271|             sink_25|                Sink|         1|         0|
 |       272|               end_0|                Exit|         4|         1|
 +--------------------------------------------------------------------------+
-Generating ./reports/new_covariance_optimized.vhd
+Generating ./reports/covariance_optimized.vhd
 Generating LSQ 0 component...
-lsq_generate ./reports/new_covariance_optimized_lsq0_configuration.json
-[[35minfo[0m] [0.005] Elaborating design...
-[[35minfo[0m] [3.327] Done elaborating.
-Total FIRRTL Compile Time: 18589.9 ms
+lsq_generate ./reports/covariance_optimized_lsq0_configuration.json
+[[35minfo[0m] [0.008] Elaborating design...
+[[35minfo[0m] [2.901] Done elaborating.
+Total FIRRTL Compile Time: 17814.0 ms
 
 Done
 
@@ -1554,8 +1554,8 @@ Exit...
 Goodbye!
 
 
-examples/new_covariance
-new_covariance
+benchmarks/covariance
+covariance
 [INFO  CAnalyzer] Return identified: end of type int (return value).
 [INFO  CAnalyzer] Parsing parameter inout_int_t data[32][32]
 array length 1024
@@ -1567,19 +1567,19 @@ i0
 [INFO  CAnalyzer] Actual type of "data" is "int" (32 bits).
 i1
 [INFO  CAnalyzer] Actual type of "cov" is "int" (32 bits).
-[INFO  CVER] Compiling C files [gcc ../C_SRC/hls_verify_new_covariance.c -I../C_SRC -o ../C_SRC/hls_verify_new_covariance.out]
+[INFO  CVER] Compiling C files [gcc ../C_SRC/hls_verify_covariance.c -I../C_SRC -o ../C_SRC/hls_verify_covariance.out]
 [INFO  CVER] Cleaning C output files [rm -rf ../C_OUT]
 [INFO  CVER] Cleaning existing input files [rm -rf ../INPUT_VECTORS]
 [INFO  CVER] Creating C output files directory [mkdir -p ../C_OUT]
 [INFO  CVER] Creating input files directory [mkdir -p ../INPUT_VECTORS]
-[INFO  CVER] Executing C test-bench [../C_SRC/hls_verify_new_covariance.out]
+[INFO  CVER] Executing C test-bench [../C_SRC/hls_verify_covariance.out]
 [INFO  CVER] C simulation finished. Outputs saved in directory ../C_OUT.
-[INFO  VVER] Generating VHDL testbench for entity new_covariance
+[INFO  VVER] Generating VHDL testbench for entity covariance
 [INFO  VVER] Transaction number computed : 1
-[INFO  VVER] Copying supplementary files: [cp /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/hls_verifier/HlsVerifier/build/resources/template_two_port_RAM.vhd ../VHDL_SRC/two_port_RAM.vhd]
-[INFO  VVER] Copying supplementary files: [cp /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/hls_verifier/HlsVerifier/build/resources/template_single_argument.vhd ../VHDL_SRC/single_argument.vhd]
-[INFO  VVER] Copying supplementary files: [cp /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/hls_verifier/HlsVerifier/build/resources/template_simpackage.vhd ../VHDL_SRC/simpackage.vhd]
-[INFO  VVER] Copying supplementary files: [cp /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/hls_verifier/HlsVerifier/build/resources/modelsim.ini ./modelsim.ini]
+[INFO  VVER] Copying supplementary files: [cp /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/hls_verifier/HlsVerifier/build/resources/template_two_port_RAM.vhd ../VHDL_SRC/two_port_RAM.vhd]
+[INFO  VVER] Copying supplementary files: [cp /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/hls_verifier/HlsVerifier/build/resources/template_single_argument.vhd ../VHDL_SRC/single_argument.vhd]
+[INFO  VVER] Copying supplementary files: [cp /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/hls_verifier/HlsVerifier/build/resources/template_simpackage.vhd ../VHDL_SRC/simpackage.vhd]
+[INFO  VVER] Copying supplementary files: [cp /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/hls_verifier/HlsVerifier/build/resources/modelsim.ini ./modelsim.ini]
 [INFO  VVER] Cleaning VHDL output files [rm -rf ../VHDL_OUT]
 [INFO  VVER] Creating VHDL output files directory [mkdir -p ../VHDL_OUT]
 [INFO  VVER] Executing modelsim: [vsim -c -do simulation.do]
@@ -1593,8 +1593,8 @@ Reading pref.tcl
 # Modifying modelsim.ini
 # Loading project simulation
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:16:37 on Nov 28,2022
-# vlog -work work /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/LSQ_data.v 
+# Start time: 15:30:27 on Dec 04,2022
+# vlog -work work /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/LSQ_data.v 
 # -- Compiling module STORE_QUEUE_LSQ_data
 # -- Compiling module LOAD_QUEUE_LSQ_data
 # -- Compiling module GROUP_ALLOCATOR_LSQ_data
@@ -1604,50 +1604,50 @@ Reading pref.tcl
 # 
 # Top level modules:
 # 	LSQ_data
-# End time: 13:16:38 on Nov 28,2022, Elapsed time: 0:00:01
+# End time: 15:30:27 on Dec 04,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Compile of LSQ_data.v was successful.
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:16:38 on Nov 28,2022
-# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/delay_buffer.vhd 
+# Start time: 15:30:27 on Dec 04,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/delay_buffer.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity delay_buffer
 # -- Compiling architecture arch of delay_buffer
-# End time: 13:16:38 on Nov 28,2022, Elapsed time: 0:00:00
+# End time: 15:30:28 on Dec 04,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Compile of delay_buffer.vhd was successful.
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:16:38 on Nov 28,2022
-# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/arithmetic_units.vhd 
+# Start time: 15:30:28 on Dec 04,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/arithmetic_units.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # ** Error: (vcom-11) Could not find work.customtypes.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/arithmetic_units.vhd(8): (vcom-1195) Cannot find expanded name "work.customTypes".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/arithmetic_units.vhd(8): Unknown expanded name.
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/arithmetic_units.vhd(10): VHDL Compiler exiting
-# End time: 13:16:38 on Nov 28,2022, Elapsed time: 0:00:00
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/arithmetic_units.vhd(8): (vcom-1195) Cannot find expanded name "work.customTypes".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/arithmetic_units.vhd(8): Unknown expanded name.
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/arithmetic_units.vhd(10): VHDL Compiler exiting
+# End time: 15:30:28 on Dec 04,2022, Elapsed time: 0:00:00
 # Errors: 4, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:16:38 on Nov 28,2022
-# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/sharing_components.vhd 
+# Start time: 15:30:28 on Dec 04,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/sharing_components.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # ** Error: (vcom-11) Could not find work.customtypes.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/sharing_components.vhd(6): (vcom-1195) Cannot find expanded name "work.customTypes".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/sharing_components.vhd(6): Unknown expanded name.
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/sharing_components.vhd(8): VHDL Compiler exiting
-# End time: 13:16:38 on Nov 28,2022, Elapsed time: 0:00:00
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/sharing_components.vhd(6): (vcom-1195) Cannot find expanded name "work.customTypes".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/sharing_components.vhd(6): Unknown expanded name.
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/sharing_components.vhd(8): VHDL Compiler exiting
+# End time: 15:30:28 on Dec 04,2022, Elapsed time: 0:00:00
 # Errors: 4, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:16:38 on Nov 28,2022
-# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/elastic_components.vhd 
+# Start time: 15:30:28 on Dec 04,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/elastic_components.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -1737,12 +1737,12 @@ Reading pref.tcl
 # -- Compiling architecture arch of lsq_load_op
 # -- Compiling entity lsq_store_op
 # -- Compiling architecture arch of lsq_store_op
-# End time: 13:16:38 on Nov 28,2022, Elapsed time: 0:00:00
+# End time: 15:30:28 on Dec 04,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Compile of elastic_components.vhd was successful.
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:16:38 on Nov 28,2022
-# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/mul_wrapper.vhd 
+# Start time: 15:30:28 on Dec 04,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/mul_wrapper.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -1752,32 +1752,16 @@ Reading pref.tcl
 # -- Compiling architecture arch of mul_op
 # -- Loading entity join
 # ** Error: (vcom-11) Could not find work.mul_4_stage.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/mul_wrapper.vhd(45): (vcom-1195) Cannot find expanded name "work.mul_4_stage".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/mul_wrapper.vhd(45): Unknown expanded name.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/mul_wrapper.vhd(45): (vcom-1195) Cannot find expanded name "work.mul_4_stage".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/mul_wrapper.vhd(45): Unknown expanded name.
 # -- Loading entity delay_buffer
 # -- Loading entity OEHB
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/mul_wrapper.vhd(76): VHDL Compiler exiting
-# End time: 13:16:38 on Nov 28,2022, Elapsed time: 0:00:00
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/mul_wrapper.vhd(76): VHDL Compiler exiting
+# End time: 15:30:28 on Dec 04,2022, Elapsed time: 0:00:00
 # Errors: 4, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:16:38 on Nov 28,2022
-# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/hls_verify_new_covariance_tb.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package std_logic_textio
-# -- Loading package NUMERIC_STD
-# ** Error: (vcom-11) Could not find work.sim_package.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/hls_verify_new_covariance_tb.vhd(9): (vcom-1195) Cannot find expanded name "work.sim_package".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/hls_verify_new_covariance_tb.vhd(9): Unknown expanded name.
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/hls_verify_new_covariance_tb.vhd(13): VHDL Compiler exiting
-# End time: 13:16:38 on Nov 28,2022, Elapsed time: 0:00:00
-# Errors: 4, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:16:38 on Nov 28,2022
-# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/MemCont.vhd 
+# Start time: 15:30:28 on Dec 04,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/MemCont.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -1823,147 +1807,13 @@ Reading pref.tcl
 # -- Compiling architecture arch of MemCont
 # -- Loading entity read_memory_arbiter
 # -- Loading entity write_memory_arbiter
-# ** Warning: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/MemCont.vhd(840): (vcom-1514) Range choice direction (downto) does not determine aggregate index range direction (to).
-# End time: 13:16:38 on Nov 28,2022, Elapsed time: 0:00:00
+# ** Warning: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/MemCont.vhd(840): (vcom-1514) Range choice direction (downto) does not determine aggregate index range direction (to).
+# End time: 15:30:28 on Dec 04,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
 # Compile of MemCont.vhd was successful.
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:16:38 on Nov 28,2022
-# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package customTypes
-# -- Compiling entity new_covariance
-# -- Compiling architecture behavioral of new_covariance
-# -- Loading entity Const
-# -- Loading entity start_node
-# -- Loading entity branch
-# -- Loading entity fork
-# -- Loading package MATH_REAL
-# -- Loading entity mux
-# -- Loading entity merge
-# -- Loading entity elasticBuffer
-# -- Loading entity transpFIFO
-# ** Error: (vcom-11) Could not find work.zext_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(5890): (vcom-1195) Cannot find expanded name "work.zext_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(5890): Unknown expanded name.
-# ** Error: (vcom-11) Could not find work.zext_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(5902): (vcom-1195) Cannot find expanded name "work.zext_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(5902): Unknown expanded name.
-# ** Error: (vcom-11) Could not find work.getelementptr_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(5914): (vcom-1195) Cannot find expanded name "work.getelementptr_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(5914): Unknown expanded name.
-# -- Loading entity mc_load_op
-# ** Error: (vcom-11) Could not find work.add_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(5950): (vcom-1195) Cannot find expanded name "work.add_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(5950): Unknown expanded name.
-# ** Error: (vcom-11) Could not find work.add_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(5977): (vcom-1195) Cannot find expanded name "work.add_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(5977): Unknown expanded name.
-# ** Error: (vcom-11) Could not find work.icmp_ult_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(6004): (vcom-1195) Cannot find expanded name "work.icmp_ult_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(6004): Unknown expanded name.
-# ** Error: (vcom-11) Could not find work.shl_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(6397): (vcom-1195) Cannot find expanded name "work.shl_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(6397): Unknown expanded name.
-# ** Error: (vcom-11) Could not find work.zext_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(6511): (vcom-1195) Cannot find expanded name "work.zext_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(6511): Unknown expanded name.
-# ** Error: (vcom-11) Could not find work.zext_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(6523): (vcom-1195) Cannot find expanded name "work.zext_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(6523): Unknown expanded name.
-# ** Error: (vcom-11) Could not find work.getelementptr_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(6535): (vcom-1195) Cannot find expanded name "work.getelementptr_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(6535): Unknown expanded name.
-# ** Error: (vcom-11) Could not find work.sub_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(6571): (vcom-1195) Cannot find expanded name "work.sub_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(6571): Unknown expanded name.
-# -- Loading entity lsq_store_op
-# ** Error: (vcom-11) Could not find work.add_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(6616): (vcom-1195) Cannot find expanded name "work.add_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(6616): Unknown expanded name.
-# ** Error: (vcom-11) Could not find work.icmp_ult_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(6643): (vcom-1195) Cannot find expanded name "work.icmp_ult_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(6643): Unknown expanded name.
-# -- Loading entity TEHB
-# ** Error: (vcom-11) Could not find work.add_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(7138): (vcom-1195) Cannot find expanded name "work.add_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(7138): Unknown expanded name.
-# ** Error: (vcom-11) Could not find work.icmp_ult_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(7165): (vcom-1195) Cannot find expanded name "work.icmp_ult_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(7165): Unknown expanded name.
-# ** Error: (vcom-11) Could not find work.icmp_ult_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(7387): (vcom-1195) Cannot find expanded name "work.icmp_ult_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(7387): Unknown expanded name.
-# ** Error: (vcom-11) Could not find work.zext_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(8092): (vcom-1195) Cannot find expanded name "work.zext_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(8092): Unknown expanded name.
-# ** Error: (vcom-11) Could not find work.zext_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(8104): (vcom-1195) Cannot find expanded name "work.zext_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(8104): Unknown expanded name.
-# ** Error: (vcom-11) Could not find work.getelementptr_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(8116): (vcom-1195) Cannot find expanded name "work.getelementptr_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(8116): Unknown expanded name.
-# -- Loading entity lsq_load_op
-# ** Error: (vcom-11) Could not find work.zext_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(8152): (vcom-1195) Cannot find expanded name "work.zext_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(8152): Unknown expanded name.
-# ** Error: (vcom-11) Could not find work.zext_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(8164): (vcom-1195) Cannot find expanded name "work.zext_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(8164): Unknown expanded name.
-# ** Error: (vcom-11) Could not find work.getelementptr_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(8176): (vcom-1195) Cannot find expanded name "work.getelementptr_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(8176): Unknown expanded name.
-# -- Loading entity mul_op
-# ** Error: (vcom-11) Could not find work.add_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(8227): (vcom-1195) Cannot find expanded name "work.add_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(8227): Unknown expanded name.
-# ** Error: (vcom-11) Could not find work.add_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(8254): (vcom-1195) Cannot find expanded name "work.add_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(8254): Unknown expanded name.
-# ** Error: (vcom-11) Could not find work.icmp_ult_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(8281): (vcom-1195) Cannot find expanded name "work.icmp_ult_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(8281): Unknown expanded name.
-# ** Error: (vcom-11) Could not find work.shl_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(8788): (vcom-1195) Cannot find expanded name "work.shl_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(8788): Unknown expanded name.
-# ** Error: (vcom-11) Could not find work.zext_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(8803): (vcom-1195) Cannot find expanded name "work.zext_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(8803): Unknown expanded name.
-# ** Error: (vcom-11) Could not find work.zext_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(8815): (vcom-1195) Cannot find expanded name "work.zext_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(8815): Unknown expanded name.
-# ** Error: (vcom-11) Could not find work.getelementptr_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(8827): (vcom-1195) Cannot find expanded name "work.getelementptr_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(8827): Unknown expanded name.
-# -- Loading entity mc_store_op
-# ** Error: (vcom-11) Could not find work.add_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(8875): (vcom-1195) Cannot find expanded name "work.add_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(8875): Unknown expanded name.
-# ** Error: (vcom-11) Could not find work.icmp_ult_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(8902): (vcom-1195) Cannot find expanded name "work.icmp_ult_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(8902): Unknown expanded name.
-# -- Loading entity nontranspFifo
-# ** Error: (vcom-11) Could not find work.add_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(9064): (vcom-1195) Cannot find expanded name "work.add_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(9064): Unknown expanded name.
-# ** Error: (vcom-11) Could not find work.icmp_ult_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(9091): (vcom-1195) Cannot find expanded name "work.icmp_ult_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(9091): Unknown expanded name.
-# ** Error: (vcom-11) Could not find work.ret_op.
-# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(9205): (vcom-1195) Cannot find expanded name "work.ret_op".
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(9205): Unknown expanded name.
-# -- Loading entity sink
-# -- Loading entity MemCont
-# -- Loading entity end_node
-# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd(9591): VHDL Compiler exiting
-# End time: 13:16:38 on Nov 28,2022, Elapsed time: 0:00:00
-# Errors: 103, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:16:38 on Nov 28,2022
-# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/multipliers.vhd 
+# Start time: 15:30:28 on Dec 04,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/multipliers.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -1972,12 +1822,12 @@ Reading pref.tcl
 # -- Compiling architecture behav of mul_4_stage
 # -- Compiling entity mul_8_stage
 # -- Compiling architecture behav of mul_8_stage
-# End time: 13:16:38 on Nov 28,2022, Elapsed time: 0:00:00
+# End time: 15:30:28 on Dec 04,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Compile of multipliers.vhd was successful.
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:16:38 on Nov 28,2022
-# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/simpackage.vhd 
+# Start time: 15:30:28 on Dec 04,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/simpackage.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -1988,12 +1838,12 @@ Reading pref.tcl
 # -- Compiling package sim_package
 # -- Compiling package body sim_package
 # -- Loading package sim_package
-# End time: 13:16:38 on Nov 28,2022, Elapsed time: 0:00:00
+# End time: 15:30:28 on Dec 04,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Compile of simpackage.vhd was successful.
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:16:38 on Nov 28,2022
-# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/two_port_RAM.vhd 
+# Start time: 15:30:28 on Dec 04,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/two_port_RAM.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -2004,13 +1854,170 @@ Reading pref.tcl
 # -- Loading package sim_package
 # -- Compiling entity two_port_RAM
 # -- Compiling architecture behav of two_port_RAM
-# ** Warning: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/two_port_RAM.vhd(41): (vcom-1236) Shared variables must be of a protected type.
-# End time: 13:16:38 on Nov 28,2022, Elapsed time: 0:00:00
+# ** Warning: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/two_port_RAM.vhd(41): (vcom-1236) Shared variables must be of a protected type.
+# End time: 15:30:28 on Dec 04,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
 # Compile of two_port_RAM.vhd was successful.
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:16:38 on Nov 28,2022
-# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/single_argument.vhd 
+# Start time: 15:30:28 on Dec 04,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package customTypes
+# -- Compiling entity covariance
+# -- Compiling architecture behavioral of covariance
+# -- Loading entity Const
+# -- Loading entity start_node
+# -- Loading entity branch
+# -- Loading entity fork
+# -- Loading package MATH_REAL
+# -- Loading entity mux
+# -- Loading entity merge
+# -- Loading entity elasticBuffer
+# -- Loading entity transpFIFO
+# ** Error: (vcom-11) Could not find work.zext_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(5890): (vcom-1195) Cannot find expanded name "work.zext_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(5890): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.zext_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(5902): (vcom-1195) Cannot find expanded name "work.zext_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(5902): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.getelementptr_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(5914): (vcom-1195) Cannot find expanded name "work.getelementptr_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(5914): Unknown expanded name.
+# -- Loading entity mc_load_op
+# ** Error: (vcom-11) Could not find work.add_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(5950): (vcom-1195) Cannot find expanded name "work.add_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(5950): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.add_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(5977): (vcom-1195) Cannot find expanded name "work.add_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(5977): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.icmp_ult_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(6004): (vcom-1195) Cannot find expanded name "work.icmp_ult_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(6004): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.shl_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(6397): (vcom-1195) Cannot find expanded name "work.shl_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(6397): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.zext_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(6511): (vcom-1195) Cannot find expanded name "work.zext_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(6511): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.zext_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(6523): (vcom-1195) Cannot find expanded name "work.zext_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(6523): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.getelementptr_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(6535): (vcom-1195) Cannot find expanded name "work.getelementptr_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(6535): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.sub_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(6571): (vcom-1195) Cannot find expanded name "work.sub_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(6571): Unknown expanded name.
+# -- Loading entity lsq_store_op
+# ** Error: (vcom-11) Could not find work.add_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(6616): (vcom-1195) Cannot find expanded name "work.add_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(6616): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.icmp_ult_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(6643): (vcom-1195) Cannot find expanded name "work.icmp_ult_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(6643): Unknown expanded name.
+# -- Loading entity TEHB
+# ** Error: (vcom-11) Could not find work.add_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(7138): (vcom-1195) Cannot find expanded name "work.add_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(7138): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.icmp_ult_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(7165): (vcom-1195) Cannot find expanded name "work.icmp_ult_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(7165): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.icmp_ult_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(7387): (vcom-1195) Cannot find expanded name "work.icmp_ult_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(7387): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.zext_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(8092): (vcom-1195) Cannot find expanded name "work.zext_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(8092): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.zext_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(8104): (vcom-1195) Cannot find expanded name "work.zext_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(8104): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.getelementptr_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(8116): (vcom-1195) Cannot find expanded name "work.getelementptr_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(8116): Unknown expanded name.
+# -- Loading entity lsq_load_op
+# ** Error: (vcom-11) Could not find work.zext_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(8152): (vcom-1195) Cannot find expanded name "work.zext_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(8152): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.zext_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(8164): (vcom-1195) Cannot find expanded name "work.zext_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(8164): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.getelementptr_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(8176): (vcom-1195) Cannot find expanded name "work.getelementptr_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(8176): Unknown expanded name.
+# -- Loading entity mul_op
+# ** Error: (vcom-11) Could not find work.add_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(8227): (vcom-1195) Cannot find expanded name "work.add_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(8227): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.add_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(8254): (vcom-1195) Cannot find expanded name "work.add_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(8254): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.icmp_ult_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(8281): (vcom-1195) Cannot find expanded name "work.icmp_ult_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(8281): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.shl_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(8788): (vcom-1195) Cannot find expanded name "work.shl_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(8788): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.zext_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(8803): (vcom-1195) Cannot find expanded name "work.zext_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(8803): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.zext_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(8815): (vcom-1195) Cannot find expanded name "work.zext_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(8815): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.getelementptr_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(8827): (vcom-1195) Cannot find expanded name "work.getelementptr_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(8827): Unknown expanded name.
+# -- Loading entity mc_store_op
+# ** Error: (vcom-11) Could not find work.add_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(8875): (vcom-1195) Cannot find expanded name "work.add_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(8875): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.icmp_ult_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(8902): (vcom-1195) Cannot find expanded name "work.icmp_ult_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(8902): Unknown expanded name.
+# -- Loading entity nontranspFifo
+# ** Error: (vcom-11) Could not find work.add_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(9064): (vcom-1195) Cannot find expanded name "work.add_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(9064): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.icmp_ult_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(9091): (vcom-1195) Cannot find expanded name "work.icmp_ult_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(9091): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.ret_op.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(9205): (vcom-1195) Cannot find expanded name "work.ret_op".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(9205): Unknown expanded name.
+# -- Loading entity sink
+# -- Loading entity MemCont
+# -- Loading entity end_node
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd(9591): VHDL Compiler exiting
+# End time: 15:30:28 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 103, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:30:28 on Dec 04,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/hls_verify_covariance_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Loading package NUMERIC_STD
+# -- Loading package sim_package
+# -- Compiling entity covariance_tb
+# -- Compiling architecture behav of covariance_tb
+# ** Warning: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/hls_verify_covariance_tb.vhd(77): (vcom-1236) Shared variables must be of a protected type.
+# -- Loading package customTypes
+# -- Loading entity covariance
+# ** Error: (vcom-11) Could not find work.single_argument.
+# ** Error (suppressible): /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/hls_verify_covariance_tb.vhd(115): (vcom-1195) Cannot find expanded name "work.single_argument".
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/hls_verify_covariance_tb.vhd(115): Unknown expanded name.
+# -- Loading entity two_port_RAM
+# ** Error: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/hls_verify_covariance_tb.vhd(361): VHDL Compiler exiting
+# End time: 15:30:28 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 1
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:30:28 on Dec 04,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/single_argument.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -2021,13 +2028,13 @@ Reading pref.tcl
 # -- Loading package sim_package
 # -- Compiling entity single_argument
 # -- Compiling architecture behav of single_argument
-# ** Warning: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/single_argument.vhd(34): (vcom-1236) Shared variables must be of a protected type.
-# End time: 13:16:38 on Nov 28,2022, Elapsed time: 0:00:00
+# ** Warning: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/single_argument.vhd(34): (vcom-1236) Shared variables must be of a protected type.
+# End time: 15:30:28 on Dec 04,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
 # Compile of single_argument.vhd was successful.
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:16:38 on Nov 28,2022
-# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/arithmetic_units.vhd 
+# Start time: 15:30:28 on Dec 04,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/arithmetic_units.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -2172,12 +2179,12 @@ Reading pref.tcl
 # -- Compiling architecture arch of copysignf_op
 # -- Compiling entity sitofp_op
 # -- Compiling architecture arch of sitofp_op
-# End time: 13:16:39 on Nov 28,2022, Elapsed time: 0:00:01
+# End time: 15:30:28 on Dec 04,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Compile of arithmetic_units.vhd was successful.
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:16:39 on Nov 28,2022
-# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/sharing_components.vhd 
+# Start time: 15:30:28 on Dec 04,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/sharing_components.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -2207,12 +2214,12 @@ Reading pref.tcl
 # -- Loading entity fork
 # -- Loading package MATH_REAL
 # -- Loading entity mux
-# End time: 13:16:39 on Nov 28,2022, Elapsed time: 0:00:00
+# End time: 15:30:28 on Dec 04,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Compile of sharing_components.vhd was successful.
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:16:39 on Nov 28,2022
-# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/mul_wrapper.vhd 
+# Start time: 15:30:28 on Dec 04,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/mul_wrapper.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -2224,40 +2231,19 @@ Reading pref.tcl
 # -- Loading entity mul_4_stage
 # -- Loading entity delay_buffer
 # -- Loading entity OEHB
-# End time: 13:16:39 on Nov 28,2022, Elapsed time: 0:00:00
+# End time: 15:30:28 on Dec 04,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Compile of mul_wrapper.vhd was successful.
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:16:39 on Nov 28,2022
-# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/hls_verify_new_covariance_tb.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package std_logic_textio
-# -- Loading package NUMERIC_STD
-# -- Loading package sim_package
-# -- Compiling entity new_covariance_tb
-# -- Compiling architecture behav of new_covariance_tb
-# ** Warning: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/hls_verify_new_covariance_tb.vhd(77): (vcom-1236) Shared variables must be of a protected type.
-# -- Loading package customTypes
-# -- Loading entity new_covariance
-# -- Loading entity single_argument
-# -- Loading entity two_port_RAM
-# End time: 13:16:39 on Nov 28,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 1
-# Compile of hls_verify_new_covariance_tb.vhd was successful.
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:16:39 on Nov 28,2022
-# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd 
+# Start time: 15:30:28 on Dec 04,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Loading package customTypes
-# -- Compiling entity new_covariance
-# -- Compiling architecture behavioral of new_covariance
+# -- Compiling entity covariance
+# -- Compiling architecture behavioral of covariance
 # -- Loading entity Const
 # -- Loading entity start_node
 # -- Loading entity branch
@@ -2284,10 +2270,31 @@ Reading pref.tcl
 # -- Loading entity sink
 # -- Loading entity MemCont
 # -- Loading entity end_node
-# End time: 13:16:39 on Nov 28,2022, Elapsed time: 0:00:00
+# End time: 15:30:29 on Dec 04,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# Compile of new_covariance_optimized.vhd was successful.
-# All compile dependencies have been resolved.vlog -work work -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/LSQ_data.v
+# Compile of covariance_optimized.vhd was successful.
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:30:29 on Dec 04,2022
+# vcom -work work -2008 -explicit /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/hls_verify_covariance_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Loading package NUMERIC_STD
+# -- Loading package sim_package
+# -- Compiling entity covariance_tb
+# -- Compiling architecture behav of covariance_tb
+# ** Warning: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/hls_verify_covariance_tb.vhd(77): (vcom-1236) Shared variables must be of a protected type.
+# -- Loading package customTypes
+# -- Loading entity covariance
+# -- Loading entity single_argument
+# -- Loading entity two_port_RAM
+# End time: 15:30:29 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# Compile of hls_verify_covariance_tb.vhd was successful.
+# All compile dependencies have been resolved.vlog -work work -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/LSQ_data.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 # -- Compiling module STORE_QUEUE_LSQ_data
 # -- Compiling module LOAD_QUEUE_LSQ_data
@@ -2298,7 +2305,7 @@ Reading pref.tcl
 # 
 # Top level modules:
 # 	LSQ_data
-ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/delay_buffer.vhd
+ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/delay_buffer.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -2306,7 +2313,7 @@ ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamati
 # -- Loading package NUMERIC_STD
 # -- Compiling entity delay_buffer
 # -- Compiling architecture arch of delay_buffer
-ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/elastic_components.vhd
+ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/elastic_components.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -2397,7 +2404,7 @@ ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamati
 # -- Compiling architecture arch of lsq_load_op
 # -- Compiling entity lsq_store_op
 # -- Compiling architecture arch of lsq_store_op
-ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/MemCont.vhd
+ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/MemCont.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -2444,8 +2451,8 @@ ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamati
 # -- Compiling architecture arch of MemCont
 # -- Loading entity read_memory_arbiter
 # -- Loading entity write_memory_arbiter
-# ** Warning: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/MemCont.vhd(840): (vcom-1514) Range choice direction (downto) does not determine aggregate index range direction (to).
-ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/multipliers.vhd
+# ** Warning: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/MemCont.vhd(840): (vcom-1514) Range choice direction (downto) does not determine aggregate index range direction (to).
+ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/multipliers.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -2455,7 +2462,7 @@ ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamati
 # -- Compiling architecture behav of mul_4_stage
 # -- Compiling entity mul_8_stage
 # -- Compiling architecture behav of mul_8_stage
-ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/simpackage.vhd
+ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/simpackage.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -2467,7 +2474,7 @@ ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamati
 # -- Compiling package sim_package
 # -- Compiling package body sim_package
 # -- Loading package sim_package
-ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/two_port_RAM.vhd
+ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/two_port_RAM.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -2479,8 +2486,8 @@ ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamati
 # -- Loading package sim_package
 # -- Compiling entity two_port_RAM
 # -- Compiling architecture behav of two_port_RAM
-# ** Warning: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/two_port_RAM.vhd(41): (vcom-1236) Shared variables must be of a protected type.
-ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/single_argument.vhd
+# ** Warning: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/two_port_RAM.vhd(41): (vcom-1236) Shared variables must be of a protected type.
+ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/single_argument.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -2492,8 +2499,8 @@ ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamati
 # -- Loading package sim_package
 # -- Compiling entity single_argument
 # -- Compiling architecture behav of single_argument
-# ** Warning: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/single_argument.vhd(34): (vcom-1236) Shared variables must be of a protected type.
-ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/arithmetic_units.vhd
+# ** Warning: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/single_argument.vhd(34): (vcom-1236) Shared variables must be of a protected type.
+ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/arithmetic_units.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -2639,7 +2646,7 @@ ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamati
 # -- Compiling architecture arch of copysignf_op
 # -- Compiling entity sitofp_op
 # -- Compiling architecture arch of sitofp_op
-ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/sharing_components.vhd
+ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/sharing_components.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -2670,7 +2677,7 @@ ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamati
 # -- Loading entity fork
 # -- Loading package MATH_REAL
 # -- Loading entity mux
-ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/mul_wrapper.vhd
+ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/mul_wrapper.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -2683,32 +2690,15 @@ ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamati
 # -- Loading entity mul_4_stage
 # -- Loading entity delay_buffer
 # -- Loading entity OEHB
-ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/hls_verify_new_covariance_tb.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package std_logic_textio
-# -- Loading package NUMERIC_STD
-# -- Loading package sim_package
-# -- Compiling entity new_covariance_tb
-# -- Compiling architecture behav of new_covariance_tb
-# ** Warning: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/hls_verify_new_covariance_tb.vhd(77): (vcom-1236) Shared variables must be of a protected type.
-# -- Loading package customTypes
-# -- Loading entity new_covariance
-# -- Loading entity single_argument
-# -- Loading entity two_port_RAM
-ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/new_covariance_optimized.vhd
+ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/covariance_optimized.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Loading package customTypes
-# -- Compiling entity new_covariance
-# -- Compiling architecture behavioral of new_covariance
+# -- Compiling entity covariance
+# -- Compiling architecture behavioral of covariance
 # -- Loading entity Const
 # -- Loading entity start_node
 # -- Loading entity branch
@@ -2735,9 +2725,26 @@ ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamati
 # -- Loading entity sink
 # -- Loading entity MemCont
 # -- Loading entity end_node
+ModelSim> # vcom -work work -2008 -explicit -stats=none /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/hls_verify_covariance_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Loading package NUMERIC_STD
+# -- Loading package sim_package
+# -- Compiling entity covariance_tb
+# -- Compiling architecture behav of covariance_tb
+# ** Warning: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/hls_verify_covariance_tb.vhd(77): (vcom-1236) Shared variables must be of a protected type.
+# -- Loading package customTypes
+# -- Loading entity covariance
+# -- Loading entity single_argument
+# -- Loading entity two_port_RAM
 ModelSim> # 13 compiles, 0 failed with no errors.
-# vsim new_covariance_tb 
-# Start time: 13:16:41 on Nov 28,2022
+# vsim covariance_tb 
+# Start time: 15:30:30 on Dec 04,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -2747,9 +2754,9 @@ ModelSim> # 13 compiles, 0 failed with no errors.
 # Loading ieee.numeric_std(body)
 # Loading work.sim_package(body)
 # Loading work.customtypes
-# Loading work.new_covariance_tb(behav)
+# Loading work.covariance_tb(behav)
 # Loading ieee.math_real(body)
-# Loading work.new_covariance(behavioral)
+# Loading work.covariance(behavioral)
 # Loading work.const(arch)
 # Loading work.start_node(arch)
 # Loading work.elasticbuffer(arch)
@@ -2804,1092 +2811,1092 @@ ModelSim> # 13 compiles, 0 failed with no errors.
 # Loading work.two_port_ram(behav)
 # ** Warning: Design size of 56592 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
-# ** Warning: (vsim-8683) Uninitialized out port /new_covariance_tb/duv/end_0/eReadyArray(2) has no driver.
+# ** Warning: (vsim-8683) Uninitialized out port /covariance_tb/duv/end_0/eReadyArray(2) has no driver.
 # This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /new_covariance_tb/duv/end_0/eReadyArray(1) has no driver.
+# ** Warning: (vsim-8683) Uninitialized out port /covariance_tb/duv/end_0/eReadyArray(1) has no driver.
 # This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /new_covariance_tb/duv/end_0/eReadyArray(0) has no driver.
+# ** Warning: (vsim-8683) Uninitialized out port /covariance_tb/duv/end_0/eReadyArray(0) has no driver.
 # This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /new_covariance_tb/duv/data_we1 has no driver.
+# ** Warning: (vsim-8683) Uninitialized out port /covariance_tb/duv/data_we1 has no driver.
 # This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /new_covariance_tb/duv/data_dout1(31 downto 0) has no driver.
+# ** Warning: (vsim-8683) Uninitialized out port /covariance_tb/duv/data_dout1(31 downto 0) has no driver.
 # This port will contribute value (32'hXXXXXXXX) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /new_covariance_tb/duv/cov_we1 has no driver.
+# ** Warning: (vsim-8683) Uninitialized out port /covariance_tb/duv/cov_we1 has no driver.
 # This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /new_covariance_tb/duv/cov_dout1(31 downto 0) has no driver.
+# ** Warning: (vsim-8683) Uninitialized out port /covariance_tb/duv/cov_dout1(31 downto 0) has no driver.
 # This port will contribute value (32'hXXXXXXXX) to the signal network.
 # ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
 # ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/icmp_57
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/icmp_57
 # ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/icmp_54
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/icmp_54
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/getelementptr_52
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/getelementptr_52
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/getelementptr_52
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/getelementptr_52
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/getelementptr_52
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/getelementptr_52
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/shl_49
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/shl_49
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phiC_39
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phiC_39
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phiC_39
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phiC_39
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phiC_39
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phiC_39
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phiC_39
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phiC_39
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_n19
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_n19
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_n19
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_n19
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_n19
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_n19
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_n19
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_n19
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_n16
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_n16
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_n16
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_n16
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_n16
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_n16
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_n16
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_n16
 # ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/icmp_47
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/icmp_47
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/getelementptr_42
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/getelementptr_42
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/getelementptr_42
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/getelementptr_42
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/getelementptr_42
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/getelementptr_42
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/getelementptr_38
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/getelementptr_38
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/getelementptr_38
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/getelementptr_38
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/getelementptr_38
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/getelementptr_38
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_35
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_35
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_35
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_35
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_34
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_34
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_34
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_34
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phiC_35
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phiC_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phiC_35
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phiC_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phiC_35
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phiC_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phiC_35
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phiC_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_n17
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_n17
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_n17
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_n17
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_n17
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_n17
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_n17
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_n17
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_32
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_32
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_32
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_32
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_32
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_32
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_32
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_32
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phiC_34
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phiC_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phiC_34
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phiC_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phiC_34
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phiC_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phiC_34
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phiC_34
 # ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/icmp_29
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/icmp_29
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_28
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_28
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_28
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_28
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_28
 # ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/icmp_25
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/icmp_25
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phiC_28
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phiC_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phiC_28
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phiC_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phiC_28
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phiC_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phiC_28
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phiC_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_n15
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_n15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_n15
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_n15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_n15
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_n15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_n15
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_n15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_n14
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_n14
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_n14
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_n14
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_n14
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_n14
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_n14
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_n14
 # ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/icmp_22
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/icmp_22
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/getelementptr_18
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/getelementptr_18
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/getelementptr_18
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/getelementptr_18
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/getelementptr_18
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/getelementptr_18
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_15
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_15
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_15
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_15
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_15
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/shl_13
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/shl_13
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phiC_22
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phiC_22
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phiC_22
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phiC_22
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phiC_22
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phiC_22
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phiC_22
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phiC_22
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_n13
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_n13
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_n13
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_n13
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_n13
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_n13
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_n13
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_n13
 # ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/icmp_11
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/icmp_11
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/getelementptr_7
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/getelementptr_7
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/getelementptr_7
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/getelementptr_7
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/getelementptr_7
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/getelementptr_7
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_4
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_4
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_4
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_4
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_4
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_4
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_4
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_4
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_3
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_3
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_3
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_3
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_3
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_3
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_3
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_3
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phiC_20
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phiC_20
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phiC_20
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phiC_20
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phiC_20
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phiC_20
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phiC_20
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phiC_20
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_1
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_1
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_1
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_1
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_1
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_1
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /new_covariance_tb/duv/phi_1
+#    Time: 0 ps  Iteration: 0  Instance: /covariance_tb/duv/phi_1
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/getelementptr_42
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/getelementptr_42
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/getelementptr_42
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/getelementptr_42
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/getelementptr_38
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/getelementptr_38
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/getelementptr_38
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/getelementptr_38
 # ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/icmp_47
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/icmp_47
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/getelementptr_52
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/getelementptr_52
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/getelementptr_52
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/getelementptr_52
 # ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/icmp_54
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/icmp_54
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/phi_34
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/phi_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/phi_34
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/phi_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/phi_34
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/phi_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/phi_34
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/phi_34
 # ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/icmp_57
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/icmp_57
 # ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/icmp_29
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/icmp_29
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/getelementptr_18
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/getelementptr_18
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/getelementptr_18
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/getelementptr_18
 # ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/icmp_22
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/icmp_22
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/getelementptr_7
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/getelementptr_7
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/getelementptr_7
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/getelementptr_7
 # ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/icmp_11
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/icmp_11
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/phi_3
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/phi_3
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/phi_3
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/phi_3
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/phi_3
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/phi_3
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/phi_3
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/phi_3
 # ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/icmp_25
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/icmp_25
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/phi_15
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/phi_15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/phi_15
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/phi_15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/phi_15
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/phi_15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/phi_15
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/phi_15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/phi_4
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/phi_4
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/phi_4
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/phi_4
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/phi_4
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/phi_4
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/phi_4
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/phi_4
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/phi_28
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/phi_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/phi_28
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/phi_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/phi_28
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/phi_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/phi_28
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/phi_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/phi_1
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/phi_1
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/phi_1
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/phi_1
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/phi_1
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/phi_1
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 3  Instance: /new_covariance_tb/duv/phi_1
+#    Time: 0 ps  Iteration: 3  Instance: /covariance_tb/duv/phi_1
 # ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/icmp_57
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/icmp_57
 # ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/icmp_54
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/icmp_54
 # ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/icmp_47
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/icmp_47
 # ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/icmp_25
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/icmp_25
 # ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/icmp_22
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/icmp_22
 # ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/icmp_11
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/icmp_11
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/shl_13
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/shl_13
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phiC_39
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phiC_39
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phiC_39
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phiC_39
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phiC_39
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phiC_39
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phiC_39
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phiC_39
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_n19
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_n19
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_n19
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_n19
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_n19
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_n19
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_n19
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_n19
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_n16
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_n16
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_n16
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_n16
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_n16
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_n16
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_n16
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_n16
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_35
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_35
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_35
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_35
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_34
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_34
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_34
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_34
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phiC_35
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phiC_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phiC_35
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phiC_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phiC_35
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phiC_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phiC_35
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phiC_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_n17
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_n17
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_n17
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_n17
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_n17
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_n17
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_n17
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_n17
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_32
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_32
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_32
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_32
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_32
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_32
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_32
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_32
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phiC_34
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phiC_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phiC_34
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phiC_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phiC_34
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phiC_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phiC_34
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phiC_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_28
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_28
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_28
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_28
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phiC_28
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phiC_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phiC_28
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phiC_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phiC_28
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phiC_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phiC_28
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phiC_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_n15
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_n15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_n15
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_n15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_n15
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_n15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_n15
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_n15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_n14
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_n14
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_n14
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_n14
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_n14
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_n14
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_n14
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_n14
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_15
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_15
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_15
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_15
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phiC_22
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phiC_22
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phiC_22
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phiC_22
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phiC_22
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phiC_22
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phiC_22
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phiC_22
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_n13
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_n13
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_n13
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_n13
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_n13
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_n13
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_n13
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_n13
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_4
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_4
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_4
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_4
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_4
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_4
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_4
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_4
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_3
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_3
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_3
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_3
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_3
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_3
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_3
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_3
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phiC_20
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phiC_20
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phiC_20
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phiC_20
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phiC_20
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phiC_20
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phiC_20
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phiC_20
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_1
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_1
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_1
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_1
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_1
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_1
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 4  Instance: /new_covariance_tb/duv/phi_1
+#    Time: 0 ps  Iteration: 4  Instance: /covariance_tb/duv/phi_1
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phiC_20
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phiC_20
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phiC_20
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phiC_20
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phiC_20
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phiC_20
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phiC_20
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phiC_20
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_3
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_3
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_3
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_3
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_3
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_3
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_3
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_3
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_4
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_4
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_4
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_4
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_4
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_4
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_4
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_4
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_n13
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_n13
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_n13
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_n13
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_n13
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_n13
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_n13
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_n13
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phiC_22
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phiC_22
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phiC_22
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phiC_22
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phiC_22
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phiC_22
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phiC_22
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phiC_22
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_15
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_15
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_15
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_15
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_n14
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_n14
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_n14
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_n14
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_n14
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_n14
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_n14
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_n14
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_n15
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_n15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_n15
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_n15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_n15
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_n15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_n15
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_n15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phiC_28
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phiC_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phiC_28
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phiC_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phiC_28
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phiC_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phiC_28
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phiC_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_1
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_1
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_1
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_1
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_1
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_1
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_1
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_1
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phiC_34
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phiC_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phiC_34
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phiC_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phiC_34
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phiC_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phiC_34
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phiC_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_n17
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_n17
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_n17
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_n17
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_n17
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_n17
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_n17
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_n17
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phiC_35
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phiC_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phiC_35
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phiC_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phiC_35
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phiC_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phiC_35
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phiC_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_34
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_34
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_34
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_34
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_35
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_35
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_35
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_35
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_n16
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_n16
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_n16
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_n16
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_n16
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_n16
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_n16
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_n16
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_n19
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_n19
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_n19
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_n19
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_n19
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_n19
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_n19
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_n19
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phiC_39
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phiC_39
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phiC_39
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phiC_39
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phiC_39
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phiC_39
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phiC_39
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phiC_39
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_32
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_32
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_32
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_32
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_32
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_32
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_32
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_32
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_28
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_28
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_28
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 5  Instance: /new_covariance_tb/duv/phi_28
+#    Time: 0 ps  Iteration: 5  Instance: /covariance_tb/duv/phi_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phiC_39
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phiC_39
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phiC_39
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phiC_39
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phiC_39
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phiC_39
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phiC_39
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phiC_39
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_n19
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_n19
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_n19
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_n19
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_n19
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_n19
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_n19
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_n19
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_n16
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_n16
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_n16
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_n16
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_n16
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_n16
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_n16
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_n16
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_35
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_35
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_35
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_35
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_34
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_34
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_34
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_34
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phiC_35
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phiC_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phiC_35
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phiC_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phiC_35
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phiC_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phiC_35
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phiC_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_n17
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_n17
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_n17
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_n17
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_n17
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_n17
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_n17
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_n17
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_32
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_32
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_32
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_32
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_32
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_32
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_32
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_32
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phiC_34
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phiC_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phiC_34
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phiC_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phiC_34
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phiC_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phiC_34
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phiC_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_28
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_28
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_28
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_28
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phiC_28
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phiC_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phiC_28
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phiC_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phiC_28
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phiC_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phiC_28
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phiC_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_n15
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_n15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_n15
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_n15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_n15
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_n15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_n15
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_n15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_n14
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_n14
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_n14
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_n14
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_n14
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_n14
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_n14
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_n14
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_15
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_15
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_15
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_15
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phiC_22
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phiC_22
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phiC_22
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phiC_22
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phiC_22
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phiC_22
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phiC_22
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phiC_22
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_n13
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_n13
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_n13
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_n13
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_n13
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_n13
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_n13
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_n13
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_4
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_4
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_4
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_4
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_4
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_4
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_4
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_4
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_3
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_3
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_3
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_3
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_3
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_3
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_3
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_3
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phiC_20
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phiC_20
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phiC_20
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phiC_20
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phiC_20
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phiC_20
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phiC_20
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phiC_20
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_1
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_1
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_1
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_1
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_1
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_1
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 6  Instance: /new_covariance_tb/duv/phi_1
+#    Time: 0 ps  Iteration: 6  Instance: /covariance_tb/duv/phi_1
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_n15
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_n15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_n15
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_n15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_n15
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_n15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_n15
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_n15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_1
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_1
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_1
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_1
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_1
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_1
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_1
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_1
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phiC_20
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phiC_20
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phiC_20
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phiC_20
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phiC_20
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phiC_20
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phiC_20
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phiC_20
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_4
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_4
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_4
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_4
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_4
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_4
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_4
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_4
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_15
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_15
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_15
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_15
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_28
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_28
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_28
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_28
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phiC_34
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phiC_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phiC_34
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phiC_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phiC_34
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phiC_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phiC_34
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phiC_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phiC_35
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phiC_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phiC_35
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phiC_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phiC_35
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phiC_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phiC_35
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phiC_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_34
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_34
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_34
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_34
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_32
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_32
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_32
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_32
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_32
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_32
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_32
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_32
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_n17
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_n17
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_n17
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_n17
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_n17
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_n17
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_n17
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_n17
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phiC_39
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phiC_39
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phiC_39
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phiC_39
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phiC_39
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phiC_39
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phiC_39
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phiC_39
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_n16
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_n16
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_n16
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_n16
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_n16
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_n16
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_n16
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_n16
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_n19
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_n19
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_n19
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_n19
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_n19
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_n19
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_n19
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_n19
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phiC_22
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phiC_22
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phiC_22
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phiC_22
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phiC_22
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phiC_22
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phiC_22
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phiC_22
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phiC_28
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phiC_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phiC_28
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phiC_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phiC_28
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phiC_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phiC_28
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phiC_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_n13
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_n13
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_n13
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_n13
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_n13
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_n13
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_n13
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_n13
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_n14
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_n14
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_n14
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_n14
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_n14
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_n14
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 7  Instance: /new_covariance_tb/duv/phi_n14
+#    Time: 0 ps  Iteration: 7  Instance: /covariance_tb/duv/phi_n14
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phi_n13
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phi_n13
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phi_n13
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phi_n13
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phi_n13
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phi_n13
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phi_n13
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phi_n13
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phi_n14
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phi_n14
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phi_n14
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phi_n14
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phi_n14
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phi_n14
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phi_n14
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phi_n14
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phiC_22
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phiC_22
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phiC_22
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phiC_22
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phiC_22
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phiC_22
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phiC_22
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phiC_22
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phiC_28
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phiC_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phiC_28
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phiC_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phiC_28
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phiC_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phiC_28
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phiC_28
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phi_n19
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phi_n19
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phi_n19
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phi_n19
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phi_n19
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phi_n19
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phi_n19
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phi_n19
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phi_n16
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phi_n16
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phi_n16
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phi_n16
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phi_n16
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phi_n16
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phi_n16
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phi_n16
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phiC_39
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phiC_39
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phiC_39
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phiC_39
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phiC_39
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phiC_39
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phiC_39
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phiC_39
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phiC_20
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phiC_20
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phiC_20
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phiC_20
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phiC_20
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phiC_20
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phiC_20
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phiC_20
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phiC_34
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phiC_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phiC_34
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phiC_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phiC_34
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phiC_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 8  Instance: /new_covariance_tb/duv/phiC_34
+#    Time: 0 ps  Iteration: 8  Instance: /covariance_tb/duv/phiC_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 9  Instance: /new_covariance_tb/duv/phiC_20
+#    Time: 0 ps  Iteration: 9  Instance: /covariance_tb/duv/phiC_20
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 9  Instance: /new_covariance_tb/duv/phiC_20
+#    Time: 0 ps  Iteration: 9  Instance: /covariance_tb/duv/phiC_20
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 9  Instance: /new_covariance_tb/duv/phiC_20
+#    Time: 0 ps  Iteration: 9  Instance: /covariance_tb/duv/phiC_20
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 9  Instance: /new_covariance_tb/duv/phiC_20
+#    Time: 0 ps  Iteration: 9  Instance: /covariance_tb/duv/phiC_20
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 9  Instance: /new_covariance_tb/duv/phiC_34
+#    Time: 0 ps  Iteration: 9  Instance: /covariance_tb/duv/phiC_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 9  Instance: /new_covariance_tb/duv/phiC_34
+#    Time: 0 ps  Iteration: 9  Instance: /covariance_tb/duv/phiC_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 9  Instance: /new_covariance_tb/duv/phiC_34
+#    Time: 0 ps  Iteration: 9  Instance: /covariance_tb/duv/phiC_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 9  Instance: /new_covariance_tb/duv/phiC_34
+#    Time: 0 ps  Iteration: 9  Instance: /covariance_tb/duv/phiC_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 9  Instance: /new_covariance_tb/duv/phi_34
+#    Time: 0 ps  Iteration: 9  Instance: /covariance_tb/duv/phi_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 9  Instance: /new_covariance_tb/duv/phi_34
+#    Time: 0 ps  Iteration: 9  Instance: /covariance_tb/duv/phi_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 9  Instance: /new_covariance_tb/duv/phi_34
+#    Time: 0 ps  Iteration: 9  Instance: /covariance_tb/duv/phi_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 9  Instance: /new_covariance_tb/duv/phi_34
+#    Time: 0 ps  Iteration: 9  Instance: /covariance_tb/duv/phi_34
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 9  Instance: /new_covariance_tb/duv/phi_4
+#    Time: 0 ps  Iteration: 9  Instance: /covariance_tb/duv/phi_4
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 9  Instance: /new_covariance_tb/duv/phi_4
+#    Time: 0 ps  Iteration: 9  Instance: /covariance_tb/duv/phi_4
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 9  Instance: /new_covariance_tb/duv/phi_4
+#    Time: 0 ps  Iteration: 9  Instance: /covariance_tb/duv/phi_4
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 9  Instance: /new_covariance_tb/duv/phi_4
+#    Time: 0 ps  Iteration: 9  Instance: /covariance_tb/duv/phi_4
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 9  Instance: /new_covariance_tb/duv/phi_15
+#    Time: 0 ps  Iteration: 9  Instance: /covariance_tb/duv/phi_15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 9  Instance: /new_covariance_tb/duv/phi_15
+#    Time: 0 ps  Iteration: 9  Instance: /covariance_tb/duv/phi_15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 9  Instance: /new_covariance_tb/duv/phi_15
+#    Time: 0 ps  Iteration: 9  Instance: /covariance_tb/duv/phi_15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 9  Instance: /new_covariance_tb/duv/phi_15
+#    Time: 0 ps  Iteration: 9  Instance: /covariance_tb/duv/phi_15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 10  Instance: /new_covariance_tb/duv/phi_n15
+#    Time: 0 ps  Iteration: 10  Instance: /covariance_tb/duv/phi_n15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 10  Instance: /new_covariance_tb/duv/phi_n15
+#    Time: 0 ps  Iteration: 10  Instance: /covariance_tb/duv/phi_n15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 10  Instance: /new_covariance_tb/duv/phi_n15
+#    Time: 0 ps  Iteration: 10  Instance: /covariance_tb/duv/phi_n15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 10  Instance: /new_covariance_tb/duv/phi_n15
+#    Time: 0 ps  Iteration: 10  Instance: /covariance_tb/duv/phi_n15
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 26 ns  Iteration: 6  Instance: /new_covariance_tb/duv/phi_3
+#    Time: 26 ns  Iteration: 6  Instance: /covariance_tb/duv/phi_3
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 26 ns  Iteration: 6  Instance: /new_covariance_tb/duv/phi_3
+#    Time: 26 ns  Iteration: 6  Instance: /covariance_tb/duv/phi_3
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 26 ns  Iteration: 6  Instance: /new_covariance_tb/duv/phi_3
+#    Time: 26 ns  Iteration: 6  Instance: /covariance_tb/duv/phi_3
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 26 ns  Iteration: 6  Instance: /new_covariance_tb/duv/phi_3
+#    Time: 26 ns  Iteration: 6  Instance: /covariance_tb/duv/phi_3
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 30 ns  Iteration: 6  Instance: /new_covariance_tb/duv/phi_35
+#    Time: 30 ns  Iteration: 6  Instance: /covariance_tb/duv/phi_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 30 ns  Iteration: 6  Instance: /new_covariance_tb/duv/phi_35
+#    Time: 30 ns  Iteration: 6  Instance: /covariance_tb/duv/phi_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 30 ns  Iteration: 6  Instance: /new_covariance_tb/duv/phi_35
+#    Time: 30 ns  Iteration: 6  Instance: /covariance_tb/duv/phi_35
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 30 ns  Iteration: 6  Instance: /new_covariance_tb/duv/phi_35
+#    Time: 30 ns  Iteration: 6  Instance: /covariance_tb/duv/phi_35
 # ** Note: simulation done!
-#    Time: 145370 ns  Iteration: 1  Instance: /new_covariance_tb
+#    Time: 145370 ns  Iteration: 1  Instance: /covariance_tb
 # ** Failure: NORMAL EXIT (note: failure is to force the simulator to stop)
-#    Time: 145370 ns  Iteration: 1  Process: /new_covariance_tb/generate_sim_done_proc File: /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/hls_verify_new_covariance_tb.vhd
-# Break in Process generate_sim_done_proc at /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/hls_verify_new_covariance_tb.vhd line 287
-# Stopped at /home/dynamatic/Dynamatic/etc/dynamatic/Regression_test/examples/new_covariance/sim/VHDL_SRC/hls_verify_new_covariance_tb.vhd line 287
-# End time: 13:26:34 on Nov 28,2022, Elapsed time: 0:09:53
+#    Time: 145370 ns  Iteration: 1  Process: /covariance_tb/generate_sim_done_proc File: /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/hls_verify_covariance_tb.vhd
+# Break in Process generate_sim_done_proc at /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/hls_verify_covariance_tb.vhd line 287
+# Stopped at /home/dynamatic/Dynamatic/etc/dynamatic/fpga23-straight-lsq-interface/experiments/benchmarks/covariance/sim/VHDL_SRC/hls_verify_covariance_tb.vhd line 287
+# End time: 15:38:52 on Dec 04,2022, Elapsed time: 0:08:22
 # Errors: 0, Warnings: 541
 
 --- Comparison Results ---

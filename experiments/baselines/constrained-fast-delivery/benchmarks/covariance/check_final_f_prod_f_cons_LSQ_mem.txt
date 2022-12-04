@@ -1,0 +1,215 @@
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB10, BB11)
+
+Consumer of type type = "Merge!!
+
+
+		 Triggering the normal non-loop addSuppress case!!!!
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  1 
+
+
+	 Don't need to add a SUPPRESS!!
+
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB11, BB11)
+
+Consumer of type type = "Merge!!
+
+
+		 Triggering the producer == consumer case!!!!
+
+	 NEW DEUBUG INFO: The original producer is in BB5
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  C11 &  + 
+
+
+	 Add a SUPPRESS with f_supp = 
+ not C11 &  + 
+
+
+	Right before calling applyShannon, the size of f_supp is: 1
+
+	Inside applyShannon
+
+	Printing the f_supp after converting it to string
+0 + 
+
+
+F_SUPP is a single condition!!
+	The condition is inverted!!
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB8, BB10)
+
+Consumer of type type = "Merge!!
+
+
+		 Triggering the normal non-loop addSuppress case!!!!
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  C8 &  + 
+
+
+	 Add a SUPPRESS with f_supp = 
+ not C8 &  + 
+
+
+	Right before calling applyShannon, the size of f_supp is: 1
+
+	Inside applyShannon
+
+	Printing the f_supp after converting it to string
+0 + 
+
+
+F_SUPP is a single condition!!
+	The condition is inverted!!
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB10, BB10)
+
+Consumer of type type = "Merge!!
+
+
+		 Triggering the producer == consumer case!!!!
+
+	 NEW DEUBUG INFO: The original producer is in BB5
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  C12 &  + 
+
+
+	 Add a SUPPRESS with f_supp = 
+ not C12 &  + 
+
+
+	Right before calling applyShannon, the size of f_supp is: 1
+
+	Inside applyShannon
+
+	Printing the f_supp after converting it to string
+0 + 
+
+
+F_SUPP is a single condition!!
+	The condition is inverted!!
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB5, BB8)
+
+Consumer of type type = "Merge!!
+
+
+		 Triggering the more_prod_than_cons case!!!!
+
+	The consumer deps before calling addLoopsExitstoDeps_ProdInConsOut are: 
+****************Inside FindLoopExits_ProdInConsOut*********
+
+	Starting a new loop in the loop nest containing the producerBB!!
+
+	The consumer is not inside this loop!!
+
+	The loop exits of this loop are: BB5 , 
+
+
+	Starting a new loop in the loop nest containing the producerBB!!
+
+	The consumer is not inside this loop!!
+
+	The loop exits of this loop are: BB6 , 
+
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  not C5 &  not C6 &  + 
+
+
+	 Add a SUPPRESS with f_supp = 
+ C6 &  +  C5 &  + 
+
+
+	Right before calling applyShannon, the size of f_supp is: 2
+
+	Inside applyShannon
+
+	Printing the f_supp after converting it to string
+x1 + 1x + 
+
+
+F_SUPP is a big condition!!
+
+************ About to print the details of a MUX ***********
+	The MUX has non-MUX inputs!!!
+	The SEL of the MUX is: 5
+
+	The size of in0 of the MUX is: 1 and the expressions are 
+
+C6 &  + 
+
+	The size of in1 of the MUX is: 1 and the expressions are 
+
+1 &  + 
+
+
+
+======================================================
+
+
+New (Producer,Consumer) pair: (BB8, BB8)
+
+Consumer of type type = "Merge!!
+
+
+		 Triggering the producer == consumer case!!!!
+
+	 NEW DEUBUG INFO: The original producer is in BB5
+
+	 The finalized f_prod =  1 
+
+
+	 The finalized f_cons =  C13 &  + 
+
+
+	 Add a SUPPRESS with f_supp = 
+ not C13 &  + 
+
+
+	Right before calling applyShannon, the size of f_supp is: 1
+
+	Inside applyShannon
+
+	Printing the f_supp after converting it to string
+0 + 
+
+
+F_SUPP is a single condition!!
+	The condition is inverted!!

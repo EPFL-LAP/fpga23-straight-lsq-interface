@@ -1,5 +1,7 @@
 # Straight to the Queue: Fast Load-Store Queue Allocation in Dataflow Circuits
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7406581.svg)](https://doi.org/10.5281/zenodo.7406581)
+
 This repository holds the source code, benchmarks and results of the work presented in the paper entitled "Straight to the Queue: Fast Load-Store Queue Allocation in Dataflow Circuits", which proposes a methodology for interfacing dataflow circuits with Load-Store Queues (LSQs) while exploiting levels of parallelism that were not possible to achieve in prior work.
 
 ## Prerequisites
